@@ -17,7 +17,7 @@ namespace ProgramPlanner.Controllers
         // GET: Courses
         public ActionResult Index()
         {
-            var courses = db.Courses.Include(c => c.Category);
+            var courses = db.Courses.Include(c => c.Category).Include(c => c.University);
             return View(courses.ToList());
         }
 
@@ -40,6 +40,7 @@ namespace ProgramPlanner.Controllers
         public ActionResult Create()
         {
             ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName");
+            ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName");
             return View();
         }
 
@@ -48,7 +49,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CourseID,CourseName,MyProperty,Units,CategoryID")] Course course)
+        public ActionResult Create([Bind(Include = "CourseID,CourseName,MyProperty,Units,UniversityID,CategoryID")] Course course)
         {
             if (ModelState.IsValid)
             {
@@ -58,6 +59,7 @@ namespace ProgramPlanner.Controllers
             }
 
             ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName", course.CategoryID);
+            ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName", course.UniversityID);
             return View(course);
         }
 
@@ -74,6 +76,7 @@ namespace ProgramPlanner.Controllers
                 return HttpNotFound();
             }
             ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName", course.CategoryID);
+            ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName", course.UniversityID);
             return View(course);
         }
 
@@ -82,7 +85,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CourseID,CourseName,MyProperty,Units,CategoryID")] Course course)
+        public ActionResult Edit([Bind(Include = "CourseID,CourseName,MyProperty,Units,UniversityID,CategoryID")] Course course)
         {
             if (ModelState.IsValid)
             {
@@ -91,6 +94,7 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName", course.CategoryID);
+            ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName", course.UniversityID);
             return View(course);
         }
 

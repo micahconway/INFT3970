@@ -5,14 +5,14 @@ namespace ProgramPlanner.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<ProgramPlanner.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ProgramPlanner.Models.ProgramPlannerContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(ProgramPlanner.Models.ApplicationDbContext context)
+        protected override void Seed(ProgramPlanner.Models.ProgramPlannerContext context)
         {
             //  This method will be called after migrating to the latest version.
 
