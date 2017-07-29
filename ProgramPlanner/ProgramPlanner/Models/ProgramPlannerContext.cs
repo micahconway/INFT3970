@@ -24,14 +24,10 @@ namespace ProgramPlanner.Models
 
         public DbSet<YearDegree> YearDegrees { get; set; }
 
-<<<<<<< HEAD
         public DbSet<Degree> Degrees { get; set; }
-=======
-        public System.Data.Entity.DbSet<ProgramPlanner.Models.Category> Categories { get; set; }
 
-        public System.Data.Entity.DbSet<ProgramPlanner.Models.Major> Majors { get; set; }
+        public DbSet<Major> Majors { get; set; }
 
-        public System.Data.Entity.DbSet<ProgramPlanner.Models.University> Universities { get; set; }
->>>>>>> b303bae991ff5189dd3d4eed3ffd15cd836c7792
+        public DbSet<University> Universities { get; set; }
     }
 }
