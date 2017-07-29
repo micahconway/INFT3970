@@ -301,21 +301,11 @@
     <Content Include="Views\Universities\Details.cshtml" />
     <Content Include="Views\Universities\Edit.cshtml" />
     <Content Include="Views\Universities\Index.cshtml" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6537d605fb537a73e3f8c3d6d0ee232001f24c68
     <Content Include="Views\Courses\Create.cshtml" />
     <Content Include="Views\Courses\Delete.cshtml" />
     <Content Include="Views\Courses\Details.cshtml" />
     <Content Include="Views\Courses\Edit.cshtml" />
     <Content Include="Views\Courses\Index.cshtml" />
-<<<<<<< HEAD
-=======
-=======
->>>>>>> b303bae991ff5189dd3d4eed3ffd15cd836c7792
->>>>>>> bae95971100f9107292e782bc7d9d79d7b2d576f
->>>>>>> 6537d605fb537a73e3f8c3d6d0ee232001f24c68
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
