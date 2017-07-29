@@ -13,7 +13,7 @@ namespace ProgramPlanner.Models
         // automatically whenever you change your model schema, please use data migrations.
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
-    
+
         public ProgramPlannerContext() : base("name=ProgramPlannerContext")
         {
         }
@@ -24,6 +24,14 @@ namespace ProgramPlanner.Models
 
         public DbSet<YearDegree> YearDegrees { get; set; }
 
+<<<<<<< HEAD
         public DbSet<Degree> Degrees { get; set; }
+=======
+        public System.Data.Entity.DbSet<ProgramPlanner.Models.Category> Categories { get; set; }
+
+        public System.Data.Entity.DbSet<ProgramPlanner.Models.Major> Majors { get; set; }
+
+        public System.Data.Entity.DbSet<ProgramPlanner.Models.University> Universities { get; set; }
+>>>>>>> b303bae991ff5189dd3d4eed3ffd15cd836c7792
     }
 }
