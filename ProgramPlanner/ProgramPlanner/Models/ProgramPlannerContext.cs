@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
-
 namespace ProgramPlanner.Models
 {
     public class ProgramPlannerContext : DbContext
@@ -19,8 +18,12 @@ namespace ProgramPlanner.Models
         {
         }
 
-        public System.Data.Entity.DbSet<ProgramPlanner.Models.Course> Courses { get; set; }
+        public DbSet<Course> Courses { get; set; }
 
-        public System.Data.Entity.DbSet<ProgramPlanner.Models.Category> Categories { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
+        public DbSet<YearDegree> YearDegrees { get; set; }
+
+        public DbSet<Degree> Degrees { get; set; }
     }
 }
