@@ -15,6 +15,9 @@ namespace ProgramPlanner.Models
 
         public int Units { get; set; }
 
+        public int UniversityID { get; set; }
+        public University University { get; set; }
+
         public int CategoryID { get; set; }
         public virtual Category Category { get; set; }
 
