@@ -192,11 +192,12 @@
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\DegreesController.cs" />
+    <Compile Include="Controllers\DirectedsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MajorsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\YearDegreesController.cs" />
     <Compile Include="Controllers\UniversitiesController.cs" />
+    <Compile Include="Controllers\YearDegreesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -228,11 +229,16 @@
     <Compile Include="Migrations\201707311101304_Update1d.Designer.cs">
       <DependentUpon>201707311101304_Update1d.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707312255371_Update2.cs" />
+    <Compile Include="Migrations\201707312255371_Update2.Designer.cs">
+      <DependentUpon>201707312255371_Update2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Degree.cs" />
+    <Compile Include="Models\Directed.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Major.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -304,16 +310,21 @@
     <Content Include="Views\Categories\Details.cshtml" />
     <Content Include="Views\Categories\Edit.cshtml" />
     <Content Include="Views\Categories\Index.cshtml" />
-    <Content Include="Views\YearDegrees\Create.cshtml" />
-    <Content Include="Views\YearDegrees\Delete.cshtml" />
-    <Content Include="Views\YearDegrees\Details.cshtml" />
-    <Content Include="Views\YearDegrees\Edit.cshtml" />
-    <Content Include="Views\YearDegrees\Index.cshtml" />
+    <Content Include="Views\Courses\Create.cshtml" />
+    <Content Include="Views\Courses\Delete.cshtml" />
+    <Content Include="Views\Courses\Details.cshtml" />
+    <Content Include="Views\Courses\Edit.cshtml" />
+    <Content Include="Views\Courses\Index.cshtml" />
     <Content Include="Views\Degrees\Create.cshtml" />
     <Content Include="Views\Degrees\Delete.cshtml" />
     <Content Include="Views\Degrees\Details.cshtml" />
     <Content Include="Views\Degrees\Edit.cshtml" />
     <Content Include="Views\Degrees\Index.cshtml" />
+    <Content Include="Views\Directeds\Create.cshtml" />
+    <Content Include="Views\Directeds\Delete.cshtml" />
+    <Content Include="Views\Directeds\Details.cshtml" />
+    <Content Include="Views\Directeds\Edit.cshtml" />
+    <Content Include="Views\Directeds\Index.cshtml" />
     <Content Include="Views\Majors\Create.cshtml" />
     <Content Include="Views\Majors\Delete.cshtml" />
     <Content Include="Views\Majors\Details.cshtml" />
@@ -324,11 +335,11 @@
     <Content Include="Views\Universities\Details.cshtml" />
     <Content Include="Views\Universities\Edit.cshtml" />
     <Content Include="Views\Universities\Index.cshtml" />
-    <Content Include="Views\Courses\Create.cshtml" />
-    <Content Include="Views\Courses\Delete.cshtml" />
-    <Content Include="Views\Courses\Details.cshtml" />
-    <Content Include="Views\Courses\Edit.cshtml" />
-    <Content Include="Views\Courses\Index.cshtml" />
+    <Content Include="Views\YearDegrees\Create.cshtml" />
+    <Content Include="Views\YearDegrees\Delete.cshtml" />
+    <Content Include="Views\YearDegrees\Details.cshtml" />
+    <Content Include="Views\YearDegrees\Edit.cshtml" />
+    <Content Include="Views\YearDegrees\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -369,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707311101304_Update1d.resx">
       <DependentUpon>201707311101304_Update1d.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707312255371_Update2.resx">
+      <DependentUpon>201707312255371_Update2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

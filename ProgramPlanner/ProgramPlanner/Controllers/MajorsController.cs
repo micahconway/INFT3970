@@ -17,7 +17,8 @@ namespace ProgramPlanner.Controllers
         // GET: Majors
         public ActionResult Index()
         {
-            return View(db.Majors.ToList());
+            var majors = db.Majors.Include(m => m.YearDegree);
+            return View(majors.ToList());
         }
 
         // GET: Majors/Details/5
@@ -38,6 +39,7 @@ namespace ProgramPlanner.Controllers
         // GET: Majors/Create
         public ActionResult Create()
         {
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "yearDegreeID", "yearDegreeID");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MajorID,MajorName")] Major major)
+        public ActionResult Create([Bind(Include = "MajorID,MajorName,YearDegreeID")] Major major)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "yearDegreeID", "yearDegreeID", major.YearDegreeID);
             return View(major);
         }
 
@@ -70,6 +73,7 @@ namespace ProgramPlanner.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "yearDegreeID", "yearDegreeID", major.YearDegreeID);
             return View(major);
         }
 
@@ -78,7 +82,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MajorID,MajorName")] Major major)
+        public ActionResult Edit([Bind(Include = "MajorID,MajorName,YearDegreeID")] Major major)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace ProgramPlanner.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "yearDegreeID", "yearDegreeID", major.YearDegreeID);
             return View(major);
         }
 

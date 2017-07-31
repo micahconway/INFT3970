@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 namespace ProgramPlanner.Models
+
 {
     public class ProgramPlannerContext : DbContext
     {
@@ -29,5 +30,17 @@ namespace ProgramPlanner.Models
         public DbSet<Major> Majors { get; set; }
 
         public DbSet<University> Universities { get; set; }
+
+        public DbSet<Directed> Directeds { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<YearDegree>()
+                .HasRequired(y => y.Majors)
+                .WithMany()
+                .WillCascadeOnDelete(false);
+        }
+
+
     }
 }

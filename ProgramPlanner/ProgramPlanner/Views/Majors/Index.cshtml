@@ -12,6 +12,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.YearDegree.yearDegreeID)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.MajorName)
         </th>
         <th></th>
@@ -19,6 +22,9 @@
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.YearDegree.yearDegreeID)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.MajorName)
         </td>
