@@ -293,3 +293,8 @@ C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\Pro
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.dll
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.pdb
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update1.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.NewMigration.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update1a.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update1b.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update1c.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update1d.resources

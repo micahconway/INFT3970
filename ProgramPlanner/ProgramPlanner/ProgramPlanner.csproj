@@ -208,12 +208,31 @@
     <Compile Include="Migrations\201707290452059_Update1.Designer.cs">
       <DependentUpon>201707290452059_Update1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707302334276_NewMigration.cs" />
+    <Compile Include="Migrations\201707302334276_NewMigration.Designer.cs">
+      <DependentUpon>201707302334276_NewMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707311011044_Update1a.cs" />
+    <Compile Include="Migrations\201707311011044_Update1a.Designer.cs">
+      <DependentUpon>201707311011044_Update1a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707311018309_Update1b.cs" />
+    <Compile Include="Migrations\201707311018309_Update1b.Designer.cs">
+      <DependentUpon>201707311018309_Update1b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707311059565_Update1c.cs" />
+    <Compile Include="Migrations\201707311059565_Update1c.Designer.cs">
+      <DependentUpon>201707311059565_Update1c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707311101304_Update1d.cs" />
+    <Compile Include="Migrations\201707311101304_Update1d.Designer.cs">
+      <DependentUpon>201707311101304_Update1d.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Degree.cs" />
-    <Compile Include="Models\Directed.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Major.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -335,6 +354,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707290452059_Update1.resx">
       <DependentUpon>201707290452059_Update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707302334276_NewMigration.resx">
+      <DependentUpon>201707302334276_NewMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707311011044_Update1a.resx">
+      <DependentUpon>201707311011044_Update1a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707311018309_Update1b.resx">
+      <DependentUpon>201707311018309_Update1b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707311059565_Update1c.resx">
+      <DependentUpon>201707311059565_Update1c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707311101304_Update1d.resx">
+      <DependentUpon>201707311101304_Update1d.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

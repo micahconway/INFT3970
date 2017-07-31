@@ -49,7 +49,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CourseID,CourseName,MyProperty,Units,UniversityID,CategoryID")] Course course)
+        public ActionResult Create([Bind(Include = "CourseID,CourseCode,CourseName,Units,UniversityID,CategoryID")] Course course)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CourseID,CourseName,MyProperty,Units,UniversityID,CategoryID")] Course course)
+        public ActionResult Edit([Bind(Include = "CourseID,CourseCode,CourseName,Units,UniversityID,CategoryID")] Course course)
         {
             if (ModelState.IsValid)
             {

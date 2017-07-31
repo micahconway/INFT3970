@@ -9,9 +9,9 @@ namespace ProgramPlanner.Models
     {
         public int CourseID { get; set; }
 
-        public string CourseName { get; set; }
+        public string CourseCode { get; set; }
 
-        public int MyProperty { get; set; }
+        public string CourseName { get; set; }
 
         public int Units { get; set; }
 
