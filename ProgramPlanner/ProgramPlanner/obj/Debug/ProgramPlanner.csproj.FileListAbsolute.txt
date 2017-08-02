@@ -287,7 +287,6 @@ C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\Pro
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\bin\Microsoft.AI.Web.xml
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csprojResolveAssemblyReference.cache
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.InitialMigration.resources
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csproj.GenerateResource.Cache
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.dll
@@ -299,3 +298,8 @@ C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\Pro
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update1c.resources
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update1d.resources
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update2.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update2a.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update2b.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update2c.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csprojResolveAssemblyReference.cache
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update2d.resources

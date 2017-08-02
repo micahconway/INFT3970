@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProgramPlanner.Models
 {
     public class YearDegree
     {
 
-        public int yearDegreeID { get; set; }
+        public int YearDegreeID { get; set; }
+
+        public string YearDegreeName { get; set; }
 
         public DateTime Year { get; set; }
 
@@ -16,5 +20,6 @@ namespace ProgramPlanner.Models
         public Degree Degree { get; set; }
 
         public virtual List<Major> Majors { get; set; }
+
     }
 }

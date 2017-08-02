@@ -36,7 +36,7 @@ namespace ProgramPlanner.Models
         protected override void OnModelCreating(DbModelBuilder modelbuilder)
         {
             modelbuilder.Entity<YearDegree>()
-                .HasRequired(y => y.Majors)
+                .HasOptional(y => y.Majors)
                 .WithMany()
                 .WillCascadeOnDelete(false);
         }

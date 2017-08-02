@@ -233,6 +233,22 @@
     <Compile Include="Migrations\201707312255371_Update2.Designer.cs">
       <DependentUpon>201707312255371_Update2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707312347039_Update2a.cs" />
+    <Compile Include="Migrations\201707312347039_Update2a.Designer.cs">
+      <DependentUpon>201707312347039_Update2a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708010049556_Update2b.cs" />
+    <Compile Include="Migrations\201708010049556_Update2b.Designer.cs">
+      <DependentUpon>201708010049556_Update2b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708010106286_Update2c.cs" />
+    <Compile Include="Migrations\201708010106286_Update2c.Designer.cs">
+      <DependentUpon>201708010106286_Update2c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708020003318_Update2d.cs" />
+    <Compile Include="Migrations\201708020003318_Update2d.Designer.cs">
+      <DependentUpon>201708020003318_Update2d.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -325,11 +341,6 @@
     <Content Include="Views\Directeds\Details.cshtml" />
     <Content Include="Views\Directeds\Edit.cshtml" />
     <Content Include="Views\Directeds\Index.cshtml" />
-    <Content Include="Views\Majors\Create.cshtml" />
-    <Content Include="Views\Majors\Delete.cshtml" />
-    <Content Include="Views\Majors\Details.cshtml" />
-    <Content Include="Views\Majors\Edit.cshtml" />
-    <Content Include="Views\Majors\Index.cshtml" />
     <Content Include="Views\Universities\Create.cshtml" />
     <Content Include="Views\Universities\Delete.cshtml" />
     <Content Include="Views\Universities\Details.cshtml" />
@@ -340,6 +351,11 @@
     <Content Include="Views\YearDegrees\Details.cshtml" />
     <Content Include="Views\YearDegrees\Edit.cshtml" />
     <Content Include="Views\YearDegrees\Index.cshtml" />
+    <Content Include="Views\Majors\Create.cshtml" />
+    <Content Include="Views\Majors\Delete.cshtml" />
+    <Content Include="Views\Majors\Details.cshtml" />
+    <Content Include="Views\Majors\Edit.cshtml" />
+    <Content Include="Views\Majors\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -384,6 +400,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707312255371_Update2.resx">
       <DependentUpon>201707312255371_Update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707312347039_Update2a.resx">
+      <DependentUpon>201707312347039_Update2a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708010049556_Update2b.resx">
+      <DependentUpon>201708010049556_Update2b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708010106286_Update2c.resx">
+      <DependentUpon>201708010106286_Update2c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708020003318_Update2d.resx">
+      <DependentUpon>201708020003318_Update2d.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

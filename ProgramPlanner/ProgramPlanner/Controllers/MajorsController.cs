@@ -17,8 +17,7 @@ namespace ProgramPlanner.Controllers
         // GET: Majors
         public ActionResult Index()
         {
-            var majors = db.Majors.Include(m => m.YearDegree);
-            return View(majors.ToList());
+            return View(db.Majors.ToList());
         }
 
         // GET: Majors/Details/5
@@ -39,7 +38,8 @@ namespace ProgramPlanner.Controllers
         // GET: Majors/Create
         public ActionResult Create()
         {
-            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "yearDegreeID", "yearDegreeID");
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "YearDegreeID", "YearDegreeName");
+
             return View();
         }
 
@@ -57,7 +57,6 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "yearDegreeID", "yearDegreeID", major.YearDegreeID);
             return View(major);
         }
 
@@ -73,7 +72,6 @@ namespace ProgramPlanner.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "yearDegreeID", "yearDegreeID", major.YearDegreeID);
             return View(major);
         }
 
@@ -90,7 +88,6 @@ namespace ProgramPlanner.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "yearDegreeID", "yearDegreeID", major.YearDegreeID);
             return View(major);
         }
 
