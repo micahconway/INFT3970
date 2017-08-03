@@ -35,12 +35,20 @@ namespace ProgramPlanner.Models
 
         protected override void OnModelCreating(DbModelBuilder modelbuilder)
         {
+            //some foreign key on delete no cascades
             modelbuilder.Entity<YearDegree>()
                 .HasOptional(y => y.Majors)
                 .WithMany()
                 .WillCascadeOnDelete(false);
+
+            modelbuilder.Entity<YearDegree>()
+                .HasOptional(y => y.DegreeCores)
+                .WithMany()
+                .WillCascadeOnDelete(false);
         }
 
+        public System.Data.Entity.DbSet<ProgramPlanner.Models.MajorCore> MajorCores { get; set; }
 
+        public System.Data.Entity.DbSet<ProgramPlanner.Models.DegreeCore> DegreeCores { get; set; }
     }
 }

@@ -21,5 +21,7 @@ namespace ProgramPlanner.Models
 
         public virtual List<Major> Majors { get; set; }
 
+        public virtual List<DegreeCore> DegreeCores { get; set; }
+
     }
 }

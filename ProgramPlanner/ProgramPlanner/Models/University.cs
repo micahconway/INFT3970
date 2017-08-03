@@ -13,6 +13,6 @@ namespace ProgramPlanner.Models
 
         public virtual List<Course> Courses { get; set; }
 
-        public  virtual List<Degree> Degrees { get; set; }
+        public virtual List<Degree> Degrees { get; set; }
     }
 }
