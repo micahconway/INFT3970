@@ -191,9 +191,11 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
+    <Compile Include="Controllers\DegreeCoresController.cs" />
     <Compile Include="Controllers\DegreesController.cs" />
     <Compile Include="Controllers\DirectedsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MajorCoresController.cs" />
     <Compile Include="Controllers\MajorsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\UniversitiesController.cs" />
@@ -249,14 +251,24 @@
     <Compile Include="Migrations\201708020003318_Update2d.Designer.cs">
       <DependentUpon>201708020003318_Update2d.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708030148010_Update3.cs" />
+    <Compile Include="Migrations\201708030148010_Update3.Designer.cs">
+      <DependentUpon>201708030148010_Update3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708030342170_Update3a.cs" />
+    <Compile Include="Migrations\201708030342170_Update3a.Designer.cs">
+      <DependentUpon>201708030342170_Update3a.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Degree.cs" />
+    <Compile Include="Models\DegreeCore.cs" />
     <Compile Include="Models\Directed.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Major.cs" />
+    <Compile Include="Models\MajorCore.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ProgramPlannerContext.cs" />
     <Compile Include="Models\YearDegree.cs" />
@@ -356,6 +368,16 @@
     <Content Include="Views\Majors\Details.cshtml" />
     <Content Include="Views\Majors\Edit.cshtml" />
     <Content Include="Views\Majors\Index.cshtml" />
+    <Content Include="Views\MajorCores\Create.cshtml" />
+    <Content Include="Views\MajorCores\Delete.cshtml" />
+    <Content Include="Views\MajorCores\Details.cshtml" />
+    <Content Include="Views\MajorCores\Edit.cshtml" />
+    <Content Include="Views\MajorCores\Index.cshtml" />
+    <Content Include="Views\DegreeCores\Create.cshtml" />
+    <Content Include="Views\DegreeCores\Delete.cshtml" />
+    <Content Include="Views\DegreeCores\Details.cshtml" />
+    <Content Include="Views\DegreeCores\Edit.cshtml" />
+    <Content Include="Views\DegreeCores\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -412,6 +434,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708020003318_Update2d.resx">
       <DependentUpon>201708020003318_Update2d.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708030148010_Update3.resx">
+      <DependentUpon>201708030148010_Update3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708030342170_Update3a.resx">
+      <DependentUpon>201708030342170_Update3a.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
