@@ -192,6 +192,7 @@
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\DegreeCoresController.cs" />
+    <Compile Include="Controllers\DegreeCoreSlotsController.cs" />
     <Compile Include="Controllers\DegreesController.cs" />
     <Compile Include="Controllers\DirectedsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -199,8 +200,15 @@
     <Compile Include="Controllers\MajorsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NeededPrereqsController.cs" />
+    <Compile Include="Controllers\OptionalCoreCoursesController.cs" />
     <Compile Include="Controllers\PrerequisiteCoursesController.cs" />
+    <Compile Include="Controllers\ProgramDirectedsController.cs" />
+    <Compile Include="Controllers\ProgramElectivesController.cs" />
+    <Compile Include="Controllers\ProgramMajorsController.cs" />
+    <Compile Include="Controllers\ProgramOptionalCoreCoursesController.cs" />
+    <Compile Include="Controllers\ProgramStructuresController.cs" />
     <Compile Include="Controllers\UniversitiesController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\YearDegreesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -277,20 +285,52 @@
     <Compile Include="Migrations\201708030639310_Update3e.Designer.cs">
       <DependentUpon>201708030639310_Update3e.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708040418199_Update3f.cs" />
+    <Compile Include="Migrations\201708040418199_Update3f.Designer.cs">
+      <DependentUpon>201708040418199_Update3f.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708040438440_Update3g.cs" />
+    <Compile Include="Migrations\201708040438440_Update3g.Designer.cs">
+      <DependentUpon>201708040438440_Update3g.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708040439184_Update3h.cs" />
+    <Compile Include="Migrations\201708040439184_Update3h.Designer.cs">
+      <DependentUpon>201708040439184_Update3h.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708040626597_Update3i.cs" />
+    <Compile Include="Migrations\201708040626597_Update3i.Designer.cs">
+      <DependentUpon>201708040626597_Update3i.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708040636461_Update3j.cs" />
+    <Compile Include="Migrations\201708040636461_Update3j.Designer.cs">
+      <DependentUpon>201708040636461_Update3j.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708040650472_Update3k.cs" />
+    <Compile Include="Migrations\201708040650472_Update3k.Designer.cs">
+      <DependentUpon>201708040650472_Update3k.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Degree.cs" />
     <Compile Include="Models\DegreeCore.cs" />
+    <Compile Include="Models\DegreeCoreSlot.cs" />
     <Compile Include="Models\Directed.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Major.cs" />
     <Compile Include="Models\MajorCore.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\NeededPrereq.cs" />
+    <Compile Include="Models\OptionalCoreCourse.cs" />
     <Compile Include="Models\PrerequisiteCourse.cs" />
+    <Compile Include="Models\ProgramDirected.cs" />
+    <Compile Include="Models\ProgramElective.cs" />
+    <Compile Include="Models\ProgramMajor.cs" />
+    <Compile Include="Models\ProgramOptionalCoreCourse.cs" />
     <Compile Include="Models\ProgramPlannerContext.cs" />
+    <Compile Include="Models\ProgramStructure.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\YearDegree.cs" />
     <Compile Include="Models\University.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -408,6 +448,46 @@
     <Content Include="Views\PrerequisiteCourses\Details.cshtml" />
     <Content Include="Views\PrerequisiteCourses\Edit.cshtml" />
     <Content Include="Views\PrerequisiteCourses\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\ProgramStructures\Create.cshtml" />
+    <Content Include="Views\ProgramStructures\Delete.cshtml" />
+    <Content Include="Views\ProgramStructures\Details.cshtml" />
+    <Content Include="Views\ProgramStructures\Edit.cshtml" />
+    <Content Include="Views\ProgramStructures\Index.cshtml" />
+    <Content Include="Views\ProgramMajors\Create.cshtml" />
+    <Content Include="Views\ProgramMajors\Delete.cshtml" />
+    <Content Include="Views\ProgramMajors\Details.cshtml" />
+    <Content Include="Views\ProgramMajors\Edit.cshtml" />
+    <Content Include="Views\ProgramMajors\Index.cshtml" />
+    <Content Include="Views\ProgramElectives\Create.cshtml" />
+    <Content Include="Views\ProgramElectives\Delete.cshtml" />
+    <Content Include="Views\ProgramElectives\Details.cshtml" />
+    <Content Include="Views\ProgramElectives\Edit.cshtml" />
+    <Content Include="Views\ProgramElectives\Index.cshtml" />
+    <Content Include="Views\ProgramDirecteds\Create.cshtml" />
+    <Content Include="Views\ProgramDirecteds\Delete.cshtml" />
+    <Content Include="Views\ProgramDirecteds\Details.cshtml" />
+    <Content Include="Views\ProgramDirecteds\Edit.cshtml" />
+    <Content Include="Views\ProgramDirecteds\Index.cshtml" />
+    <Content Include="Views\ProgramOptionalCoreCourses\Create.cshtml" />
+    <Content Include="Views\ProgramOptionalCoreCourses\Delete.cshtml" />
+    <Content Include="Views\ProgramOptionalCoreCourses\Details.cshtml" />
+    <Content Include="Views\ProgramOptionalCoreCourses\Edit.cshtml" />
+    <Content Include="Views\ProgramOptionalCoreCourses\Index.cshtml" />
+    <Content Include="Views\OptionalCoreCourses\Create.cshtml" />
+    <Content Include="Views\OptionalCoreCourses\Delete.cshtml" />
+    <Content Include="Views\OptionalCoreCourses\Details.cshtml" />
+    <Content Include="Views\OptionalCoreCourses\Edit.cshtml" />
+    <Content Include="Views\OptionalCoreCourses\Index.cshtml" />
+    <Content Include="Views\DegreeCoreSlots\Create.cshtml" />
+    <Content Include="Views\DegreeCoreSlots\Delete.cshtml" />
+    <Content Include="Views\DegreeCoreSlots\Details.cshtml" />
+    <Content Include="Views\DegreeCoreSlots\Edit.cshtml" />
+    <Content Include="Views\DegreeCoreSlots\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -482,6 +562,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708030639310_Update3e.resx">
       <DependentUpon>201708030639310_Update3e.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708040418199_Update3f.resx">
+      <DependentUpon>201708040418199_Update3f.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708040438440_Update3g.resx">
+      <DependentUpon>201708040438440_Update3g.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708040439184_Update3h.resx">
+      <DependentUpon>201708040439184_Update3h.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708040626597_Update3i.resx">
+      <DependentUpon>201708040626597_Update3i.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708040636461_Update3j.resx">
+      <DependentUpon>201708040636461_Update3j.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708040650472_Update3k.resx">
+      <DependentUpon>201708040650472_Update3k.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

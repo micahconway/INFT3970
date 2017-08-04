@@ -55,5 +55,20 @@ namespace ProgramPlanner.Models
                 .WillCascadeOnDelete(false);
         }
 
+        public DbSet<User> Users { get; set; }
+
+        public System.Data.Entity.DbSet<ProgramPlanner.Models.ProgramStructure> ProgramStructures { get; set; }
+
+        public System.Data.Entity.DbSet<ProgramPlanner.Models.ProgramMajor> ProgramMajors { get; set; }
+
+        public System.Data.Entity.DbSet<ProgramPlanner.Models.ProgramElective> ProgramElectives { get; set; }
+
+        public System.Data.Entity.DbSet<ProgramPlanner.Models.ProgramDirected> ProgramDirecteds { get; set; }
+
+        public System.Data.Entity.DbSet<ProgramPlanner.Models.ProgramOptionalCoreCourse> ProgramOptionalCoreCourses { get; set; }
+
+        public System.Data.Entity.DbSet<ProgramPlanner.Models.OptionalCoreCourse> OptionalCoreCourses { get; set; }
+
+        public System.Data.Entity.DbSet<ProgramPlanner.Models.DegreeCoreSlot> DegreeCoreSlots { get; set; }
     }
 }

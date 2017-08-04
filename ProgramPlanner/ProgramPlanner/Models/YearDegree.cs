@@ -23,5 +23,7 @@ namespace ProgramPlanner.Models
 
         public virtual List<DegreeCore> DegreeCores { get; set; }
 
+        public virtual List<DegreeCoreSlot> DegreeCoreSlots { get; set; }
+
     }
 }
