@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ProgramPlanner.Models.NeededPrereq>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PrerequisiteCourse.PrerequisiteCourseID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrerequisiteCourseID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrerequisiteCourse.PrerequisiteCourseID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrerequisiteCourseID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NeededPrereqID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NeededPrereqID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NeededPrereqID })
+        </td>
+    </tr>
+}
+
+</table>

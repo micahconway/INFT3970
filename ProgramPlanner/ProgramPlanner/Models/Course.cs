@@ -21,5 +21,11 @@ namespace ProgramPlanner.Models
         public int CategoryID { get; set; }
         public virtual Category Category { get; set; }
 
+        //This course many have one or many courses it can be a prerequisite for.
+        public virtual List<PrerequisiteCourse> PrerequisiteCourses { get; set; }
+
+        //A course may need one or many prerequisites in order to be studied.
+        public virtual List<NeededPrereq> NeededPrereqs { get; set; }
+
     }
 }

@@ -198,6 +198,8 @@
     <Compile Include="Controllers\MajorCoresController.cs" />
     <Compile Include="Controllers\MajorsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NeededPrereqsController.cs" />
+    <Compile Include="Controllers\PrerequisiteCoursesController.cs" />
     <Compile Include="Controllers\UniversitiesController.cs" />
     <Compile Include="Controllers\YearDegreesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -259,6 +261,22 @@
     <Compile Include="Migrations\201708030342170_Update3a.Designer.cs">
       <DependentUpon>201708030342170_Update3a.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708030503229_Update3b.cs" />
+    <Compile Include="Migrations\201708030503229_Update3b.Designer.cs">
+      <DependentUpon>201708030503229_Update3b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708030614372_Update3c.cs" />
+    <Compile Include="Migrations\201708030614372_Update3c.Designer.cs">
+      <DependentUpon>201708030614372_Update3c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708030621135_Update3d.cs" />
+    <Compile Include="Migrations\201708030621135_Update3d.Designer.cs">
+      <DependentUpon>201708030621135_Update3d.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708030639310_Update3e.cs" />
+    <Compile Include="Migrations\201708030639310_Update3e.Designer.cs">
+      <DependentUpon>201708030639310_Update3e.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -270,6 +288,8 @@
     <Compile Include="Models\Major.cs" />
     <Compile Include="Models\MajorCore.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NeededPrereq.cs" />
+    <Compile Include="Models\PrerequisiteCourse.cs" />
     <Compile Include="Models\ProgramPlannerContext.cs" />
     <Compile Include="Models\YearDegree.cs" />
     <Compile Include="Models\University.cs" />
@@ -378,6 +398,16 @@
     <Content Include="Views\DegreeCores\Details.cshtml" />
     <Content Include="Views\DegreeCores\Edit.cshtml" />
     <Content Include="Views\DegreeCores\Index.cshtml" />
+    <Content Include="Views\NeededPrereqs\Create.cshtml" />
+    <Content Include="Views\NeededPrereqs\Delete.cshtml" />
+    <Content Include="Views\NeededPrereqs\Details.cshtml" />
+    <Content Include="Views\NeededPrereqs\Edit.cshtml" />
+    <Content Include="Views\NeededPrereqs\Index.cshtml" />
+    <Content Include="Views\PrerequisiteCourses\Create.cshtml" />
+    <Content Include="Views\PrerequisiteCourses\Delete.cshtml" />
+    <Content Include="Views\PrerequisiteCourses\Details.cshtml" />
+    <Content Include="Views\PrerequisiteCourses\Edit.cshtml" />
+    <Content Include="Views\PrerequisiteCourses\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -440,6 +470,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708030342170_Update3a.resx">
       <DependentUpon>201708030342170_Update3a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708030503229_Update3b.resx">
+      <DependentUpon>201708030503229_Update3b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708030614372_Update3c.resx">
+      <DependentUpon>201708030614372_Update3c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708030621135_Update3d.resx">
+      <DependentUpon>201708030621135_Update3d.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708030639310_Update3e.resx">
+      <DependentUpon>201708030639310_Update3e.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

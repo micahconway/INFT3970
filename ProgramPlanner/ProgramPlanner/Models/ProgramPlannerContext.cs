@@ -50,5 +50,9 @@ namespace ProgramPlanner.Models
         public System.Data.Entity.DbSet<ProgramPlanner.Models.MajorCore> MajorCores { get; set; }
 
         public System.Data.Entity.DbSet<ProgramPlanner.Models.DegreeCore> DegreeCores { get; set; }
+
+        public System.Data.Entity.DbSet<ProgramPlanner.Models.PrerequisiteCourse> Prerequisites { get; set; }
+
+        public System.Data.Entity.DbSet<ProgramPlanner.Models.NeededPrereq> NeededPrereqs { get; set; }
     }
 }
