@@ -141,32 +141,6 @@ C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\Pro
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\obj\Debug\ProgramPlanner.Tests.dll
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\obj\Debug\ProgramPlanner.Tests.pdb
 <<<<<<< HEAD
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\csc.exe
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\csc.exe.config
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\csc.rsp
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\csi.exe
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\csi.rsp
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\System.AppContext.dll
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\System.IO.FileSystem.dll
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\vbc.exe
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\vbc.exe.config
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\vbc.rsp
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\VBCSCompiler.exe
-C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\csc.exe
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\csc.exe.config
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\roslyn\csc.rsp
