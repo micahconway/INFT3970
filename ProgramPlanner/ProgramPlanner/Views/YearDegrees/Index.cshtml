@@ -15,6 +15,9 @@
             @Html.DisplayNameFor(model => model.Degree.DegreeName)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.YearDegreeName)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Year)
         </th>
         <th></th>
@@ -26,12 +29,15 @@
             @Html.DisplayFor(modelItem => item.Degree.DegreeName)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.YearDegreeName)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Year)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.yearDegreeID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.yearDegreeID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.yearDegreeID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.YearDegreeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.YearDegreeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.YearDegreeID })
         </td>
     </tr>
 }

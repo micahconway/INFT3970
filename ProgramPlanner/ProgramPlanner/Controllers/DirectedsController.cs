@@ -17,8 +17,8 @@ namespace ProgramPlanner.Controllers
         // GET: Directeds
         public ActionResult Index()
         {
-            var courses = db.Courses.Include(d => d.Category).Include(d => d.Major);
-            return View(courses.ToList());
+            var directeds = db.Directeds.Include(d => d.Course).Include(d => d.Major);
+            return View(directeds.ToList());
         }
 
         // GET: Directeds/Details/5
@@ -28,7 +28,7 @@ namespace ProgramPlanner.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Directed directed = db.Courses.Find(id);
+            Directed directed = db.Directeds.Find(id);
             if (directed == null)
             {
                 return HttpNotFound();
@@ -39,7 +39,7 @@ namespace ProgramPlanner.Controllers
         // GET: Directeds/Create
         public ActionResult Create()
         {
-            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName");
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode");
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName");
             return View();
         }
@@ -49,16 +49,16 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CourseID,CourseName,MyProperty,Units,CategoryID,MajorID")] Directed directed)
+        public ActionResult Create([Bind(Include = "DirectedID,CourseID,MajorID")] Directed directed)
         {
             if (ModelState.IsValid)
             {
-                db.Courses.Add(directed);
+                db.Directeds.Add(directed);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName", directed.CategoryID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", directed.CourseID);
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName", directed.MajorID);
             return View(directed);
         }
@@ -70,12 +70,12 @@ namespace ProgramPlanner.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Directed directed = db.Courses.Find(id);
+            Directed directed = db.Directeds.Find(id);
             if (directed == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName", directed.CategoryID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", directed.CourseID);
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName", directed.MajorID);
             return View(directed);
         }
@@ -85,7 +85,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CourseID,CourseName,MyProperty,Units,CategoryID,MajorID")] Directed directed)
+        public ActionResult Edit([Bind(Include = "DirectedID,CourseID,MajorID")] Directed directed)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +93,7 @@ namespace ProgramPlanner.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName", directed.CategoryID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", directed.CourseID);
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName", directed.MajorID);
             return View(directed);
         }
@@ -105,7 +105,7 @@ namespace ProgramPlanner.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Directed directed = db.Courses.Find(id);
+            Directed directed = db.Directeds.Find(id);
             if (directed == null)
             {
                 return HttpNotFound();
@@ -118,8 +118,8 @@ namespace ProgramPlanner.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Directed directed = db.Courses.Find(id);
-            db.Courses.Remove(directed);
+            Directed directed = db.Directeds.Find(id);
+            db.Directeds.Remove(directed);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

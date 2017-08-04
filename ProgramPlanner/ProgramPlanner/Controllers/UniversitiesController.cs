@@ -37,7 +37,7 @@ namespace ProgramPlanner.Controllers
 
         // GET: Universities/Create
         public ActionResult Create()
-        {            
+        {
             return View();
         }
 

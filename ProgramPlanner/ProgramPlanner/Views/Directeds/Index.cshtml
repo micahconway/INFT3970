@@ -12,16 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Category.CategoryName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CourseName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MyProperty)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Units)
+            @Html.DisplayNameFor(model => model.Course.CourseCode)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Major.MajorName)
@@ -32,24 +23,15 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Category.CategoryName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CourseName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MyProperty)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Units)
+            @Html.DisplayFor(modelItem => item.Course.CourseCode)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Major.MajorName)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CourseID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CourseID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CourseID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.DirectedID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DirectedID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DirectedID })
         </td>
     </tr>
 }

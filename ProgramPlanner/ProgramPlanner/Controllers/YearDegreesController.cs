@@ -48,10 +48,11 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "yearDegreeID,Year,DegreeID")] YearDegree yearDegree)
+        public ActionResult Create([Bind(Include = "YearDegreeID,YearDegreeName,Year,DegreeID")] YearDegree yearDegree)
         {
             if (ModelState.IsValid)
             {
+                yearDegree = addYearDegreeName(yearDegree);
                 db.YearDegrees.Add(yearDegree);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -82,10 +83,11 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "yearDegreeID,Year,DegreeID")] YearDegree yearDegree)
+        public ActionResult Edit([Bind(Include = "YearDegreeID,YearDegreeName,Year,DegreeID")] YearDegree yearDegree)
         {
             if (ModelState.IsValid)
             {
+                yearDegree = addYearDegreeName(yearDegree);
                 db.Entry(yearDegree).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -127,6 +129,16 @@ namespace ProgramPlanner.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        private YearDegree addYearDegreeName(YearDegree myYearDegree)
+        {
+            //following two lines ensure the YearDegreeName field is obtained, which is a derived field and should actually
+            //be the PK of the YearDegree table but can't be because MVC demands ints on. This way there is plain text and
+            //it looks nice.
+            Degree tempDegree = db.Degrees.Find(myYearDegree.DegreeID);
+            myYearDegree.YearDegreeName = tempDegree.DegreeName + "," + myYearDegree.Year.Year.ToString();
+            return myYearDegree;
         }
     }
 }

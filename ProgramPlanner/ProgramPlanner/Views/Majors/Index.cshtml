@@ -14,6 +14,9 @@
         <th>
             @Html.DisplayNameFor(model => model.MajorName)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YearDegreeID)
+        </th>
         <th></th>
     </tr>
 
@@ -21,6 +24,9 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.MajorName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YearDegreeID)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.MajorID }) |

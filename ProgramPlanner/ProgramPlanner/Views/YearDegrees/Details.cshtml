@@ -19,6 +19,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.YearDegreeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YearDegreeName)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Year)
         </dt>
 
@@ -29,6 +37,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.yearDegreeID }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.YearDegreeID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

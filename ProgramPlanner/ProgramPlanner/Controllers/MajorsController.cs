@@ -38,6 +38,8 @@ namespace ProgramPlanner.Controllers
         // GET: Majors/Create
         public ActionResult Create()
         {
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "YearDegreeID", "YearDegreeName");
+
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MajorID,MajorName")] Major major)
+        public ActionResult Create([Bind(Include = "MajorID,MajorName,YearDegreeID")] Major major)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +80,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MajorID,MajorName")] Major major)
+        public ActionResult Edit([Bind(Include = "MajorID,MajorName,YearDegreeID")] Major major)
         {
             if (ModelState.IsValid)
             {

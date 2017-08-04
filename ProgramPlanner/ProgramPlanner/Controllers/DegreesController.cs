@@ -17,7 +17,8 @@ namespace ProgramPlanner.Controllers
         // GET: Degrees
         public ActionResult Index()
         {
-            return View(db.Degrees.ToList());
+            var degrees = db.Degrees.Include(d => d.University);
+            return View(degrees.ToList());
         }
 
         // GET: Degrees/Details/5
@@ -38,6 +39,7 @@ namespace ProgramPlanner.Controllers
         // GET: Degrees/Create
         public ActionResult Create()
         {
+            ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "DegreeID,DegreeName")] Degree degree)
+        public ActionResult Create([Bind(Include = "DegreeID,DegreeName,UniversityID")] Degree degree)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName", degree.UniversityID);
             return View(degree);
         }
 
@@ -70,6 +73,7 @@ namespace ProgramPlanner.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName", degree.UniversityID);
             return View(degree);
         }
 
@@ -78,7 +82,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "DegreeID,DegreeName")] Degree degree)
+        public ActionResult Edit([Bind(Include = "DegreeID,DegreeName,UniversityID")] Degree degree)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace ProgramPlanner.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName", degree.UniversityID);
             return View(degree);
         }
 

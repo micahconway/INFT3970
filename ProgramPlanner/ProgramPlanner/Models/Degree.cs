@@ -11,6 +11,9 @@ namespace ProgramPlanner.Models
 
         public string DegreeName { get; set; }
 
+        public int UniversityID { get; set; }
+        public University University { get; set; }
+
         public virtual List<YearDegree> YearDegrees { get; set; }
     }
 }
