@@ -33,6 +33,14 @@ namespace ProgramPlanner.Models
 
         public DbSet<Directed> Directeds { get; set; }
 
+        public DbSet<MajorCore> MajorCores { get; set; }
+
+        public DbSet<DegreeCore> DegreeCores { get; set; }
+
+        public DbSet<PrerequisiteCourse> Prerequisites { get; set; }
+
+        public DbSet<NeededPrereq> NeededPrereqs { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelbuilder)
         {
             //some foreign key on delete no cascades
@@ -47,12 +55,5 @@ namespace ProgramPlanner.Models
                 .WillCascadeOnDelete(false);
         }
 
-        public System.Data.Entity.DbSet<ProgramPlanner.Models.MajorCore> MajorCores { get; set; }
-
-        public System.Data.Entity.DbSet<ProgramPlanner.Models.DegreeCore> DegreeCores { get; set; }
-
-        public System.Data.Entity.DbSet<ProgramPlanner.Models.PrerequisiteCourse> Prerequisites { get; set; }
-
-        public System.Data.Entity.DbSet<ProgramPlanner.Models.NeededPrereq> NeededPrereqs { get; set; }
     }
 }

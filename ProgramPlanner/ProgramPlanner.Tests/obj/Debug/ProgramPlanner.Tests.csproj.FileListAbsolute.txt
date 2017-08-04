@@ -240,6 +240,8 @@ C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\ProgramPlanner.Tests.dll.config
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\ProgramPlanner.Tests.dll
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\ProgramPlanner.Tests.pdb
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\EntityFramework.dll
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\Newtonsoft.Json.dll
@@ -257,11 +259,12 @@ C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\Microsoft.Owin.Security.dll
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\Owin.dll
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\EntityFramework.dll
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\ProgramPlanner.pdb
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\ProgramPlanner.dll.config
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\EntityFramework.xml
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\Newtonsoft.Json.xml
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\System.Web.Helpers.xml
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\System.Web.Mvc.xml
@@ -275,7 +278,6 @@ C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\Microsoft.Owin.Security.xml
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\EntityFramework.xml
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\obj\Debug\ProgramPlanner.Tests.csprojResolveAssemblyReference.cache
