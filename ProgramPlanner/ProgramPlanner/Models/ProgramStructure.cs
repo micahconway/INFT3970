@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 /// <summary>
 /// Author: Ryan Cunneen
 /// Date created: 04-Aug-2017
@@ -14,8 +15,10 @@ namespace ProgramPlanner.Models
     {
         public int ProgramStructureID { get; set; }
 
+        [Required]
         public DateTime DateCreated { get; set; }
 
+        [Required]
         public DateTime  DateModified { get; set; }
 
         public int UserID { get; set; }

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ProgramPlanner.Models.Replacement>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ReplacementCourseID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReplacedCourseID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReplacementCourseID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReplacedCourseID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ReplacementID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ReplacementID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ReplacementID })
+        </td>
+    </tr>
+}
+
+</table>

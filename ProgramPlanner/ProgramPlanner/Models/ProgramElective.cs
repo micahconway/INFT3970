@@ -14,9 +14,11 @@ namespace ProgramPlanner.Models
         public int ProgramElectiveID { get; set; }
 
         public int CourseID { get; set; }
+
         public virtual Course Course { get; set; }
 
         public int ProgramStructureID { get; set; }
+
         public virtual ProgramStructure ProgramStructure { get; set; }
 
     }
