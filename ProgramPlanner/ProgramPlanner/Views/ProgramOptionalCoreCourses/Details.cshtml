@@ -1,0 +1,34 @@
+﻿@model ProgramPlanner.Models.ProgramOptionalCoreCourse
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ProgramOptionalCoreCourse</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProgramStructure.ProgramStructureID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProgramStructure.ProgramStructureID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OptionalCoreID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OptionalCoreID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProgramOptionalCoreCourseID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

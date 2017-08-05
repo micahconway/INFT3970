@@ -14,9 +14,11 @@ namespace ProgramPlanner.Models
         public string NeededPrereqName { get; set; }
 
         public int Course { get; set; }
+
         public virtual Course RequiredCourse { get; set; }
         
         public int PrerequisiteCourseID { get; set; } 
+
         public virtual PrerequisiteCourse PrerequisiteCourse { get; set; }
 
         

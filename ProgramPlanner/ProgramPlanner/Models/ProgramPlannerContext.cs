@@ -33,6 +33,38 @@ namespace ProgramPlanner.Models
 
         public DbSet<Directed> Directeds { get; set; }
 
+        public DbSet<MajorCore> MajorCores { get; set; }
+
+        public DbSet<DegreeCore> DegreeCores { get; set; }
+
+        public DbSet<PrerequisiteCourse> Prerequisites { get; set; }
+
+        public DbSet<NeededPrereq> NeededPrereqs { get; set; }
+
+        public DbSet<User> Users { get; set; }
+
+        public DbSet<ProgramStructure> ProgramStructures { get; set; }
+
+        public DbSet<ProgramMajor> ProgramMajors { get; set; }
+
+        public DbSet<ProgramElective> ProgramElectives { get; set; }
+
+        public DbSet<ProgramDirected> ProgramDirecteds { get; set; }
+
+        public DbSet<ProgramOptionalCoreCourse> ProgramOptionalCoreCourses { get; set; }
+
+        public DbSet<OptionalCoreCourse> OptionalCoreCourses { get; set; }
+
+        public DbSet<DegreeCoreSlot> DegreeCoreSlots { get; set; }
+
+        public DbSet<Semester> Semesters { get; set; }
+
+        public DbSet<Trimester> Trimesters { get; set; }
+
+        public DbSet<SemesterCourse> SemesterCourses { get; set; }
+
+        public DbSet<TrimesterCourse> TrimesterCourses { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelbuilder)
         {
             //some foreign key on delete no cascades
@@ -45,14 +77,20 @@ namespace ProgramPlanner.Models
                 .HasOptional(y => y.DegreeCores)
                 .WithMany()
                 .WillCascadeOnDelete(false);
+
+            modelbuilder.Entity<Replacement>()
+                .HasOptional(y => y.ReplacedCourse)
+                .WithMany()
+                .HasForeignKey(y=>y.ReplacedCourseID)
+                .WillCascadeOnDelete(false);
+
+            modelbuilder.Entity<Replacement>()
+                .HasOptional(y => y.ReplacementCourse)
+                .WithMany()
+                .HasForeignKey(y => y.ReplacementCourseID)
+                .WillCascadeOnDelete(false);
         }
 
-        public System.Data.Entity.DbSet<ProgramPlanner.Models.MajorCore> MajorCores { get; set; }
-
-        public System.Data.Entity.DbSet<ProgramPlanner.Models.DegreeCore> DegreeCores { get; set; }
-
-        public System.Data.Entity.DbSet<ProgramPlanner.Models.PrerequisiteCourse> Prerequisites { get; set; }
-
-        public System.Data.Entity.DbSet<ProgramPlanner.Models.NeededPrereq> NeededPrereqs { get; set; }
+        public System.Data.Entity.DbSet<ProgramPlanner.Models.Replacement> Replacements { get; set; }
     }
 }

@@ -17,11 +17,14 @@ namespace ProgramPlanner.Models
         public DateTime Year { get; set; }
 
         public int DegreeID { get; set; }
+
         public Degree Degree { get; set; }
 
         public virtual List<Major> Majors { get; set; }
 
         public virtual List<DegreeCore> DegreeCores { get; set; }
+
+        public virtual List<DegreeCoreSlot> DegreeCoreSlots { get; set; }
 
     }
 }
