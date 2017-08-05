@@ -1,0 +1,94 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   ProgramPlanner/.vs/ProgramPlanner/v15/.suo
+#	modified:   ProgramPlanner/ProgramPlanner.Tests/bin/Debug/ProgramPlanner.Tests.dll
+#	modified:   ProgramPlanner/ProgramPlanner.Tests/bin/Debug/ProgramPlanner.Tests.pdb
+#	modified:   ProgramPlanner/ProgramPlanner.Tests/bin/Debug/ProgramPlanner.dll
+#	modified:   ProgramPlanner/ProgramPlanner.Tests/bin/Debug/ProgramPlanner.pdb
+#	modified:   ProgramPlanner/ProgramPlanner.Tests/obj/Debug/ProgramPlanner.Tests.csprojResolveAssemblyReference.cache
+#	modified:   ProgramPlanner/ProgramPlanner.Tests/obj/Debug/ProgramPlanner.Tests.dll
+#	modified:   ProgramPlanner/ProgramPlanner.Tests/obj/Debug/ProgramPlanner.Tests.pdb
+#
+# Changes not staged for commit:
+#	modified:   ProgramPlanner/ProgramPlanner/App_Data/ProgramPlannerContext-20170729114207.mdf
+#	modified:   ProgramPlanner/ProgramPlanner/App_Data/ProgramPlannerContext-20170729114207_log.ldf
+#	modified:   ProgramPlanner/ProgramPlanner/Models/Category.cs
+#	modified:   ProgramPlanner/ProgramPlanner/Models/Course.cs
+#	modified:   ProgramPlanner/ProgramPlanner/Models/Degree.cs
+#	modified:   ProgramPlanner/ProgramPlanner/Models/DegreeCore.cs
+#	modified:   ProgramPlanner/ProgramPlanner/Models/Directed.cs
+#	modified:   ProgramPlanner/ProgramPlanner/Models/Major.cs
+#	modified:   ProgramPlanner/ProgramPlanner/Models/MajorCore.cs
+#	modified:   ProgramPlanner/ProgramPlanner/Models/NeededPrereq.cs
+#	modified:   ProgramPlanner/ProgramPlanner/Models/ProgramElective.cs
+#	modified:   ProgramPlanner/ProgramPlanner/Models/ProgramPlannerContext.cs
+#	modified:   ProgramPlanner/ProgramPlanner/Models/ProgramStructure.cs
+#	modified:   ProgramPlanner/ProgramPlanner/Models/User.cs
+#	modified:   ProgramPlanner/ProgramPlanner/Models/YearDegree.cs
+#	modified:   ProgramPlanner/ProgramPlanner/ProgramPlanner.csproj
+#	modified:   ProgramPlanner/ProgramPlanner/bin/ProgramPlanner.dll
+#	modified:   ProgramPlanner/ProgramPlanner/bin/ProgramPlanner.pdb
+#	modified:   ProgramPlanner/ProgramPlanner/obj/Debug/CoreCompileInputs.cache
+#	modified:   ProgramPlanner/ProgramPlanner/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+#	modified:   ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.csproj.FileListAbsolute.txt
+#	modified:   ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.csproj.GenerateResource.Cache
+#	modified:   ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.dll
+#	modified:   ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.pdb
+#
+# Untracked files:
+#	ProgramPlanner/ProgramPlanner/Controllers/ReplacementsController.cs
+#	ProgramPlanner/ProgramPlanner/Controllers/SemestersController.cs
+#	ProgramPlanner/ProgramPlanner/Controllers/TrimestersController.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050044368_Update3l.Designer.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050044368_Update3l.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050044368_Update3l.resx
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050344179_Update4a.Designer.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050344179_Update4a.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050344179_Update4a.resx
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050348107_Update4b.Designer.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050348107_Update4b.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050348107_Update4b.resx
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050349468_Update4c.Designer.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050349468_Update4c.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050349468_Update4c.resx
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050353012_Update4d.Designer.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050353012_Update4d.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050353012_Update4d.resx
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050354117_Update4e.Designer.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050354117_Update4e.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050354117_Update4e.resx
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050404203_Update4f.Designer.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050404203_Update4f.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050404203_Update4f.resx
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050416021_Update4g.Designer.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050416021_Update4g.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050416021_Update4g.resx
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050430552_Update4h.Designer.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050430552_Update4h.cs
+#	ProgramPlanner/ProgramPlanner/Migrations/201708050430552_Update4h.resx
+#	ProgramPlanner/ProgramPlanner/Models/Replacement.cs
+#	ProgramPlanner/ProgramPlanner/Models/Semester.cs
+#	ProgramPlanner/ProgramPlanner/Models/SemesterCourse.cs
+#	ProgramPlanner/ProgramPlanner/Models/Trimester.cs
+#	ProgramPlanner/ProgramPlanner/Models/TrimesterCourse.cs
+#	ProgramPlanner/ProgramPlanner/Views/Replacements/
+#	ProgramPlanner/ProgramPlanner/Views/SemesterCourses/
+#	ProgramPlanner/ProgramPlanner/Views/Semesters/
+#	ProgramPlanner/ProgramPlanner/Views/TrimesterCourses/
+#	ProgramPlanner/ProgramPlanner/Views/Trimesters/
+#	ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.Migrations.Update3l.resources
+#	ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.Migrations.Update4a.resources
+#	ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.Migrations.Update4b.resources
+#	ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.Migrations.Update4c.resources
+#	ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.Migrations.Update4d.resources
+#	ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.Migrations.Update4e.resources
+#	ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.Migrations.Update4f.resources
+#	ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.Migrations.Update4g.resources
+#	ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.Migrations.Update4h.resources
+#
+
