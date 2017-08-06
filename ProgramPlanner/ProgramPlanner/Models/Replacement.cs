@@ -24,5 +24,11 @@ namespace ProgramPlanner.Models
 
         [ForeignKey("ReplacedCourseID")]
         public Course ReplacedCourse { get; set; }
+        
+        public int YearDegreeID { get; set; }
+
+        [ForeignKey("YearDegreeID")]
+        public YearDegree YearDegree { get; set; }
+
     }
 }

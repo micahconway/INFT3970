@@ -15,6 +15,9 @@ namespace ProgramPlanner.Models
 
         public int UniversityID { get; set; }
 
+        // How long the degree will take the complete (Years). 
+        public int Duration { get; set; }
+
         public University University { get; set; }
 
         public virtual List<YearDegree> YearDegrees { get; set; }
