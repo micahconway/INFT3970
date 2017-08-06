@@ -38,6 +38,8 @@ namespace ProgramPlanner.Controllers
         // GET: Replacements/Create
         public ActionResult Create()
         {
+            ViewBag.ReplacementCourseID = new SelectList(db.Courses, "CourseID", "CourseCode");
+            ViewBag.ReplacedCourseID = new SelectList(db.Courses, "CourseID", "CourseCode");
             return View();
         }
 
@@ -60,7 +62,7 @@ namespace ProgramPlanner.Controllers
 
         // GET: Replacements/Edit/5
         public ActionResult Edit(int? id)
-        {
+        {            
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -70,6 +72,13 @@ namespace ProgramPlanner.Controllers
             {
                 return HttpNotFound();
             }
+
+            Course replacementCourse = db.Courses.Find(replacement.ReplacementCourseID);
+            ViewBag.ReplacementCourseID = new SelectList(db.Courses, "CourseID", "CourseCode", replacement.ReplacementCourseID);
+
+            Course replacedCourse = db.Courses.Find(replacement.ReplacedCourseID);
+            ViewBag.ReplacedCourseID = new SelectList(db.Courses, "CourseID", "CourseCode", replacement.ReplacedCourseID);
+
             return View(replacement);
         }
 
