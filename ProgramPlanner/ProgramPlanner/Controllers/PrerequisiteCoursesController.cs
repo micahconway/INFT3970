@@ -17,8 +17,8 @@ namespace ProgramPlanner.Controllers
         // GET: PrerequisiteCourses
         public ActionResult Index()
         {
-            var prerequisites = db.Prerequisites.Include(p => p.NeededPrereq);
-            return View(prerequisites.ToList());
+            var prerequisiteCourses = db.PrerequisiteCourses.Include(p => p.Prerequisite).Include(p => p.RequiredCourse);
+            return View(prerequisiteCourses.ToList());
         }
 
         // GET: PrerequisiteCourses/Details/5
@@ -28,7 +28,7 @@ namespace ProgramPlanner.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PrerequisiteCourse prerequisiteCourse = db.Prerequisites.Find(id);
+            PrerequisiteCourse prerequisiteCourse = db.PrerequisiteCourses.Find(id);
             if (prerequisiteCourse == null)
             {
                 return HttpNotFound();
@@ -39,8 +39,8 @@ namespace ProgramPlanner.Controllers
         // GET: PrerequisiteCourses/Create
         public ActionResult Create()
         {
-            ViewBag.NeededPrereqID = new SelectList(db.NeededPrereqs, "NeededPrereqID", "NeededPrereqName");
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode");
+            ViewBag.PrerequisiteID = new SelectList(db.Courses, "CourseID", "CourseCode");
+            ViewBag.RequiredCourseID = new SelectList(db.Courses, "CourseID", "CourseCode");
             return View();
         }
 
@@ -49,17 +49,17 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PrerequisiteCourseID,Course,NeededPrereqID")] PrerequisiteCourse prerequisiteCourse)
+        public ActionResult Create([Bind(Include = "PrerequisiteCourseID,RequiredCourseID,PrerequisiteID")] PrerequisiteCourse prerequisiteCourse)
         {
             if (ModelState.IsValid)
             {
-                prerequisiteCourse = addCourseName(prerequisiteCourse);
-                db.Prerequisites.Add(prerequisiteCourse);
+                db.PrerequisiteCourses.Add(prerequisiteCourse);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.PrerequisiteCourseID = new SelectList(db.NeededPrereqs, "NeededPrereqID", "NeededPrereqID", prerequisiteCourse.PrerequisiteCourseID);
+            ViewBag.PrerequisiteID = new SelectList(db.Courses, "CourseID", "CourseCode", prerequisiteCourse.PrerequisiteID);
+            ViewBag.RequiredCourseID = new SelectList(db.Courses, "CourseID", "CourseCode", prerequisiteCourse.RequiredCourseID);
             return View(prerequisiteCourse);
         }
 
@@ -70,12 +70,13 @@ namespace ProgramPlanner.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PrerequisiteCourse prerequisiteCourse = db.Prerequisites.Find(id);
+            PrerequisiteCourse prerequisiteCourse = db.PrerequisiteCourses.Find(id);
             if (prerequisiteCourse == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.PrerequisiteCourseID = new SelectList(db.NeededPrereqs, "NeededPrereqID", "NeededPrereqID", prerequisiteCourse.PrerequisiteCourseID);
+            ViewBag.PrerequisiteID = new SelectList(db.Courses, "CourseID", "CourseCode", prerequisiteCourse.PrerequisiteID);
+            ViewBag.RequiredCourseID = new SelectList(db.Courses, "CourseID", "CourseCode", prerequisiteCourse.RequiredCourseID);
             return View(prerequisiteCourse);
         }
 
@@ -84,16 +85,16 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PrerequisiteCourseID,Course,NeededPrereqID")] PrerequisiteCourse prerequisiteCourse)
+        public ActionResult Edit([Bind(Include = "PrerequisiteCourseID,RequiredCourseID,PrerequisiteID")] PrerequisiteCourse prerequisiteCourse)
         {
             if (ModelState.IsValid)
             {
-                prerequisiteCourse = addCourseName(prerequisiteCourse);
                 db.Entry(prerequisiteCourse).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.PrerequisiteCourseID = new SelectList(db.NeededPrereqs, "NeededPrereqID", "NeededPrereqID", prerequisiteCourse.PrerequisiteCourseID);
+            ViewBag.PrerequisiteID = new SelectList(db.Courses, "CourseID", "CourseCode", prerequisiteCourse.PrerequisiteID);
+            ViewBag.RequiredCourseID = new SelectList(db.Courses, "CourseID", "CourseCode", prerequisiteCourse.RequiredCourseID);
             return View(prerequisiteCourse);
         }
 
@@ -104,7 +105,7 @@ namespace ProgramPlanner.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PrerequisiteCourse prerequisiteCourse = db.Prerequisites.Find(id);
+            PrerequisiteCourse prerequisiteCourse = db.PrerequisiteCourses.Find(id);
             if (prerequisiteCourse == null)
             {
                 return HttpNotFound();
@@ -117,8 +118,8 @@ namespace ProgramPlanner.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            PrerequisiteCourse prerequisiteCourse = db.Prerequisites.Find(id);
-            db.Prerequisites.Remove(prerequisiteCourse);
+            PrerequisiteCourse prerequisiteCourse = db.PrerequisiteCourses.Find(id);
+            db.PrerequisiteCourses.Remove(prerequisiteCourse);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -131,14 +132,5 @@ namespace ProgramPlanner.Controllers
             }
             base.Dispose(disposing);
         }
-
-        //gets CourseCode for this prerequisite
-        private PrerequisiteCourse addCourseName(PrerequisiteCourse myCourse)
-        {
-            Course tempCourse = db.Courses.Find(myCourse.Course);
-            myCourse.PrerequisiteCourseName = tempCourse.CourseCode;
-            return myCourse;
-        }
-        
     }
 }

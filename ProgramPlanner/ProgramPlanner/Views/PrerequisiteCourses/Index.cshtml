@@ -12,29 +12,23 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.NeededPrereq.NeededPrereqID)
+            Required Course
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Course)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NeededPrereqID)
+            Assumed Knowledge
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr>W
         <td>
-            @Html.DisplayFor(modelItem => item.NeededPrereq.NeededPrereqID)
+            @Html.DisplayFor(modelItem => item.RequiredCourse.CourseCode)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Course)
+            @Html.DisplayFor(modelItem => item.Prerequisite.CourseCode)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NeededPrereqID)
-        </td>
-        <td>
+        <td>W
             @Html.ActionLink("Edit", "Edit", new { id=item.PrerequisiteCourseID }) |
             @Html.ActionLink("Details", "Details", new { id=item.PrerequisiteCourseID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.PrerequisiteCourseID })

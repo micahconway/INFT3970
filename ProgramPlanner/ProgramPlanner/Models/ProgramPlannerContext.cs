@@ -37,10 +37,6 @@ namespace ProgramPlanner.Models
 
         public DbSet<DegreeCore> DegreeCores { get; set; }
 
-        public DbSet<PrerequisiteCourse> Prerequisites { get; set; }
-
-        public DbSet<NeededPrereq> NeededPrereqs { get; set; }
-
         public DbSet<User> Users { get; set; }
 
         public DbSet<ProgramStructure> ProgramStructures { get; set; }
@@ -65,24 +61,64 @@ namespace ProgramPlanner.Models
 
         public DbSet<TrimesterCourse> TrimesterCourses { get; set; }
 
+        public DbSet<Replacement> Replacements { get; set; }
+
+        public DbSet<PrerequisiteCourse> PrerequisiteCourses { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
         protected override void OnModelCreating(DbModelBuilder modelbuilder)
         {
+            ModelCourse(modelbuilder);
+            ModelYearDegree(modelbuilder);
+            ModelReplacement(modelbuilder);
+            ModelPrerequisitie(modelbuilder);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void ModelCourse(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<Course>()
+                .HasOptional(y => y.PrerequisiteCourses)
+                .WithMany()
+                .WillCascadeOnDelete(true);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void ModelYearDegree(DbModelBuilder modelbuilder) {
+                             
             //some foreign key on delete no cascades
             modelbuilder.Entity<YearDegree>()
-                .HasOptional(y => y.Majors)
+                .HasRequired(y => y.Majors)
                 .WithMany()
                 .WillCascadeOnDelete(false);
 
             modelbuilder.Entity<YearDegree>()
-                .HasOptional(y => y.DegreeCores)
+                .HasRequired(y => y.DegreeCores)
                 .WithMany()
                 .WillCascadeOnDelete(false);
 
+            // Ignore the Class attribute YearDegreeName.
+            modelbuilder.Entity<YearDegree>()
+                .Ignore(y => y.YearDegreeName);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void ModelReplacement(DbModelBuilder modelbuilder)
+        {
             modelbuilder.Entity<Replacement>()
-                .HasOptional(y => y.ReplacedCourse)
-                .WithMany()
-                .HasForeignKey(y=>y.ReplacedCourseID)
-                .WillCascadeOnDelete(false);
+              .HasOptional(y => y.ReplacedCourse)
+              .WithMany()
+              .HasForeignKey(y => y.ReplacedCourseID)
+              .WillCascadeOnDelete(false);
 
             modelbuilder.Entity<Replacement>()
                 .HasOptional(y => y.ReplacementCourse)
@@ -90,7 +126,23 @@ namespace ProgramPlanner.Models
                 .HasForeignKey(y => y.ReplacementCourseID)
                 .WillCascadeOnDelete(false);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void ModelPrerequisitie(DbModelBuilder modelbuilder) {
+            modelbuilder.Entity<PrerequisiteCourse>()
+                .HasRequired(y => y.RequiredCourse)
+                .WithMany()
+                .HasForeignKey(y => y.RequiredCourseID)
+                .WillCascadeOnDelete(false);
 
-        public System.Data.Entity.DbSet<ProgramPlanner.Models.Replacement> Replacements { get; set; }
+
+            modelbuilder.Entity<PrerequisiteCourse>()
+                .HasRequired(y => y.Prerequisite)
+                .WithMany()
+                .HasForeignKey(y => y.PrerequisiteID)
+                .WillCascadeOnDelete(false);
+        }
     }
 }

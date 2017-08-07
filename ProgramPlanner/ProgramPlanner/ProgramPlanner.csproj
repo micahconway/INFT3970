@@ -199,7 +199,6 @@
     <Compile Include="Controllers\MajorCoresController.cs" />
     <Compile Include="Controllers\MajorsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\NeededPrereqsController.cs" />
     <Compile Include="Controllers\OptionalCoreCoursesController.cs" />
     <Compile Include="Controllers\PrerequisiteCoursesController.cs" />
     <Compile Include="Controllers\ProgramDirectedsController.cs" />
@@ -356,6 +355,86 @@
     <Compile Include="Migrations\201708052355452_Update4j.Designer.cs">
       <DependentUpon>201708052355452_Update4j.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708060051183_Update4k.cs" />
+    <Compile Include="Migrations\201708060051183_Update4k.Designer.cs">
+      <DependentUpon>201708060051183_Update4k.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708060053547_Update4m.cs" />
+    <Compile Include="Migrations\201708060053547_Update4m.Designer.cs">
+      <DependentUpon>201708060053547_Update4m.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708060054347_Update4n.cs" />
+    <Compile Include="Migrations\201708060054347_Update4n.Designer.cs">
+      <DependentUpon>201708060054347_Update4n.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708060056253_Update4i1.cs" />
+    <Compile Include="Migrations\201708060056253_Update4i1.Designer.cs">
+      <DependentUpon>201708060056253_Update4i1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708060101205_Update5a.cs" />
+    <Compile Include="Migrations\201708060101205_Update5a.Designer.cs">
+      <DependentUpon>201708060101205_Update5a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708060101518_Update5b.cs" />
+    <Compile Include="Migrations\201708060101518_Update5b.Designer.cs">
+      <DependentUpon>201708060101518_Update5b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708060105057_Update5c.cs" />
+    <Compile Include="Migrations\201708060105057_Update5c.Designer.cs">
+      <DependentUpon>201708060105057_Update5c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708060106181_Update5d.cs" />
+    <Compile Include="Migrations\201708060106181_Update5d.Designer.cs">
+      <DependentUpon>201708060106181_Update5d.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708060107119_Update5e.cs" />
+    <Compile Include="Migrations\201708060107119_Update5e.Designer.cs">
+      <DependentUpon>201708060107119_Update5e.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708060107575_Update5f.cs" />
+    <Compile Include="Migrations\201708060107575_Update5f.Designer.cs">
+      <DependentUpon>201708060107575_Update5f.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708060108253_Update5f1.cs" />
+    <Compile Include="Migrations\201708060108253_Update5f1.Designer.cs">
+      <DependentUpon>201708060108253_Update5f1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708060110102_Update5h.cs" />
+    <Compile Include="Migrations\201708060110102_Update5h.Designer.cs">
+      <DependentUpon>201708060110102_Update5h.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708060114155_Update5k.cs" />
+    <Compile Include="Migrations\201708060114155_Update5k.Designer.cs">
+      <DependentUpon>201708060114155_Update5k.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708060116440_Update5k1.cs" />
+    <Compile Include="Migrations\201708060116440_Update5k1.Designer.cs">
+      <DependentUpon>201708060116440_Update5k1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708060119010_Update5m.cs" />
+    <Compile Include="Migrations\201708060119010_Update5m.Designer.cs">
+      <DependentUpon>201708060119010_Update5m.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708070141475_Update5p.cs" />
+    <Compile Include="Migrations\201708070141475_Update5p.Designer.cs">
+      <DependentUpon>201708070141475_Update5p.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708070149587_Update5q.cs" />
+    <Compile Include="Migrations\201708070149587_Update5q.Designer.cs">
+      <DependentUpon>201708070149587_Update5q.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708070206490_Update5r.cs" />
+    <Compile Include="Migrations\201708070206490_Update5r.Designer.cs">
+      <DependentUpon>201708070206490_Update5r.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708070214382_Update5s.cs" />
+    <Compile Include="Migrations\201708070214382_Update5s.Designer.cs">
+      <DependentUpon>201708070214382_Update5s.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708070226044_Update5.cs" />
+    <Compile Include="Migrations\201708070226044_Update5.Designer.cs">
+      <DependentUpon>201708070226044_Update5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -368,7 +447,6 @@
     <Compile Include="Models\Major.cs" />
     <Compile Include="Models\MajorCore.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\NeededPrereq.cs" />
     <Compile Include="Models\OptionalCoreCourse.cs" />
     <Compile Include="Models\PrerequisiteCourse.cs" />
     <Compile Include="Models\ProgramDirected.cs" />
@@ -490,16 +568,6 @@
     <Content Include="Views\DegreeCores\Details.cshtml" />
     <Content Include="Views\DegreeCores\Edit.cshtml" />
     <Content Include="Views\DegreeCores\Index.cshtml" />
-    <Content Include="Views\NeededPrereqs\Create.cshtml" />
-    <Content Include="Views\NeededPrereqs\Delete.cshtml" />
-    <Content Include="Views\NeededPrereqs\Details.cshtml" />
-    <Content Include="Views\NeededPrereqs\Edit.cshtml" />
-    <Content Include="Views\NeededPrereqs\Index.cshtml" />
-    <Content Include="Views\PrerequisiteCourses\Create.cshtml" />
-    <Content Include="Views\PrerequisiteCourses\Delete.cshtml" />
-    <Content Include="Views\PrerequisiteCourses\Details.cshtml" />
-    <Content Include="Views\PrerequisiteCourses\Edit.cshtml" />
-    <Content Include="Views\PrerequisiteCourses\Index.cshtml" />
     <Content Include="Views\Users\Create.cshtml" />
     <Content Include="Views\Users\Delete.cshtml" />
     <Content Include="Views\Users\Details.cshtml" />
@@ -565,6 +633,11 @@
     <Content Include="Views\Trimesters\Details.cshtml" />
     <Content Include="Views\Trimesters\Edit.cshtml" />
     <Content Include="Views\Trimesters\Index.cshtml" />
+    <Content Include="Views\PrerequisiteCourses\Create.cshtml" />
+    <Content Include="Views\PrerequisiteCourses\Delete.cshtml" />
+    <Content Include="Views\PrerequisiteCourses\Details.cshtml" />
+    <Content Include="Views\PrerequisiteCourses\Edit.cshtml" />
+    <Content Include="Views\PrerequisiteCourses\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -690,6 +763,66 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708052355452_Update4j.resx">
       <DependentUpon>201708052355452_Update4j.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708060051183_Update4k.resx">
+      <DependentUpon>201708060051183_Update4k.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708060053547_Update4m.resx">
+      <DependentUpon>201708060053547_Update4m.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708060054347_Update4n.resx">
+      <DependentUpon>201708060054347_Update4n.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708060056253_Update4i1.resx">
+      <DependentUpon>201708060056253_Update4i1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708060101205_Update5a.resx">
+      <DependentUpon>201708060101205_Update5a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708060101518_Update5b.resx">
+      <DependentUpon>201708060101518_Update5b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708060105057_Update5c.resx">
+      <DependentUpon>201708060105057_Update5c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708060106181_Update5d.resx">
+      <DependentUpon>201708060106181_Update5d.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708060107119_Update5e.resx">
+      <DependentUpon>201708060107119_Update5e.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708060107575_Update5f.resx">
+      <DependentUpon>201708060107575_Update5f.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708060108253_Update5f1.resx">
+      <DependentUpon>201708060108253_Update5f1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708060110102_Update5h.resx">
+      <DependentUpon>201708060110102_Update5h.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708060114155_Update5k.resx">
+      <DependentUpon>201708060114155_Update5k.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708060116440_Update5k1.resx">
+      <DependentUpon>201708060116440_Update5k1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708060119010_Update5m.resx">
+      <DependentUpon>201708060119010_Update5m.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708070141475_Update5p.resx">
+      <DependentUpon>201708070141475_Update5p.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708070149587_Update5q.resx">
+      <DependentUpon>201708070149587_Update5q.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708070206490_Update5r.resx">
+      <DependentUpon>201708070206490_Update5r.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708070214382_Update5s.resx">
+      <DependentUpon>201708070214382_Update5s.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708070226044_Update5.resx">
+      <DependentUpon>201708070226044_Update5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
