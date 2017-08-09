@@ -11,7 +11,20 @@ namespace ProgramPlanner.Controllers
         // GET: Plan
         public ActionResult Index()
         {
+            ViewBag.YearsInDegree = 3;
             ViewBag.SubjectsPerSemester = 4;
+            return View();
+        }
+
+        public ActionResult Submit()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Submit(string blah)
+        {
             return View();
         }
     }

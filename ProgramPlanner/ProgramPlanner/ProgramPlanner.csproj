@@ -578,6 +578,7 @@
     <Content Include="Views\Trimesters\Edit.cshtml" />
     <Content Include="Views\Trimesters\Index.cshtml" />
     <Content Include="Views\Plan\Index.cshtml" />
+    <Content Include="Views\Plan\Submit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

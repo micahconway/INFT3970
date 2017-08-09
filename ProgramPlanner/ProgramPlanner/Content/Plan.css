@@ -1,4 +1,38 @@
-﻿.box{
-    color:blue;
+﻿.courseBoxContainer {
+    padding:0px;
+    padding-right:5px;
+}
 
+.year {
+    margin-bottom: 10px;
+}
+
+#plan_all{
+    position:relative;
+    left:50px;
+    top:100px;
+}
+
+.rowName{
+    line-height:100px;
+}
+
+.semestername{
+    text-align:center;
+    position:relative;
+    top:100px;
+}
+
+#plan{
+    position:relative;
+    width:860px;
+    left:200px;
+    top:100px;
+}
+
+.courseBox {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color:aliceblue;
 }
