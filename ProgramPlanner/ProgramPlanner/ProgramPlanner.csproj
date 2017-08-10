@@ -645,19 +645,13 @@
     <Content Include="Views\Trimesters\Details.cshtml" />
     <Content Include="Views\Trimesters\Edit.cshtml" />
     <Content Include="Views\Trimesters\Index.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\PrerequisiteCourses\Create.cshtml" />
     <Content Include="Views\PrerequisiteCourses\Delete.cshtml" />
     <Content Include="Views\PrerequisiteCourses\Details.cshtml" />
     <Content Include="Views\PrerequisiteCourses\Edit.cshtml" />
     <Content Include="Views\PrerequisiteCourses\Index.cshtml" />
-=======
     <Content Include="Views\Plan\Index.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Plan\Submit.cshtml" />
-=======
->>>>>>> origin/master
->>>>>>> 428a6e3c27f7bd6b6d6392274f1cb34442ac907e
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
