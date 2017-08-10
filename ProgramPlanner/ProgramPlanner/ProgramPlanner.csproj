@@ -449,6 +449,7 @@
     <Compile Include="Models\MajorCore.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\OptionalCoreCourse.cs" />
+    <Compile Include="Models\Plan.cs" />
     <Compile Include="Models\PrerequisiteCourse.cs" />
     <Compile Include="Models\ProgramDirected.cs" />
     <Compile Include="Models\ProgramElective.cs" />

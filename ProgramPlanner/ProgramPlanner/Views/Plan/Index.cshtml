@@ -40,14 +40,30 @@
         }
     </div>
 
-    <input type="button" title="Submit" value="S" onclick="location.href='@Url.Action("Submit", "Plan", new { animal = "fish" })'" />
+    <form id="myForm">
+        <input type="hidden" name="InputData" id="courseInput"/>
 
+        <input type="submit" value="Submit" class="btn btn-default" onclick="recordCourseBoxData()" />
+    </form>
+
+    
     <script type="text/javascript">
         $(function () {
             $('#plan').shapeshift({
                 gutterX: 5,
             });
         });
+
+        //read html values from courseBoxes
+        function recordCourseBoxData() {
+            $("btnSubmit").on("click", function () {
+                var courseText;
+                $(".courseBox").each(function () {
+                    courseText = courseText + this.html();
+                });
+                $("#courseInput").val(courseText);
+            });
+        } 
     </script>
 
     
