@@ -28,42 +28,106 @@
         {
             for (var y = 1; y <= @ViewBag.SubjectsPerSemester * 2; y++)
             {
-                if (@y <= 4)
-                {
-                    <div class="courseBox">Course @y</div>
-                }
-                else
-                {
-                    <div class="courseBox">Course @y</div>
-                }
+                <div class="courseBox">Course @y</div>
             }
         }
     </div>
 
-    <form id="myForm">
-        <input type="hidden" name="InputData" id="courseInput"/>
+    <div id="optionsMenu" class="col-md-1">
+        <input type="number" min="1" max="5" value="4" id="newNumOfSubjects" />
+        <input type="button" id="btnPicker" value="Update"/>
+        <input type="hidden" name="oldNumOfSubjects" id="oldNumOfSubjects" value="@ViewBag.SubjectsPerSemester"/>
+    </div>
 
-        <input type="submit" value="Submit" class="btn btn-default" onclick="recordCourseBoxData()" />
-    </form>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <form class="form-group">
+            <input type="hidden" name="InputData" id="courseInput"/>
+            <input type="submit" value="Index" class="btn btn-default" id="btnPicker"/>
+        </form>
+    }
 
-    
+
     <script type="text/javascript">
-        $(function () {
+        $(function () {     
+
+            var planWidth = 2 * $("#oldNumOfSubjects").val() * 115;
+            $("#plan").css("width", planWidth);
+
             $('#plan').shapeshift({
                 gutterX: 5,
             });
+
+            //set initial values
+            var courseText = "";
+            $(".courseBox").each(function () {
+                courseText = courseText + $(this).text() + ",";
+            });
+            $("#courseInput").val(courseText);            
+
         });
 
-        //read html values from courseBoxes
-        function recordCourseBoxData() {
-            $("btnSubmit").on("click", function () {
-                var courseText;
-                $(".courseBox").each(function () {
-                    courseText = courseText + this.html();
-                });
-                $("#courseInput").val(courseText);
+        //every time a box is dropped and dragged, loop through all the boxes and reset the value of the hidden field that stores the
+        //html values of all the boxes. when submit button is clicked, that value is sent through to the plancontroller.
+        $container = $("#plan");
+        $container.on("ss-rearranged", function (e, selected) {
+            var courseText = "";
+            $(".courseBox").each(function () {
+                courseText = courseText + $(this).text() + ",";
             });
-        } 
+            $("#courseInput").val(courseText);
+        });
+
+        //on click to change number of subjects per semester
+        $("#btnPicker").click(function () {
+
+            var oldNumber = $("#oldNumOfSubjects").val();
+            var newNumber = $("#newNumOfSubjects").val();
+            var difference = newNumber - oldNumber;
+
+            if (difference != 0) {//if a change was actually made
+                //change width to fit new number of courseBoxes
+                var planWidth = 2 * newNumber * 115;
+                $("#plan").css("width", planWidth);
+
+                var counter = 1;
+                if (difference > 0) {
+                    $(".courseBox").each(function () {
+                        if (counter % oldNumber == 0) {
+                            for (var i = 0; i < difference; i++) {
+                                $(this).after("<div class='courseBox'>Empty Course</div>");
+                            }
+                            
+                        }
+                        counter = counter + 1;                            
+                    });
+                    
+                }
+                else {//remove courseBox
+                    for (var i = 0; i > difference; i--) {
+                        $(".courseBox").each(function () {
+                            if (counter % oldNumber == 0) {
+                                $(this).remove();
+                            }
+                            counter = counter + 1;
+                        });
+                        oldNumber = oldNumber - 1;
+                    }
+                }
+
+                $("#oldNumOfSubjects").val(newNumber);
+
+
+                $('#plan').shapeshift({
+                    gutterX: 5,
+                });
+            }
+
+            
+
+        });
+
     </script>
 
     

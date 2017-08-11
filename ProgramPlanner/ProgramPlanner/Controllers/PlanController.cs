@@ -12,22 +12,24 @@ namespace ProgramPlanner.Controllers
 {
     public class PlanController : Controller
     {
+        private ProgramPlannerContext db = new ProgramPlannerContext();
+
         // GET: Plan
         public ActionResult Index()
         {
             ViewBag.YearsInDegree = 3;
             ViewBag.SubjectsPerSemester = 4;
-            return View();
-        }
 
-        public ActionResult Submit()
-        {
+            //YearDegree yearDegree = db.YearDegrees.Find("1");            
+            //ViewBag.YearDegreeSelected = "";
+            //ViewBag.DegreeCoreCourses = 
+
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Submit(Plan plan)
+        public ActionResult Index([Bind(Include = "InputData")]Plan plan)
         {
             string blah = plan.InputData;
             return View();
