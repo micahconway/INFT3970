@@ -13,22 +13,17 @@ namespace ProgramPlanner.Models
 {
     public class Replacement
     {
-        public int ReplacementID { get; set; }
+        public int ReplacementCourseID { get; set; }
 
-        public int? ReplacementCourseID { get; set; }
+        public virtual Course ReplacementCourse { get; set; }
+  
+        public int ReplacedCourseID { get; set; }
 
-        [ForeignKey("ReplacementCourseID")]
-        public Course ReplacementCourse { get; set; }
-
-        public int? ReplacedCourseID { get; set; }
-
-        [ForeignKey("ReplacedCourseID")]
-        public Course ReplacedCourse { get; set; }
+        public virtual Course ReplacedCourse { get; set; }
         
         public int YearDegreeID { get; set; }
 
-        [ForeignKey("YearDegreeID")]
-        public YearDegree YearDegree { get; set; }
+        public virtual YearDegree YearDegree { get; set; }
 
     }
 }

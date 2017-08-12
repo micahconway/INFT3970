@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\micah\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\ApplicationInsights.config
 C:\Users\micah\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\roslyn\csc.exe
 C:\Users\micah\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\roslyn\csc.exe.config
@@ -197,8 +196,6 @@ C:\Users\Ryan\Source\Repos\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\Prog
 C:\Users\Ryan\Source\Repos\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csproj.GenerateResource.Cache
 C:\Users\Ryan\Source\Repos\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.dll
 C:\Users\Ryan\Source\Repos\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.pdb
-=======
->>>>>>> origin/master
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\bin\ApplicationInsights.config
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\bin\roslyn\csc.exe
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\bin\roslyn\csc.exe.config
@@ -351,7 +348,6 @@ C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\Pro
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.dll
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.pdb
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csprojResolveAssemblyReference.cache
-<<<<<<< HEAD
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\ApplicationInsights.config
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\roslyn\csc.exe
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\roslyn\csc.exe.config
@@ -461,10 +457,10 @@ C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update13.resources
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update14.resources
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update17.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Blah.resources
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.test.resources
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.test2.resources
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.test3.resources
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csproj.GenerateResource.Cache
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.dll
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.pdb
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Blah2.resources
-=======
->>>>>>> origin/master
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.test4.resources
