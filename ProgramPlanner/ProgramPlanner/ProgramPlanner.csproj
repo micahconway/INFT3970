@@ -201,14 +201,13 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OptionalCoreCoursesController.cs" />
     <Compile Include="Controllers\PlanController.cs" />
-    <Compile Include="Controllers\PrerequisiteCoursesController.cs" />
     <Compile Include="Controllers\ProgramDirectedsController.cs" />
     <Compile Include="Controllers\ProgramElectivesController.cs" />
     <Compile Include="Controllers\ProgramMajorsController.cs" />
     <Compile Include="Controllers\ProgramOptionalCoreCoursesController.cs" />
     <Compile Include="Controllers\ProgramStructuresController.cs" />
     <Compile Include="Controllers\ReplacementsController.cs" />
-    <Compile Include="Controllers\SemestersController.cs" />
+    <Compile Include="Controllers\SemesterCoursesController.cs" />
     <Compile Include="Controllers\TrimestersController.cs" />
     <Compile Include="Controllers\UniversitiesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
@@ -216,225 +215,77 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201707290354203_InitialMigration.cs" />
-    <Compile Include="Migrations\201707290354203_InitialMigration.Designer.cs">
-      <DependentUpon>201707290354203_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201708100136422_10-Aug-2017Version2.cs" />
+    <Compile Include="Migrations\201708100136422_10-Aug-2017Version2.Designer.cs">
+      <DependentUpon>201708100136422_10-Aug-2017Version2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201707290452059_Update1.cs" />
-    <Compile Include="Migrations\201707290452059_Update1.Designer.cs">
-      <DependentUpon>201707290452059_Update1.cs</DependentUpon>
+    <Compile Include="Migrations\201708120226229_12-Aug-2017Update1.cs" />
+    <Compile Include="Migrations\201708120226229_12-Aug-2017Update1.Designer.cs">
+      <DependentUpon>201708120226229_12-Aug-2017Update1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201707302334276_NewMigration.cs" />
-    <Compile Include="Migrations\201707302334276_NewMigration.Designer.cs">
-      <DependentUpon>201707302334276_NewMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201708120229403_12-Aug-2017Update2.cs" />
+    <Compile Include="Migrations\201708120229403_12-Aug-2017Update2.Designer.cs">
+      <DependentUpon>201708120229403_12-Aug-2017Update2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201707311011044_Update1a.cs" />
-    <Compile Include="Migrations\201707311011044_Update1a.Designer.cs">
-      <DependentUpon>201707311011044_Update1a.cs</DependentUpon>
+    <Compile Include="Migrations\201708120231109_12-Aug-2017Update3.cs" />
+    <Compile Include="Migrations\201708120231109_12-Aug-2017Update3.Designer.cs">
+      <DependentUpon>201708120231109_12-Aug-2017Update3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201707311018309_Update1b.cs" />
-    <Compile Include="Migrations\201707311018309_Update1b.Designer.cs">
-      <DependentUpon>201707311018309_Update1b.cs</DependentUpon>
+    <Compile Include="Migrations\201708120232129_12-Aug-2017Update4.cs" />
+    <Compile Include="Migrations\201708120232129_12-Aug-2017Update4.Designer.cs">
+      <DependentUpon>201708120232129_12-Aug-2017Update4.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201707311059565_Update1c.cs" />
-    <Compile Include="Migrations\201707311059565_Update1c.Designer.cs">
-      <DependentUpon>201707311059565_Update1c.cs</DependentUpon>
+    <Compile Include="Migrations\201708120232587_12-Aug-2017Update5.cs" />
+    <Compile Include="Migrations\201708120232587_12-Aug-2017Update5.Designer.cs">
+      <DependentUpon>201708120232587_12-Aug-2017Update5.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201707311101304_Update1d.cs" />
-    <Compile Include="Migrations\201707311101304_Update1d.Designer.cs">
-      <DependentUpon>201707311101304_Update1d.cs</DependentUpon>
+    <Compile Include="Migrations\201708120356290_12-Aug-2017Update6.cs" />
+    <Compile Include="Migrations\201708120356290_12-Aug-2017Update6.Designer.cs">
+      <DependentUpon>201708120356290_12-Aug-2017Update6.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201707312255371_Update2.cs" />
-    <Compile Include="Migrations\201707312255371_Update2.Designer.cs">
-      <DependentUpon>201707312255371_Update2.cs</DependentUpon>
+    <Compile Include="Migrations\201708120401461_12-Aug-2017Update7.cs" />
+    <Compile Include="Migrations\201708120401461_12-Aug-2017Update7.Designer.cs">
+      <DependentUpon>201708120401461_12-Aug-2017Update7.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201707312347039_Update2a.cs" />
-    <Compile Include="Migrations\201707312347039_Update2a.Designer.cs">
-      <DependentUpon>201707312347039_Update2a.cs</DependentUpon>
+    <Compile Include="Migrations\201708120501294_12-Aug-2017Update8.cs" />
+    <Compile Include="Migrations\201708120501294_12-Aug-2017Update8.Designer.cs">
+      <DependentUpon>201708120501294_12-Aug-2017Update8.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201708010049556_Update2b.cs" />
-    <Compile Include="Migrations\201708010049556_Update2b.Designer.cs">
-      <DependentUpon>201708010049556_Update2b.cs</DependentUpon>
+    <Compile Include="Migrations\201708120507074_12-Aug-2017Update9.cs" />
+    <Compile Include="Migrations\201708120507074_12-Aug-2017Update9.Designer.cs">
+      <DependentUpon>201708120507074_12-Aug-2017Update9.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201708010106286_Update2c.cs" />
-    <Compile Include="Migrations\201708010106286_Update2c.Designer.cs">
-      <DependentUpon>201708010106286_Update2c.cs</DependentUpon>
+    <Compile Include="Migrations\201708120510419_12-Aug-2017Update10.cs" />
+    <Compile Include="Migrations\201708120510419_12-Aug-2017Update10.Designer.cs">
+      <DependentUpon>201708120510419_12-Aug-2017Update10.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201708020003318_Update2d.cs" />
-    <Compile Include="Migrations\201708020003318_Update2d.Designer.cs">
-      <DependentUpon>201708020003318_Update2d.cs</DependentUpon>
+    <Compile Include="Migrations\201708120538022_12-Aug-2017Update11.cs" />
+    <Compile Include="Migrations\201708120538022_12-Aug-2017Update11.Designer.cs">
+      <DependentUpon>201708120538022_12-Aug-2017Update11.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201708030148010_Update3.cs" />
-    <Compile Include="Migrations\201708030148010_Update3.Designer.cs">
-      <DependentUpon>201708030148010_Update3.cs</DependentUpon>
+    <Compile Include="Migrations\201708120543025_12-Aug-2017Update12.cs" />
+    <Compile Include="Migrations\201708120543025_12-Aug-2017Update12.Designer.cs">
+      <DependentUpon>201708120543025_12-Aug-2017Update12.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201708030342170_Update3a.cs" />
-    <Compile Include="Migrations\201708030342170_Update3a.Designer.cs">
-      <DependentUpon>201708030342170_Update3a.cs</DependentUpon>
+    <Compile Include="Migrations\201708120545031_12-Aug-2017Update13.cs" />
+    <Compile Include="Migrations\201708120545031_12-Aug-2017Update13.Designer.cs">
+      <DependentUpon>201708120545031_12-Aug-2017Update13.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201708030503229_Update3b.cs" />
-    <Compile Include="Migrations\201708030503229_Update3b.Designer.cs">
-      <DependentUpon>201708030503229_Update3b.cs</DependentUpon>
+    <Compile Include="Migrations\201708120600018_12-Aug-2017Update14.cs" />
+    <Compile Include="Migrations\201708120600018_12-Aug-2017Update14.Designer.cs">
+      <DependentUpon>201708120600018_12-Aug-2017Update14.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201708030614372_Update3c.cs" />
-    <Compile Include="Migrations\201708030614372_Update3c.Designer.cs">
-      <DependentUpon>201708030614372_Update3c.cs</DependentUpon>
+    <Compile Include="Migrations\201708120611001_12-Aug-2017Update17.cs" />
+    <Compile Include="Migrations\201708120611001_12-Aug-2017Update17.Designer.cs">
+      <DependentUpon>201708120611001_12-Aug-2017Update17.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201708030621135_Update3d.cs" />
-    <Compile Include="Migrations\201708030621135_Update3d.Designer.cs">
-      <DependentUpon>201708030621135_Update3d.cs</DependentUpon>
+    <Compile Include="Migrations\201708120622499_Blah.cs" />
+    <Compile Include="Migrations\201708120622499_Blah.Designer.cs">
+      <DependentUpon>201708120622499_Blah.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201708030639310_Update3e.cs" />
-    <Compile Include="Migrations\201708030639310_Update3e.Designer.cs">
-      <DependentUpon>201708030639310_Update3e.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708040418199_Update3f.cs" />
-    <Compile Include="Migrations\201708040418199_Update3f.Designer.cs">
-      <DependentUpon>201708040418199_Update3f.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708040438440_Update3g.cs" />
-    <Compile Include="Migrations\201708040438440_Update3g.Designer.cs">
-      <DependentUpon>201708040438440_Update3g.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708040439184_Update3h.cs" />
-    <Compile Include="Migrations\201708040439184_Update3h.Designer.cs">
-      <DependentUpon>201708040439184_Update3h.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708040626597_Update3i.cs" />
-    <Compile Include="Migrations\201708040626597_Update3i.Designer.cs">
-      <DependentUpon>201708040626597_Update3i.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708040636461_Update3j.cs" />
-    <Compile Include="Migrations\201708040636461_Update3j.Designer.cs">
-      <DependentUpon>201708040636461_Update3j.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708040650472_Update3k.cs" />
-    <Compile Include="Migrations\201708040650472_Update3k.Designer.cs">
-      <DependentUpon>201708040650472_Update3k.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708050044368_Update3l.cs" />
-    <Compile Include="Migrations\201708050044368_Update3l.Designer.cs">
-      <DependentUpon>201708050044368_Update3l.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708050344179_Update4a.cs" />
-    <Compile Include="Migrations\201708050344179_Update4a.Designer.cs">
-      <DependentUpon>201708050344179_Update4a.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708050348107_Update4b.cs" />
-    <Compile Include="Migrations\201708050348107_Update4b.Designer.cs">
-      <DependentUpon>201708050348107_Update4b.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708050349468_Update4c.cs" />
-    <Compile Include="Migrations\201708050349468_Update4c.Designer.cs">
-      <DependentUpon>201708050349468_Update4c.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708050353012_Update4d.cs" />
-    <Compile Include="Migrations\201708050353012_Update4d.Designer.cs">
-      <DependentUpon>201708050353012_Update4d.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708050354117_Update4e.cs" />
-    <Compile Include="Migrations\201708050354117_Update4e.Designer.cs">
-      <DependentUpon>201708050354117_Update4e.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708050404203_Update4f.cs" />
-    <Compile Include="Migrations\201708050404203_Update4f.Designer.cs">
-      <DependentUpon>201708050404203_Update4f.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708050416021_Update4g.cs" />
-    <Compile Include="Migrations\201708050416021_Update4g.Designer.cs">
-      <DependentUpon>201708050416021_Update4g.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708050430552_Update4h.cs" />
-    <Compile Include="Migrations\201708050430552_Update4h.Designer.cs">
-      <DependentUpon>201708050430552_Update4h.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708052334224_Update4i.cs" />
-    <Compile Include="Migrations\201708052334224_Update4i.Designer.cs">
-      <DependentUpon>201708052334224_Update4i.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708052355452_Update4j.cs" />
-    <Compile Include="Migrations\201708052355452_Update4j.Designer.cs">
-      <DependentUpon>201708052355452_Update4j.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708060051183_Update4k.cs" />
-    <Compile Include="Migrations\201708060051183_Update4k.Designer.cs">
-      <DependentUpon>201708060051183_Update4k.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708060053547_Update4m.cs" />
-    <Compile Include="Migrations\201708060053547_Update4m.Designer.cs">
-      <DependentUpon>201708060053547_Update4m.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708060054347_Update4n.cs" />
-    <Compile Include="Migrations\201708060054347_Update4n.Designer.cs">
-      <DependentUpon>201708060054347_Update4n.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708060056253_Update4i1.cs" />
-    <Compile Include="Migrations\201708060056253_Update4i1.Designer.cs">
-      <DependentUpon>201708060056253_Update4i1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708060101205_Update5a.cs" />
-    <Compile Include="Migrations\201708060101205_Update5a.Designer.cs">
-      <DependentUpon>201708060101205_Update5a.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708060101518_Update5b.cs" />
-    <Compile Include="Migrations\201708060101518_Update5b.Designer.cs">
-      <DependentUpon>201708060101518_Update5b.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708060105057_Update5c.cs" />
-    <Compile Include="Migrations\201708060105057_Update5c.Designer.cs">
-      <DependentUpon>201708060105057_Update5c.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708060106181_Update5d.cs" />
-    <Compile Include="Migrations\201708060106181_Update5d.Designer.cs">
-      <DependentUpon>201708060106181_Update5d.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708060107119_Update5e.cs" />
-    <Compile Include="Migrations\201708060107119_Update5e.Designer.cs">
-      <DependentUpon>201708060107119_Update5e.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708060107575_Update5f.cs" />
-    <Compile Include="Migrations\201708060107575_Update5f.Designer.cs">
-      <DependentUpon>201708060107575_Update5f.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708060108253_Update5f1.cs" />
-    <Compile Include="Migrations\201708060108253_Update5f1.Designer.cs">
-      <DependentUpon>201708060108253_Update5f1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708060110102_Update5h.cs" />
-    <Compile Include="Migrations\201708060110102_Update5h.Designer.cs">
-      <DependentUpon>201708060110102_Update5h.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708060114155_Update5k.cs" />
-    <Compile Include="Migrations\201708060114155_Update5k.Designer.cs">
-      <DependentUpon>201708060114155_Update5k.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708060116440_Update5k1.cs" />
-    <Compile Include="Migrations\201708060116440_Update5k1.Designer.cs">
-      <DependentUpon>201708060116440_Update5k1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708060119010_Update5m.cs" />
-    <Compile Include="Migrations\201708060119010_Update5m.Designer.cs">
-      <DependentUpon>201708060119010_Update5m.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708070141475_Update5p.cs" />
-    <Compile Include="Migrations\201708070141475_Update5p.Designer.cs">
-      <DependentUpon>201708070141475_Update5p.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708070149587_Update5q.cs" />
-    <Compile Include="Migrations\201708070149587_Update5q.Designer.cs">
-      <DependentUpon>201708070149587_Update5q.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708070206490_Update5r.cs" />
-    <Compile Include="Migrations\201708070206490_Update5r.Designer.cs">
-      <DependentUpon>201708070206490_Update5r.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708070214382_Update5s.cs" />
-    <Compile Include="Migrations\201708070214382_Update5s.Designer.cs">
-      <DependentUpon>201708070214382_Update5s.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708070226044_Update5.cs" />
-    <Compile Include="Migrations\201708070226044_Update5.Designer.cs">
-      <DependentUpon>201708070226044_Update5.cs</DependentUpon>
+    <Compile Include="Migrations\201708120651465_Blah2.cs" />
+    <Compile Include="Migrations\201708120651465_Blah2.Designer.cs">
+      <DependentUpon>201708120651465_Blah2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -449,7 +300,6 @@
     <Compile Include="Models\MajorCore.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\OptionalCoreCourse.cs" />
-    <Compile Include="Models\PrerequisiteCourse.cs" />
     <Compile Include="Models\ProgramDirected.cs" />
     <Compile Include="Models\ProgramElective.cs" />
     <Compile Include="Models\ProgramMajor.cs" />
@@ -645,19 +495,8 @@
     <Content Include="Views\Trimesters\Details.cshtml" />
     <Content Include="Views\Trimesters\Edit.cshtml" />
     <Content Include="Views\Trimesters\Index.cshtml" />
-<<<<<<< HEAD
-    <Content Include="Views\PrerequisiteCourses\Create.cshtml" />
-    <Content Include="Views\PrerequisiteCourses\Delete.cshtml" />
-    <Content Include="Views\PrerequisiteCourses\Details.cshtml" />
-    <Content Include="Views\PrerequisiteCourses\Edit.cshtml" />
-    <Content Include="Views\PrerequisiteCourses\Index.cshtml" />
-=======
     <Content Include="Views\Plan\Index.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Plan\Submit.cshtml" />
-=======
->>>>>>> origin/master
->>>>>>> 428a6e3c27f7bd6b6d6392274f1cb34442ac907e
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -670,170 +509,59 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201707290354203_InitialMigration.resx">
-      <DependentUpon>201707290354203_InitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708100136422_10-Aug-2017Version2.resx">
+      <DependentUpon>201708100136422_10-Aug-2017Version2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707290452059_Update1.resx">
-      <DependentUpon>201707290452059_Update1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708120226229_12-Aug-2017Update1.resx">
+      <DependentUpon>201708120226229_12-Aug-2017Update1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707302334276_NewMigration.resx">
-      <DependentUpon>201707302334276_NewMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708120229403_12-Aug-2017Update2.resx">
+      <DependentUpon>201708120229403_12-Aug-2017Update2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707311011044_Update1a.resx">
-      <DependentUpon>201707311011044_Update1a.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708120231109_12-Aug-2017Update3.resx">
+      <DependentUpon>201708120231109_12-Aug-2017Update3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707311018309_Update1b.resx">
-      <DependentUpon>201707311018309_Update1b.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708120232129_12-Aug-2017Update4.resx">
+      <DependentUpon>201708120232129_12-Aug-2017Update4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707311059565_Update1c.resx">
-      <DependentUpon>201707311059565_Update1c.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708120232587_12-Aug-2017Update5.resx">
+      <DependentUpon>201708120232587_12-Aug-2017Update5.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707311101304_Update1d.resx">
-      <DependentUpon>201707311101304_Update1d.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708120356290_12-Aug-2017Update6.resx">
+      <DependentUpon>201708120356290_12-Aug-2017Update6.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707312255371_Update2.resx">
-      <DependentUpon>201707312255371_Update2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708120401461_12-Aug-2017Update7.resx">
+      <DependentUpon>201708120401461_12-Aug-2017Update7.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707312347039_Update2a.resx">
-      <DependentUpon>201707312347039_Update2a.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708120501294_12-Aug-2017Update8.resx">
+      <DependentUpon>201708120501294_12-Aug-2017Update8.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708010049556_Update2b.resx">
-      <DependentUpon>201708010049556_Update2b.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708120507074_12-Aug-2017Update9.resx">
+      <DependentUpon>201708120507074_12-Aug-2017Update9.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708010106286_Update2c.resx">
-      <DependentUpon>201708010106286_Update2c.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708120510419_12-Aug-2017Update10.resx">
+      <DependentUpon>201708120510419_12-Aug-2017Update10.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708020003318_Update2d.resx">
-      <DependentUpon>201708020003318_Update2d.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708120538022_12-Aug-2017Update11.resx">
+      <DependentUpon>201708120538022_12-Aug-2017Update11.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708030148010_Update3.resx">
-      <DependentUpon>201708030148010_Update3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708120543025_12-Aug-2017Update12.resx">
+      <DependentUpon>201708120543025_12-Aug-2017Update12.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708030342170_Update3a.resx">
-      <DependentUpon>201708030342170_Update3a.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708120545031_12-Aug-2017Update13.resx">
+      <DependentUpon>201708120545031_12-Aug-2017Update13.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708030503229_Update3b.resx">
-      <DependentUpon>201708030503229_Update3b.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708120600018_12-Aug-2017Update14.resx">
+      <DependentUpon>201708120600018_12-Aug-2017Update14.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708030614372_Update3c.resx">
-      <DependentUpon>201708030614372_Update3c.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708120611001_12-Aug-2017Update17.resx">
+      <DependentUpon>201708120611001_12-Aug-2017Update17.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708030621135_Update3d.resx">
-      <DependentUpon>201708030621135_Update3d.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708120622499_Blah.resx">
+      <DependentUpon>201708120622499_Blah.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708030639310_Update3e.resx">
-      <DependentUpon>201708030639310_Update3e.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708040418199_Update3f.resx">
-      <DependentUpon>201708040418199_Update3f.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708040438440_Update3g.resx">
-      <DependentUpon>201708040438440_Update3g.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708040439184_Update3h.resx">
-      <DependentUpon>201708040439184_Update3h.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708040626597_Update3i.resx">
-      <DependentUpon>201708040626597_Update3i.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708040636461_Update3j.resx">
-      <DependentUpon>201708040636461_Update3j.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708040650472_Update3k.resx">
-      <DependentUpon>201708040650472_Update3k.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708050044368_Update3l.resx">
-      <DependentUpon>201708050044368_Update3l.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708050344179_Update4a.resx">
-      <DependentUpon>201708050344179_Update4a.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708050348107_Update4b.resx">
-      <DependentUpon>201708050348107_Update4b.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708050349468_Update4c.resx">
-      <DependentUpon>201708050349468_Update4c.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708050353012_Update4d.resx">
-      <DependentUpon>201708050353012_Update4d.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708050354117_Update4e.resx">
-      <DependentUpon>201708050354117_Update4e.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708050404203_Update4f.resx">
-      <DependentUpon>201708050404203_Update4f.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708050416021_Update4g.resx">
-      <DependentUpon>201708050416021_Update4g.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708050430552_Update4h.resx">
-      <DependentUpon>201708050430552_Update4h.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708052334224_Update4i.resx">
-      <DependentUpon>201708052334224_Update4i.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708052355452_Update4j.resx">
-      <DependentUpon>201708052355452_Update4j.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708060051183_Update4k.resx">
-      <DependentUpon>201708060051183_Update4k.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708060053547_Update4m.resx">
-      <DependentUpon>201708060053547_Update4m.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708060054347_Update4n.resx">
-      <DependentUpon>201708060054347_Update4n.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708060056253_Update4i1.resx">
-      <DependentUpon>201708060056253_Update4i1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708060101205_Update5a.resx">
-      <DependentUpon>201708060101205_Update5a.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708060101518_Update5b.resx">
-      <DependentUpon>201708060101518_Update5b.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708060105057_Update5c.resx">
-      <DependentUpon>201708060105057_Update5c.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708060106181_Update5d.resx">
-      <DependentUpon>201708060106181_Update5d.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708060107119_Update5e.resx">
-      <DependentUpon>201708060107119_Update5e.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708060107575_Update5f.resx">
-      <DependentUpon>201708060107575_Update5f.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708060108253_Update5f1.resx">
-      <DependentUpon>201708060108253_Update5f1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708060110102_Update5h.resx">
-      <DependentUpon>201708060110102_Update5h.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708060114155_Update5k.resx">
-      <DependentUpon>201708060114155_Update5k.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708060116440_Update5k1.resx">
-      <DependentUpon>201708060116440_Update5k1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708060119010_Update5m.resx">
-      <DependentUpon>201708060119010_Update5m.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708070141475_Update5p.resx">
-      <DependentUpon>201708070141475_Update5p.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708070149587_Update5q.resx">
-      <DependentUpon>201708070149587_Update5q.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708070206490_Update5r.resx">
-      <DependentUpon>201708070206490_Update5r.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708070214382_Update5s.resx">
-      <DependentUpon>201708070214382_Update5s.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708070226044_Update5.resx">
-      <DependentUpon>201708070226044_Update5.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708120651465_Blah2.resx">
+      <DependentUpon>201708120651465_Blah2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

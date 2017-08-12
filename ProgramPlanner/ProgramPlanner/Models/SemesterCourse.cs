@@ -15,6 +15,7 @@ namespace ProgramPlanner.Models
     {
         public int SemesterCourseID { get; set; }
 
+        [Range(1900, 9999, ErrorMessage = "Must be between 1900, and 9999")]
         public int Year { get; set; }
 
         public int SemesterID { get; set; }

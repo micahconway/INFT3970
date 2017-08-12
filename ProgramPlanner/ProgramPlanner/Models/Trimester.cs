@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 /// <summary>
 /// Author: Ryan Cunneen
 /// Date created: 05-Aug-2017
@@ -13,6 +15,7 @@ namespace ProgramPlanner.Models
     {
         public int TrimesterID { get; set; }
 
+        [Range(1, 3)]
         public int TrimesterValue { get; set; }
     }
 }

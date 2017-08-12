@@ -63,36 +63,72 @@ namespace ProgramPlanner.Models
 
         public DbSet<Replacement> Replacements { get; set; }
 
-        public DbSet<PrerequisiteCourse> PrerequisiteCourses { get; set; }
+        //-------------------------------------------------------------------------------------
+        //----------------------------------DATABASE MODELS------------------------------------: 
+        /// <summary>
+        /// Constructs model schemas for database context. 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        protected override void OnModelCreating(DbModelBuilder modelbuilder)
+        {
+            Models(modelbuilder);
+            Relationships(modelbuilder);
+        }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="modelbuilder"></param>
-        protected override void OnModelCreating(DbModelBuilder modelbuilder)
+        private void Models(DbModelBuilder modelbuilder)
         {
             ModelCourse(modelbuilder);
             ModelYearDegree(modelbuilder);
             ModelReplacement(modelbuilder);
-            ModelPrerequisitie(modelbuilder);
+            ModelPrerequisites(modelbuilder);
+            ModelSemester(modelbuilder);
+            ModelTrimester(modelbuilder);
+            ModelSemesterCourse(modelbuilder);
+            ModelTrimesterCourse(modelbuilder);
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="modelbuilder"></param>
         private void ModelCourse(DbModelBuilder modelbuilder)
         {
+            // Also referrenced in the class Course as data annotations (Required)
+            // Remove these later. 
             modelbuilder.Entity<Course>()
-                .HasOptional(y => y.PrerequisiteCourses)
-                .WithMany()
-                .WillCascadeOnDelete(true);
+                .Property(y => y.CourseCode).IsRequired();
+
+            modelbuilder.Entity<Course>()
+                .Property(y => y.CourseName).IsRequired();
+
+            modelbuilder.Entity<Course>()
+                .Property(y => y.UniversityID).IsRequired();
+
+            modelbuilder.Entity<Course>()
+                .Property(y => y.Units).IsRequired();
+
+            modelbuilder.Entity<Course>().
+                Property(y => y.CategoryID).IsRequired();
         }
+
         /// <summary>
-        /// 
+        ///  Defines the schema for the entity PrerequisiteCourse in the database context.
         /// </summary>
         /// <param name="modelbuilder"></param>
-        private void ModelYearDegree(DbModelBuilder modelbuilder) {
-                             
+        private void ModelPrerequisites(DbModelBuilder modelbuilder)
+        {
+        }
+
+        /// <summary>
+        /// Constructs the schema for entity YearDegree in the database context.
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void ModelYearDegree(DbModelBuilder modelbuilder)
+        {              
             //some foreign key on delete no cascades
             modelbuilder.Entity<YearDegree>()
                 .HasRequired(y => y.Majors)
@@ -108,40 +144,153 @@ namespace ProgramPlanner.Models
             modelbuilder.Entity<YearDegree>()
                 .Ignore(y => y.YearDegreeName);
         }
+
         /// <summary>
-        /// 
+        /// Constructs the schema for entity Replacement in the database context;
         /// </summary>
         /// <param name="modelbuilder"></param>
         private void ModelReplacement(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<Replacement>()
-              .HasOptional(y => y.ReplacedCourse)
-              .WithMany()
-              .HasForeignKey(y => y.ReplacedCourseID)
-              .WillCascadeOnDelete(false);
-
-            modelbuilder.Entity<Replacement>()
-                .HasOptional(y => y.ReplacementCourse)
-                .WithMany()
-                .HasForeignKey(y => y.ReplacementCourseID)
-                .WillCascadeOnDelete(false);
+            
         }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="modelbuilder"></param>
-        private void ModelPrerequisitie(DbModelBuilder modelbuilder) {
-            modelbuilder.Entity<PrerequisiteCourse>()
-                .HasRequired(y => y.RequiredCourse)
+        private void ModelSemester(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<Semester>().Property(y => y.SemesterValue).IsRequired();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void ModelTrimester(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<Trimester>().Property(y => y.TrimesterValue).IsRequired();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void ModelSemesterCourse(DbModelBuilder modelbuilder)
+        {
+            // Creating a new composite Primary key. 
+            modelbuilder.Entity<SemesterCourse>().HasKey(y => new { y.SemesterCourseID, y.SemesterID, y.CourseID});
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void ModelTrimesterCourse(DbModelBuilder modelbuilder)
+        {
+            // Creating a new composite Primary key. 
+            modelbuilder.Entity<TrimesterCourse>().HasKey(y => new { y.TrimesterCourseID, y.TrimesterID, y.CourseID });
+        }
+
+        //-------------------------------------------------------------------------------------
+        //---------------------------------ENTITY ASSOCIATIONS---------------------------------:
+
+        /// <summary>
+        /// Defines associations between entities for database context.
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void Relationships(DbModelBuilder modelbuilder)
+        {
+            RelationshipsForCourse(modelbuilder);
+            RelationshipsForPrerequisite(modelbuilder);
+            RelationshipsForCategory(modelbuilder);
+            RelationshipsForSemester(modelbuilder);
+        }
+
+        /// <summary>
+        /// Defines the relationships for the entity Course.  
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void RelationshipsForCourse(DbModelBuilder modelbuilder)
+        {
+            // A Course has a required Category, and a Category is associated with many Courses. 
+            // In the Course entity the Foreign key for the Category is CategoryID.
+            // If the Course entity is deleted, the associated Category will not be.
+            modelbuilder.Entity<Course>().HasRequired(y => y.Category)
                 .WithMany()
-                .HasForeignKey(y => y.RequiredCourseID)
+                .HasForeignKey(y =>y.CategoryID)
                 .WillCascadeOnDelete(false);
 
+            modelbuilder.Entity<Course>()
+               .HasMany(y => y.MandatoryPrerequisites)
+               .WithMany()
+               .Map(
+                    Mandatory => {
+                        Mandatory.MapLeftKey("CourseID");
+                        Mandatory.MapRightKey("PrerequisiteID");
+                        Mandatory.ToTable("MandatoryPrerquisites");
+                    });
 
-            modelbuilder.Entity<PrerequisiteCourse>()
-                .HasRequired(y => y.Prerequisite)
+
+            modelbuilder.Entity<Course>()
+               .HasMany(y => y.OptionalPrerequisites)
+               .WithMany()
+               .Map(
+                    Mandatory => {
+                        Mandatory.MapLeftKey("CourseID");
+                        Mandatory.MapRightKey("PrerequisiteID");
+                        Mandatory.ToTable("OptionalPrerequisites");
+                    });
+        }
+
+        /// <summary>
+        /// Defines all associations for entity PrerequisiteCourse.
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void RelationshipsForPrerequisite(DbModelBuilder modelbuilder)
+        {
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelBuilder"></param>
+        private void RelationshipsForCategory(DbModelBuilder modelBuilder)
+        {
+            
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void RelationshipsForSemester(DbModelBuilder modelbuilder)
+        {
+            
+        }
+        /// <summary>
+        /// Defines all associations for entity Replacement. 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void RelationshipsForReplacement(DbModelBuilder modelbuilder)
+        {
+            // Constraint: The attribute(ReplacedCourse) is not null 
+            modelbuilder.Entity<Replacement>()
+              .HasOptional(y => y.ReplacedCourse)
+              .WithMany()
+              .HasForeignKey(y => y.ReplacedCourseID)
+               // if Replacement data is deleted, then the ReplacedCourse will not be deleted.
+              .WillCascadeOnDelete(false);
+
+            // Constraint: The attribute(ReplacementCourse) is not null
+            modelbuilder.Entity<Replacement>()
+                .HasOptional(y => y.ReplacementCourse)
                 .WithMany()
-                .HasForeignKey(y => y.PrerequisiteID)
+                .HasForeignKey(y => y.ReplacementCourseID)
+                 // if Replacement data is deleted, then the ReplacementCourse will not be deleted.
+                .WillCascadeOnDelete(false);
+
+            // Constraint: The attribute(YearDegree) is not null
+            modelbuilder.Entity<Replacement>()
+                .HasRequired(y => y.YearDegree)
+                .WithMany()
+                .HasForeignKey(y => y.YearDegreeID)
+                 // if Replacement data is deleted, then the YearDegree will not be deleted.
                 .WillCascadeOnDelete(false);
         }
     }

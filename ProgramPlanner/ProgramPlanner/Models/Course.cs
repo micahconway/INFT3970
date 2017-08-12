@@ -11,6 +11,7 @@ namespace ProgramPlanner.Models
         public int CourseID { get; set; }
 
         [Required]
+        [MaxLength(8)]
         public string CourseCode { get; set; }
 
         [Required]
@@ -28,7 +29,12 @@ namespace ProgramPlanner.Models
 
         public virtual Category Category { get; set; }
 
-        //This course many have one or many courses it can be a prerequisite for.
-        public virtual List<PrerequisiteCourse> PrerequisiteCourses { get; set; }
+        // These are your 'AND' prerequisites.
+        // A Course can one-to-many mandatory prerequisites. 
+        public virtual ICollection<Course> MandatoryPrerequisites { get; set; }
+
+        // These are your 'OR' prerequisites
+        // A Course can have zero-to-many optional prerequisites. 
+        public virtual ICollection<Course> OptionalPrerequisites { get; set; }
     }
 }

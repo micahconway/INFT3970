@@ -12,7 +12,5 @@ namespace ProgramPlanner.Models
 
         [Required]
         public string CategoryName { get; set; }
-
-        public virtual List<Course> Courses { get; set; }
     }
 }

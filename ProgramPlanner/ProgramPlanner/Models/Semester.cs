@@ -16,6 +16,7 @@ namespace ProgramPlanner.Models
         public int SemesterID { get; set; }
 
         [Required]
+        [Range(1,2)]
         public int SemesterValue { get; set; }
     }
 }
