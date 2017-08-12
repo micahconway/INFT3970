@@ -300,6 +300,11 @@
     <Compile Include="Models\MajorCore.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\OptionalCoreCourse.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Models\Plan.cs" />
+    <Compile Include="Models\PrerequisiteCourse.cs" />
+>>>>>>> origin/master
     <Compile Include="Models\ProgramDirected.cs" />
     <Compile Include="Models\ProgramElective.cs" />
     <Compile Include="Models\ProgramMajor.cs" />
@@ -495,6 +500,14 @@
     <Content Include="Views\Trimesters\Details.cshtml" />
     <Content Include="Views\Trimesters\Edit.cshtml" />
     <Content Include="Views\Trimesters\Index.cshtml" />
+<<<<<<< HEAD
+=======
+    <Content Include="Views\PrerequisiteCourses\Create.cshtml" />
+    <Content Include="Views\PrerequisiteCourses\Delete.cshtml" />
+    <Content Include="Views\PrerequisiteCourses\Details.cshtml" />
+    <Content Include="Views\PrerequisiteCourses\Edit.cshtml" />
+    <Content Include="Views\PrerequisiteCourses\Index.cshtml" />
+>>>>>>> origin/master
     <Content Include="Views\Plan\Index.cshtml" />
     <Content Include="Views\Plan\Submit.cshtml" />
   </ItemGroup>
