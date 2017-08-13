@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\micah\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\ApplicationInsights.config
 C:\Users\micah\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\roslyn\csc.exe
 C:\Users\micah\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\roslyn\csc.exe.config
@@ -351,7 +350,6 @@ C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\Pro
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.dll
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.pdb
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csprojResolveAssemblyReference.cache
-<<<<<<< HEAD
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\ApplicationInsights.config
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\roslyn\csc.exe
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\roslyn\csc.exe.config
@@ -466,5 +464,21 @@ C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.dll
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.pdb
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Blah2.resources
-=======
->>>>>>> origin/master
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._10Aug2017Version2.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update1.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update2.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update3.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update4.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update5.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update6.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update7.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update8.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update9.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update10.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update11.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update12.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update13.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update14.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update17.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Blah.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Blah2.resources
