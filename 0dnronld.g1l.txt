@@ -1,0 +1,38 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+	modified:   ProgramPlanner/.vs/ProgramPlanner/v15/.suo
+	modified:   ProgramPlanner/ProgramPlanner.Tests/bin/Debug/ProgramPlanner.Tests.dll
+	modified:   ProgramPlanner/ProgramPlanner.Tests/bin/Debug/ProgramPlanner.Tests.pdb
+	copied:     ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.dll -> ProgramPlanner/ProgramPlanner.Tests/bin/Debug/ProgramPlanner.dll
+	modified:   ProgramPlanner/ProgramPlanner.Tests/bin/Debug/ProgramPlanner.pdb
+	modified:   ProgramPlanner/ProgramPlanner.Tests/obj/Debug/ProgramPlanner.Tests.csprojResolveAssemblyReference.cache
+	modified:   ProgramPlanner/ProgramPlanner.Tests/obj/Debug/ProgramPlanner.Tests.dll
+	modified:   ProgramPlanner/ProgramPlanner.Tests/obj/Debug/ProgramPlanner.Tests.pdb
+	modified:   ProgramPlanner/ProgramPlanner/App_Data/ProgramPlannerContext-20170729114207.mdf
+	modified:   ProgramPlanner/ProgramPlanner/App_Data/ProgramPlannerContext-20170729114207_log.ldf
+	new file:   ProgramPlanner/ProgramPlanner/Migrations/201708130045522_13-Aug-2017Update1.Designer.cs
+	new file:   ProgramPlanner/ProgramPlanner/Migrations/201708130045522_13-Aug-2017Update1.cs
+	new file:   ProgramPlanner/ProgramPlanner/Migrations/201708130045522_13-Aug-2017Update1.resx
+	new file:   ProgramPlanner/ProgramPlanner/Migrations/201708130047228_13-Aug-2017Update2.Designer.cs
+	new file:   ProgramPlanner/ProgramPlanner/Migrations/201708130047228_13-Aug-2017Update2.cs
+	new file:   ProgramPlanner/ProgramPlanner/Migrations/201708130047228_13-Aug-2017Update2.resx
+	modified:   ProgramPlanner/ProgramPlanner/Models/ProgramElective.cs
+	modified:   ProgramPlanner/ProgramPlanner/Models/ProgramPlannerContext.cs
+	modified:   ProgramPlanner/ProgramPlanner/ProgramPlanner.csproj
+	modified:   ProgramPlanner/ProgramPlanner/bin/ProgramPlanner.dll
+	modified:   ProgramPlanner/ProgramPlanner/bin/ProgramPlanner.pdb
+	modified:   ProgramPlanner/ProgramPlanner/obj/Debug/CoreCompileInputs.cache
+	new file:   ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.Migrations._13Aug2017Update1.resources
+	new file:   ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.Migrations._13Aug2017Update2.resources
+	modified:   ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.csproj.FileListAbsolute.txt
+#	modified:   ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.csproj.GenerateResource.Cache
+#	new file:   ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.csprojResolveAssemblyReference.cache
+#	modified:   ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.dll
+#	modified:   ProgramPlanner/ProgramPlanner/obj/Debug/ProgramPlanner.pdb
+#
+

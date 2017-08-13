@@ -89,6 +89,7 @@ namespace ProgramPlanner.Models
             ModelSemesterCourse(modelbuilder);
             ModelTrimesterCourse(modelbuilder);
             ModelReplacement(modelbuilder);
+            ModelProgramElective(modelbuilder);
         }
 
         /// <summary>
@@ -114,6 +115,15 @@ namespace ProgramPlanner.Models
             modelbuilder.Entity<Course>().
                 Property(y => y.CategoryID).IsRequired();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void ModelProgramElective(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<ProgramElective>().HasKey(y => new {y.CourseID, y.ProgramStructureID});
+        }
+
         /// <summary>
         /// Constructs the schema for entity YearDegree in the database context.
         /// </summary>

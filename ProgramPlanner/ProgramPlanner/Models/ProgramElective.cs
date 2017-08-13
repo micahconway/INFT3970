@@ -11,8 +11,6 @@ namespace ProgramPlanner.Models
 {
     public class ProgramElective
     {
-        public int ProgramElectiveID { get; set; }
-
         public int CourseID { get; set; }
 
         public virtual Course Course { get; set; }
