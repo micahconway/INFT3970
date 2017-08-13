@@ -84,11 +84,12 @@ namespace ProgramPlanner.Models
             ModelCourse(modelbuilder);
             ModelYearDegree(modelbuilder);
             ModelReplacement(modelbuilder);
-            ModelPrerequisites(modelbuilder);
             ModelSemester(modelbuilder);
             ModelTrimester(modelbuilder);
             ModelSemesterCourse(modelbuilder);
             ModelTrimesterCourse(modelbuilder);
+            ModelReplacement(modelbuilder);
+            ModelProgramElective(modelbuilder);
         }
 
         /// <summary>
@@ -114,13 +115,13 @@ namespace ProgramPlanner.Models
             modelbuilder.Entity<Course>().
                 Property(y => y.CategoryID).IsRequired();
         }
-
         /// <summary>
-        ///  Defines the schema for the entity PrerequisiteCourse in the database context.
+        /// 
         /// </summary>
         /// <param name="modelbuilder"></param>
-        private void ModelPrerequisites(DbModelBuilder modelbuilder)
+        private void ModelProgramElective(DbModelBuilder modelbuilder)
         {
+            modelbuilder.Entity<ProgramElective>().HasKey(y => new {y.CourseID, y.ProgramStructureID});
         }
 
         /// <summary>
@@ -151,7 +152,8 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelReplacement(DbModelBuilder modelbuilder)
         {
-            
+            // Creating a new composite Primary key for entity Replacement;
+            modelbuilder.Entity<Replacement>().HasKey(y => new {y.ReplacedCourseID, y.ReplacementCourseID, y.YearDegreeID});
         }
         /// <summary>
         /// 
@@ -199,9 +201,7 @@ namespace ProgramPlanner.Models
         private void Relationships(DbModelBuilder modelbuilder)
         {
             RelationshipsForCourse(modelbuilder);
-            RelationshipsForPrerequisite(modelbuilder);
-            RelationshipsForCategory(modelbuilder);
-            RelationshipsForSemester(modelbuilder);
+            RelationshipsForReplacement(modelbuilder);
         }
 
         /// <summary>
@@ -239,39 +239,16 @@ namespace ProgramPlanner.Models
                         Mandatory.ToTable("OptionalPrerequisites");
                     });
         }
-
-        /// <summary>
-        /// Defines all associations for entity PrerequisiteCourse.
-        /// </summary>
-        /// <param name="modelbuilder"></param>
-        private void RelationshipsForPrerequisite(DbModelBuilder modelbuilder)
-        {
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="modelBuilder"></param>
-        private void RelationshipsForCategory(DbModelBuilder modelBuilder)
-        {
-            
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="modelbuilder"></param>
-        private void RelationshipsForSemester(DbModelBuilder modelbuilder)
-        {
-            
-        }
         /// <summary>
         /// Defines all associations for entity Replacement. 
         /// </summary>
         /// <param name="modelbuilder"></param>
         private void RelationshipsForReplacement(DbModelBuilder modelbuilder)
         {
+
             // Constraint: The attribute(ReplacedCourse) is not null 
             modelbuilder.Entity<Replacement>()
-              .HasOptional(y => y.ReplacedCourse)
+              .HasRequired(y => y.ReplacedCourse)
               .WithMany()
               .HasForeignKey(y => y.ReplacedCourseID)
                // if Replacement data is deleted, then the ReplacedCourse will not be deleted.
@@ -279,7 +256,7 @@ namespace ProgramPlanner.Models
 
             // Constraint: The attribute(ReplacementCourse) is not null
             modelbuilder.Entity<Replacement>()
-                .HasOptional(y => y.ReplacementCourse)
+                .HasRequired(y => y.ReplacementCourse)
                 .WithMany()
                 .HasForeignKey(y => y.ReplacementCourseID)
                  // if Replacement data is deleted, then the ReplacementCourse will not be deleted.
