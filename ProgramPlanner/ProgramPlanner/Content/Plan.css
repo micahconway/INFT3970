@@ -34,3 +34,26 @@
     width: 100px;
     background-color:aliceblue;
 }
+
+#planMenu{
+    float:right;
+    position:relative;
+    top:-300px;
+    height:400px;
+}
+.elecOrDirec{
+    z-index:1;
+    width:100px;
+    margin-bottom:2px;
+    padding:2px;
+    background-color:aliceblue;
+}
+
+#tabs{
+    height:100%;
+}
+
+#tabs-2{
+    padding:10px;
+    
+}

@@ -28,7 +28,7 @@
         {
             for (var y = 1; y <= @ViewBag.SubjectsPerSemester * 2; y++)
             {
-                <div class="courseBox">Course @y</div>
+                <div class="courseBox droppable">Course @y</div>
             }
         }
     </div>
@@ -48,6 +48,50 @@
         </form>
     }
 
+    <div id="planMenu" class="col-md-2">       
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">Directed</a></li>
+                <li><a href="#tabs-2">Electives</a></li>
+            </ul>
+            <div id="tabs-1">
+                <div>Course 1</div>
+                <div>Course 2</div>
+                <div>Course 3</div>
+                <div>Course 4</div>
+            </div>
+            <div id="tabs-2">
+                <div class="ui-widget">
+                    <label for="searchBox">Search: </label>
+                    <input id="searchBox">                    
+
+                    <div id="accordion">
+                        <h3>Arts</h3>
+                        <div>
+                            <div class="draggable elecOrDirec">ARTS1001</div>
+                            <div class="draggable elecOrDirec">ARTS1002</div>
+                        </div>
+                        <h3>Business</h3>
+                        <div>
+                            <div class="draggable elecOrDirec">BUSN1100</div>
+                            <div class="draggable elecOrDirec">BUSN1110</div>
+                        </div>
+                        <h3>Information Technology</h3>
+                        <div>
+                            <div class="draggable elecOrDirec">INFT1001</div>
+                            <div class="draggable elecOrDirec">INFT2003</div>
+                        </div>
+                        <h3>Science</h3>
+                        <div>
+                            <div class="draggable elecOrDirec">PHYS1010</div>
+                            <div class="draggable elecOrDirec">CHEM1010</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script type="text/javascript">
         $(function () {     
@@ -64,7 +108,12 @@
             $(".courseBox").each(function () {
                 courseText = courseText + $(this).text() + ",";
             });
-            $("#courseInput").val(courseText);            
+            $("#courseInput").val(courseText);    
+
+            //tabbed menu
+            $(function () {
+                $("#tabs").tabs();
+            });
 
         });
 
@@ -96,7 +145,7 @@
                     $(".courseBox").each(function () {
                         if (counter % oldNumber == 0) {
                             for (var i = 0; i < difference; i++) {
-                                $(this).after("<div class='courseBox'>Empty Course</div>");
+                                //$(this).after("<div class='courseBox'>Empty Course</div>");
                             }
                             
                         }
@@ -129,6 +178,64 @@
     </script>
 
     
+    <script>
+        //search box
+        $(function () {
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+            ];
+            $("#searchBox").autocomplete({
+                source: availableTags
+            });
+        });
+    </script>
+    
+    <script>
+        //accordian
+        $(function () {
+            $("#accordion").accordion({
+                heightStyle: "content",
+                collapsible: true,
+            });
+        });
+    </script>
+
+    <script>
+        //drag and drog
+        $(function () {
+            $(".draggable").draggable({
+                appendTo: "body",
+                helper: "clone"
+            });
+            $(".droppable").droppable({
+                accept: ".draggable",
+                drop: function (event, ui) {
+                    $(this).html($(ui.draggable).text());
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
