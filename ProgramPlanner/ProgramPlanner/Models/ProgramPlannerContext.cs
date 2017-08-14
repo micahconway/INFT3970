@@ -98,6 +98,7 @@ namespace ProgramPlanner.Models
             ModelProgramDirected(modelbuilder);
             ModelUniversity(modelbuilder);
             ModelUser(modelbuilder);
+            ModelProgramStructure(modelbuilder);
         }
 
         /// <summary>
@@ -264,6 +265,15 @@ namespace ProgramPlanner.Models
             modelbuilder.Entity<User>().Property(y => y.Password).IsRequired();
             modelbuilder.Entity<User>().HasKey(y => y.Email);
 
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void ModelProgramStructure(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<ProgramStructure>().Property(y => y.DateCreated).IsRequired();
+            modelbuilder.Entity<ProgramStructure>().Property(y => y.DateModified).IsRequired();
         }
         //-------------------------------------------------------------------------------------
         //---------------------------------ENTITY ASSOCIATIONS---------------------------------:
