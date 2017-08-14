@@ -39,14 +39,22 @@
     float:right;
     position:relative;
     top:-300px;
-    height:400px;
+    height:500px;
 }
-.elecOrDirec{
-    z-index:1;
-    width:100px;
-    margin-bottom:2px;
-    padding:2px;
-    background-color:aliceblue;
+
+.directeds {
+    width: 100px;
+    margin-bottom: 2px;
+    padding: 2px;
+    background-color: aliceblue;
+}
+
+.electives {
+    width: 100px;
+    margin-bottom: 2px;
+    padding: 2px;
+    background-color: aliceblue;
+    float: right;
 }
 
 #tabs{
@@ -56,4 +64,18 @@
 #tabs-2{
     padding:10px;
     
+}
+
+#accordion{
+    position:relative;
+    top:10px;
+}
+
+.accordions {
+    padding: 0px !important;
+}
+
+h4{
+    width:80%;
+    float:right;
 }

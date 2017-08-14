@@ -55,10 +55,10 @@
                 <li><a href="#tabs-2">Electives</a></li>
             </ul>
             <div id="tabs-1">
-                <div>Course 1</div>
-                <div>Course 2</div>
-                <div>Course 3</div>
-                <div>Course 4</div>
+                <div class="draggable directeds">Course 1</div>
+                <div class="draggable directeds">Course 2</div>
+                <div class="draggable directeds">Course 3</div>
+                <div class="draggable directeds">Course 4</div>
             </div>
             <div id="tabs-2">
                 <div class="ui-widget">
@@ -66,26 +66,56 @@
                     <input id="searchBox">                    
 
                     <div id="accordion">
-                        <h3>Arts</h3>
-                        <div>
-                            <div class="draggable elecOrDirec">ARTS1001</div>
-                            <div class="draggable elecOrDirec">ARTS1002</div>
+
+                        <h3>Communication and Creative Industries</h3>
+                        <div class="accordions">
+                            <h4>Architecture</h4>
+                            <div>
+                                <div class="draggable electives">ARCH1001</div>
+                                <div class="draggable electives">ARCH1002</div>
+                            </div>  
+                            <h4>Music</h4>
+                            <div>
+                                <div class="draggable electives">MUSC1001</div>
+                                <div class="draggable electives">MUSC1002</div>
+                            </div> 
+                            <h4>Visual Arts</h4>
+                            <div>
+                                <div class="draggable electives">ARTS1001</div>
+                                <div class="draggable electives">ARTS1002</div>
+                            </div> 
                         </div>
-                        <h3>Business</h3>
-                        <div>
-                            <div class="draggable elecOrDirec">BUSN1100</div>
-                            <div class="draggable elecOrDirec">BUSN1110</div>
-                        </div>
-                        <h3>Information Technology</h3>
-                        <div>
-                            <div class="draggable elecOrDirec">INFT1001</div>
-                            <div class="draggable elecOrDirec">INFT2003</div>
-                        </div>
-                        <h3>Science</h3>
-                        <div>
-                            <div class="draggable elecOrDirec">PHYS1010</div>
-                            <div class="draggable elecOrDirec">CHEM1010</div>
-                        </div>
+
+
+                        <h3>Business and Entrepreneurship</h3>
+                        <div class="accordions">
+                            <h4>Commerce</h4>
+                            <div>
+                                <div class="draggable electives">COMM1100</div>
+                                <div class="draggable electives">COMM1110</div>
+                            </div>
+                            <h4>Marketing</h4>
+                            <div>
+                                <div class="draggable electives">BUSN1100</div>
+                                <div class="draggable electives">BUSN1110</div>
+                            </div>
+                        </div>   
+                        
+
+                        <h3>Computing, Maths and Technology</h3>
+                        <div class="accordions">
+                            <h4>Computer Science</h4>
+                            <div>
+                                <div class="draggable electives">COMP1100</div>
+                                <div class="draggable electives">COMP1110</div>
+                            </div>
+                            <h4>Information Technology</h4>
+                            <div>
+                                <div class="draggable electives">INFT1100</div>
+                                <div class="draggable electives">INFT1110</div>
+                            </div>
+                        </div> 
+
                     </div>
                 </div>
             </div>
@@ -217,7 +247,14 @@
             $("#accordion").accordion({
                 heightStyle: "content",
                 collapsible: true,
+                active: false,
             });
+            $(".accordions").accordion({
+                heightStyle: "content",
+                collapsible: true,
+                active: false,
+            });
+            
         });
     </script>
 
