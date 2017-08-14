@@ -287,9 +287,14 @@ namespace ProgramPlanner.Models
             RelationshipsForYearDegree(modelbuilder);
             RelationshipsForReplacement(modelbuilder);
             RelationshipsForMajorCore(modelbuilder);
+            RelationshipsForProgramElective(modelbuilder);
             RelationshipsForProgramDirected(modelbuilder);
             RelationshipsForProgramStructures(modelbuilder);
             RelationshipsForUser(modelbuilder);
+            RelationshipsForMajors(modelbuilder);
+            RelationshipsForOptionalCoreCourses(modelbuilder);
+            RelationshipsForSemesterCourse(modelbuilder);
+            RelationshipsForTrimesterCourse(modelbuilder);
         }
 
         /// <summary>
@@ -388,6 +393,15 @@ namespace ProgramPlanner.Models
         /// 
         /// </summary>
         /// <param name="modelbuilder"></param>
+        private void RelationshipsForProgramElective(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<ProgramElective>().HasRequired(y => y.ProgramStructure).WithMany().WillCascadeOnDelete(false);
+            modelbuilder.Entity<ProgramElective>().HasRequired(y => y.Course).WithMany().HasForeignKey(y => y.CourseID).WillCascadeOnDelete(false);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
         private void RelationshipsForProgramStructures(DbModelBuilder modelbuilder)
         {
             modelbuilder.Entity<ProgramStructure>().HasRequired(y => y.User).WithMany().HasForeignKey(y => y.Email);
@@ -399,6 +413,72 @@ namespace ProgramPlanner.Models
         private void RelationshipsForUser(DbModelBuilder modelbuilder)
         {
             modelbuilder.Entity<User>().HasMany(y => y.ProgramStructures);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void RelationshipsForMajors(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<Major>()
+                .HasRequired(y => y.YearDegree)
+                .WithMany()
+                .HasForeignKey(y => y.YearDegreeID)
+                .WillCascadeOnDelete(false);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void RelationshipsForSemesterCourse(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<SemesterCourse>()
+                .HasRequired(y => y.Semester)
+                .WithMany()
+                .HasForeignKey(y => y.SemesterID)
+                .WillCascadeOnDelete(false);
+
+            modelbuilder.Entity<SemesterCourse>()
+                .HasRequired(y => y.Course)
+                .WithMany()
+                .HasForeignKey(y => y.CourseID)
+                .WillCascadeOnDelete(false);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void RelationshipsForTrimesterCourse(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<TrimesterCourse>()
+                .HasRequired(y => y.Trimester)
+                .WithMany()
+                .HasForeignKey(y => y.TrimesterID)
+                .WillCascadeOnDelete(false);
+
+            modelbuilder.Entity<TrimesterCourse>()
+                .HasRequired(y => y.Course)
+                .WithMany()
+                .HasForeignKey(y => y.CourseID)
+                .WillCascadeOnDelete(false);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void RelationshipsForOptionalCoreCourses(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<OptionalCoreCourse>()
+                .HasRequired(y => y.DegreeCoreSlot)
+                .WithMany()
+                .HasForeignKey(y => y.DegreeCoreSlotID)
+                .WillCascadeOnDelete(false);
+
+            modelbuilder.Entity<OptionalCoreCourse>()
+                .HasRequired(y => y.Course)
+                .WithMany()
+                .HasForeignKey(y => y.CourseID)
+                .WillCascadeOnDelete(false);
         }
     }
 }

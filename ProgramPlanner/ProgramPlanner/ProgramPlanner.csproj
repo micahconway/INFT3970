@@ -255,6 +255,38 @@
     <Compile Include="Migrations\201708140700174_Test11.Designer.cs">
       <DependentUpon>201708140700174_Test11.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708140705214_Test12.cs" />
+    <Compile Include="Migrations\201708140705214_Test12.Designer.cs">
+      <DependentUpon>201708140705214_Test12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140722520_Test13.cs" />
+    <Compile Include="Migrations\201708140722520_Test13.Designer.cs">
+      <DependentUpon>201708140722520_Test13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140726424_Test14.cs" />
+    <Compile Include="Migrations\201708140726424_Test14.Designer.cs">
+      <DependentUpon>201708140726424_Test14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140727181_Test15.cs" />
+    <Compile Include="Migrations\201708140727181_Test15.Designer.cs">
+      <DependentUpon>201708140727181_Test15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140736018_Test16.cs" />
+    <Compile Include="Migrations\201708140736018_Test16.Designer.cs">
+      <DependentUpon>201708140736018_Test16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140737345_test17.cs" />
+    <Compile Include="Migrations\201708140737345_test17.Designer.cs">
+      <DependentUpon>201708140737345_test17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140742112_Test18.cs" />
+    <Compile Include="Migrations\201708140742112_Test18.Designer.cs">
+      <DependentUpon>201708140742112_Test18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140748005_test19.cs" />
+    <Compile Include="Migrations\201708140748005_test19.Designer.cs">
+      <DependentUpon>201708140748005_test19.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -512,6 +544,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708140700174_Test11.resx">
       <DependentUpon>201708140700174_Test11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140705214_Test12.resx">
+      <DependentUpon>201708140705214_Test12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140722520_Test13.resx">
+      <DependentUpon>201708140722520_Test13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140726424_Test14.resx">
+      <DependentUpon>201708140726424_Test14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140727181_Test15.resx">
+      <DependentUpon>201708140727181_Test15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140736018_Test16.resx">
+      <DependentUpon>201708140736018_Test16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140737345_test17.resx">
+      <DependentUpon>201708140737345_test17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140742112_Test18.resx">
+      <DependentUpon>201708140742112_Test18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140748005_test19.resx">
+      <DependentUpon>201708140748005_test19.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

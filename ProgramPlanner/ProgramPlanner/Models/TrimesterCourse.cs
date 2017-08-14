@@ -15,9 +15,6 @@ namespace ProgramPlanner.Models
     {
         public int TrimesterCourseID { get; set; }
 
-        [Range(1900, 9999, ErrorMessage = "Must be between 1900, and 9999")]
-        public int Year { get; set; }
-
         public int TrimesterID { get; set; }
 
         public Trimester Trimester { get; set; }
@@ -25,5 +22,8 @@ namespace ProgramPlanner.Models
         public int CourseID { get; set; }
 
         public Course Course { get; set; }
+       
+        [Range(1900, 9999, ErrorMessage = "Must be between 1900, and 9999")]
+        public int Year { get; set; }
     }
 }
