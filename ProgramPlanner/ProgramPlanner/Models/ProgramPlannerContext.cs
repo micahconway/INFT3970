@@ -173,7 +173,7 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelDegreeCore(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<DegreeCore>().HasKey(y => new {y.DegreeCoreID, y.CourseID, y.YearDegreeID});
+            modelbuilder.Entity<DegreeCore>().HasKey(y => new { y.CourseID, y.YearDegreeID});
         }
 
         /// <summary>
@@ -380,7 +380,7 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void RelationshipsForProgramStructures(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<ProgramStructure>().HasRequired(y => y.User);
+            modelbuilder.Entity<ProgramStructure>().HasRequired(y => y.User).WithMany().HasForeignKey(y => y.Email);
         }
         /// <summary>
         /// 

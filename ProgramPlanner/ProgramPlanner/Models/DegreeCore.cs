@@ -7,8 +7,6 @@ namespace ProgramPlanner.Models
 {
     public class DegreeCore
     {
-        public int DegreeCoreID { get; set; }
-
         public int CourseID { get; set; }
 
         public virtual Course Course { get; set; }
