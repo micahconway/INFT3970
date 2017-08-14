@@ -490,6 +490,12 @@ namespace ProgramPlanner.Models
         {
             modelbuilder.Entity<StudyArea>().HasMany(y => y.Abbrevations);
             modelbuilder.Entity<StudyArea>().HasRequired(y => y.University).WithMany().HasForeignKey(y => y.UniversityID).WillCascadeOnDelete(false);
+            modelbuilder.Entity<StudyArea>().HasMany(y => y.Abbrevations).WithMany().Map(
+            StudyAreaAbbreviation => {
+                StudyAreaAbbreviation.MapLeftKey("StudyAreaID");
+                StudyAreaAbbreviation.MapRightKey("AbbreviationID");
+                StudyAreaAbbreviation.ToTable("StudyAreaAbbreviations");
+            });
         }
     }
 }

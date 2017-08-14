@@ -336,6 +336,14 @@
     <Compile Include="Migrations\201708141023502_Test35.Designer.cs">
       <DependentUpon>201708141023502_Test35.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708141209106_Test40.cs" />
+    <Compile Include="Migrations\201708141209106_Test40.Designer.cs">
+      <DependentUpon>201708141209106_Test40.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708141211283_Test41.cs" />
+    <Compile Include="Migrations\201708141211283_Test41.Designer.cs">
+      <DependentUpon>201708141211283_Test41.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Abbreviation.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -659,6 +667,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708141023502_Test35.resx">
       <DependentUpon>201708141023502_Test35.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708141209106_Test40.resx">
+      <DependentUpon>201708141209106_Test40.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708141211283_Test41.resx">
+      <DependentUpon>201708141211283_Test41.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
