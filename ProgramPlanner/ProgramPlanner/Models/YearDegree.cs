@@ -18,13 +18,13 @@ namespace ProgramPlanner.Models
 
         public int DegreeID { get; set; }
 
-        public Degree Degree { get; set; }
+        public virtual Degree Degree { get; set; }
 
-        public virtual List<Major> Majors { get; set; }
+        public virtual ICollection<Major> Majors { get; set; }
 
-        public virtual List<DegreeCore> DegreeCores { get; set; }
+        public virtual ICollection<DegreeCore> DegreeCores { get; set; }
 
-        public virtual List<DegreeCoreSlot> DegreeCoreSlots { get; set; }
+        public virtual ICollection<DegreeCoreSlot> DegreeCoreSlots { get; set; }
 
     }
 }

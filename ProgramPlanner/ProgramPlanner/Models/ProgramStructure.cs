@@ -21,7 +21,7 @@ namespace ProgramPlanner.Models
         [Required]
         public DateTime  DateModified { get; set; }
 
-        public int UserID { get; set; }
+        public string Email { get; set; }
 
         public virtual User User { get; set; }
 

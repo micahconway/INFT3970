@@ -58,7 +58,7 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", directed.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", directed.DirectedID);
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName", directed.MajorID);
             return View(directed);
         }
@@ -75,7 +75,7 @@ namespace ProgramPlanner.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", directed.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", directed.DirectedID);
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName", directed.MajorID);
             return View(directed);
         }
@@ -93,7 +93,7 @@ namespace ProgramPlanner.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", directed.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", directed.DirectedID);
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName", directed.MajorID);
             return View(directed);
         }

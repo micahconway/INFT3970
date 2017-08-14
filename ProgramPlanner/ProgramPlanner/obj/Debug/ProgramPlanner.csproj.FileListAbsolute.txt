@@ -289,29 +289,17 @@ C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\Micro
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\Microsoft.AI.Web.xml
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._10Aug2017Version2.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update1.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update2.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update3.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update4.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update5.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update6.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update7.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update8.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update9.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update10.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update11.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update12.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update13.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update14.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update17.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.test.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.test2.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.test3.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.test4.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csproj.GenerateResource.Cache
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.dll
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.pdb
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csprojResolveAssemblyReference.cache
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.test5.resources
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csproj.GenerateResource.Cache
+=======
+<<<<<<< HEAD
+>>>>>>> 0d86480abba94eee21856d93bae7aaceab178b9c
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Blah2.resources
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._13Aug2017Update1.resources
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csprojResolveAssemblyReference.cache
@@ -426,6 +414,7 @@ C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\Pro
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update13.resources
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update14.resources
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._12Aug2017Update17.resources
+<<<<<<< HEAD
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.test.resources
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.test2.resources
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.test3.resources
@@ -435,3 +424,13 @@ C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\Pro
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csproj.GenerateResource.Cache
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.dll
 C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.pdb
+=======
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Blah.resources
+C:\Users\micah\Documents\Visual Studio 2017\Projects\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Blah2.resources
+=======
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._13Aug2017Update1.resources
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csprojResolveAssemblyReference.cache
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._13Aug2017Update2.resources
+>>>>>>> 2ba486b11573bfef7588300287fe84174e8f7bce
+>>>>>>> origin/master
+>>>>>>> 0d86480abba94eee21856d93bae7aaceab178b9c

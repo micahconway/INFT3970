@@ -13,15 +13,14 @@ namespace ProgramPlanner.Models
 {
     public class User
     {
-        public int UserID { get; set; }
-
-        [Required, EmailAddress]
+        [EmailAddress]
         public string Email { get; set; }
         
-        [Required]
         [MaxLength(100, ErrorMessage = "The {0} must be less than or equal to 100 in length.")]
         [MinLength(5, ErrorMessage ="Cannot be less than 5 characters.")]
         [Display(Name ="Password")]
         public string Password { get; set; }
+
+        public virtual ICollection<ProgramStructure> ProgramStructures { get; set; }
     }
 }

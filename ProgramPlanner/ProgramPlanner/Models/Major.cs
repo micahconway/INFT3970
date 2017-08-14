@@ -10,7 +10,6 @@ namespace ProgramPlanner.Models
     {
         public int MajorID { get; set; }
 
-        [Required]
         public string MajorName { get; set; }
 
         public int YearDegreeID { get; set; }
