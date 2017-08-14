@@ -17,7 +17,7 @@ namespace ProgramPlanner.Controllers
         // GET: Courses
         public ActionResult Index()
         {
-            var courses = db.Courses.Include(c => c.Category).Include(c => c.University);
+            var courses = db.Courses.Include(c => c.Abbreviation).Include(c => c.University);
             return View(courses.ToList());
         }
 
@@ -39,7 +39,7 @@ namespace ProgramPlanner.Controllers
         // GET: Courses/Create
         public ActionResult Create()
         {
-            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName");
+            ViewBag.AbbreviationID = new SelectList(db.Abbreviations, "AbbreviationID", "AbbrevName");
             ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName");
             return View();
         }
@@ -49,7 +49,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CourseID,CourseCode,CourseName,Units,UniversityID,CategoryID")] Course course)
+        public ActionResult Create([Bind(Include = "CourseID,CourseCode,CourseName,Units,UniversityID,AbbreviationID")] Course course)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +58,7 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName", course.CategoryID);
+            ViewBag.AbbreviationID = new SelectList(db.Abbreviations, "AbbreviationID", "AbbrevName", course.AbbreviationID);
             ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName", course.UniversityID);
             return View(course);
         }
@@ -75,7 +75,7 @@ namespace ProgramPlanner.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName", course.CategoryID);
+            ViewBag.AbbreviationID = new SelectList(db.Abbreviations, "AbbreviationID", "AbbrevName", course.AbbreviationID);
             ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName", course.UniversityID);
             return View(course);
         }
@@ -85,7 +85,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CourseID,CourseCode,CourseName,Units,UniversityID,CategoryID")] Course course)
+        public ActionResult Edit([Bind(Include = "CourseID,CourseCode,CourseName,Units,UniversityID,AbbreviationID")] Course course)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +93,7 @@ namespace ProgramPlanner.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName", course.CategoryID);
+            ViewBag.AbbreviationID = new SelectList(db.Abbreviations, "AbbreviationID", "AbbrevName", course.AbbreviationID);
             ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName", course.UniversityID);
             return View(course);
         }

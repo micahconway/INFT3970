@@ -15,10 +15,8 @@ namespace ProgramPlanner.Models
     {
         public int ProgramStructureID { get; set; }
 
-        [Required]
         public DateTime DateCreated { get; set; }
 
-        [Required]
         public DateTime  DateModified { get; set; }
 
         public string Email { get; set; }

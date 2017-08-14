@@ -10,14 +10,11 @@ namespace ProgramPlanner.Models
     {
         public int CourseID { get; set; }
 
-        [Required]
         [MaxLength(8)]
         public string CourseCode { get; set; }
 
-        [Required]
         public string CourseName { get; set; }
 
-        [Required]
         [Range(10, 20)]
         public int Units { get; set; }
 
@@ -25,9 +22,9 @@ namespace ProgramPlanner.Models
 
         public virtual University University { get; set; }
 
-        public int CategoryID { get; set; }
+        public int AbbreviationID { get; set; }
 
-        public virtual Category Category { get; set; }
+        public virtual Abbreviation Abbreviation { get; set; }
 
         // These are your 'AND' prerequisites.
         // A Course can one-to-many mandatory prerequisites. 
