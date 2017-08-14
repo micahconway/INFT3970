@@ -57,7 +57,7 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.UserID = new SelectList(db.Users, "UserID", "Email", programStructure.UserID);
+            ViewBag.UserID = new SelectList(db.Users, "Email", programStructure.Email);
             return View(programStructure);
         }
 
@@ -73,7 +73,7 @@ namespace ProgramPlanner.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.UserID = new SelectList(db.Users, "UserID", "Email", programStructure.UserID);
+            ViewBag.UserID = new SelectList(db.Users, "Email", programStructure.Email);
             return View(programStructure);
         }
 
@@ -90,7 +90,7 @@ namespace ProgramPlanner.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.UserID = new SelectList(db.Users, "UserID", "Email", programStructure.UserID);
+            ViewBag.UserID = new SelectList(db.Users, "Email", programStructure.Email);
             return View(programStructure);
         }
 

@@ -17,7 +17,7 @@ namespace ProgramPlanner.Controllers
         // GET: ProgramDirecteds
         public ActionResult Index()
         {
-            var programDirecteds = db.ProgramDirecteds.Include(p => p.Course).Include(p => p.ProgramStructure);
+            var programDirecteds = db.ProgramDirecteds.Include(p => p.Directed).Include(p => p.ProgramStructure);
             return View(programDirecteds.ToList());
         }
 
@@ -58,7 +58,7 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", programDirected.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", programDirected.DirectedID);
             ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID", programDirected.ProgramStructureID);
             return View(programDirected);
         }
@@ -75,7 +75,7 @@ namespace ProgramPlanner.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", programDirected.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", programDirected.DirectedID);
             ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID", programDirected.ProgramStructureID);
             return View(programDirected);
         }
@@ -93,7 +93,7 @@ namespace ProgramPlanner.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", programDirected.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", programDirected.DirectedID);
             ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID", programDirected.ProgramStructureID);
             return View(programDirected);
         }

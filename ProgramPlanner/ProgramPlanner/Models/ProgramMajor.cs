@@ -11,8 +11,6 @@ namespace ProgramPlanner.Models
 {
     public class ProgramMajor
     {
-        public int ProgramMajorID { get; set; }
-
         public int ProgramStructureID { get; set; }
 
         public virtual ProgramStructure ProgramStructure { get; set; }

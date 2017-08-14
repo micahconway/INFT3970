@@ -10,7 +10,6 @@ namespace ProgramPlanner.Models
     {
         public int UniversityID { get; set; }
 
-        [Required]
         public string UniName { get; set; }
 
         public virtual ICollection<Course> Courses { get; set; }
