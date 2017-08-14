@@ -10,107 +10,112 @@ using ProgramPlanner.Models;
 
 namespace ProgramPlanner.Controllers
 {
-    public class CategoriesController : Controller
+    public class AbbreviationsController : Controller
     {
         private ProgramPlannerContext db = new ProgramPlannerContext();
 
-        // GET: Categories
+        // GET: Abbreviations
         public ActionResult Index()
         {
-            return View(db.Categories.ToList());
+            var abbreviations = db.Abbreviations.Include(a => a.StudyArea);
+            return View(abbreviations.ToList());
         }
 
-        // GET: Categories/Details/5
+        // GET: Abbreviations/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Category category = db.Categories.Find(id);
-            if (category == null)
+            Abbreviation abbreviation = db.Abbreviations.Find(id);
+            if (abbreviation == null)
             {
                 return HttpNotFound();
             }
-            return View(category);
+            return View(abbreviation);
         }
 
-        // GET: Categories/Create
+        // GET: Abbreviations/Create
         public ActionResult Create()
         {
+            ViewBag.StudyAreaID = new SelectList(db.StudyAreas, "StudyAreaID", "StudyAreaName");
             return View();
         }
 
-        // POST: Categories/Create
+        // POST: Abbreviations/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CategoryID,CategoryName")] Category category)
+        public ActionResult Create([Bind(Include = "AbbreviationID,AbbrevName,StudyAreaID")] Abbreviation abbreviation)
         {
             if (ModelState.IsValid)
             {
-                db.Categories.Add(category);
+                db.Abbreviations.Add(abbreviation);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(category);
+            ViewBag.StudyAreaID = new SelectList(db.StudyAreas, "StudyAreaID", "StudyAreaName", abbreviation.StudyAreaID);
+            return View(abbreviation);
         }
 
-        // GET: Categories/Edit/5
+        // GET: Abbreviations/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Category category = db.Categories.Find(id);
-            if (category == null)
+            Abbreviation abbreviation = db.Abbreviations.Find(id);
+            if (abbreviation == null)
             {
                 return HttpNotFound();
             }
-            return View(category);
+            ViewBag.StudyAreaID = new SelectList(db.StudyAreas, "StudyAreaID", "StudyAreaName", abbreviation.StudyAreaID);
+            return View(abbreviation);
         }
 
-        // POST: Categories/Edit/5
+        // POST: Abbreviations/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CategoryID,CategoryName")] Category category)
+        public ActionResult Edit([Bind(Include = "AbbreviationID,AbbrevName,StudyAreaID")] Abbreviation abbreviation)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(category).State = EntityState.Modified;
+                db.Entry(abbreviation).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(category);
+            ViewBag.StudyAreaID = new SelectList(db.StudyAreas, "StudyAreaID", "StudyAreaName", abbreviation.StudyAreaID);
+            return View(abbreviation);
         }
 
-        // GET: Categories/Delete/5
+        // GET: Abbreviations/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Category category = db.Categories.Find(id);
-            if (category == null)
+            Abbreviation abbreviation = db.Abbreviations.Find(id);
+            if (abbreviation == null)
             {
                 return HttpNotFound();
             }
-            return View(category);
+            return View(abbreviation);
         }
 
-        // POST: Categories/Delete/5
+        // POST: Abbreviations/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Category category = db.Categories.Find(id);
-            db.Categories.Remove(category);
+            Abbreviation abbreviation = db.Abbreviations.Find(id);
+            db.Abbreviations.Remove(abbreviation);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

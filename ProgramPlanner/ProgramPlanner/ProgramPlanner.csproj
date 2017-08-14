@@ -188,8 +188,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AbbreviationsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\DegreeCoresController.cs" />
     <Compile Include="Controllers\DegreeCoreSlotsController.cs" />
@@ -208,6 +208,7 @@
     <Compile Include="Controllers\ProgramStructuresController.cs" />
     <Compile Include="Controllers\ReplacementsController.cs" />
     <Compile Include="Controllers\SemesterCoursesController.cs" />
+    <Compile Include="Controllers\StudyAreasController.cs" />
     <Compile Include="Controllers\TrimestersController.cs" />
     <Compile Include="Controllers\UniversitiesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
@@ -323,9 +324,21 @@
     <Compile Include="Migrations\201708140820596_Test28.Designer.cs">
       <DependentUpon>201708140820596_Test28.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708141020266_Test33.cs" />
+    <Compile Include="Migrations\201708141020266_Test33.Designer.cs">
+      <DependentUpon>201708141020266_Test33.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708141022570_Test34.cs" />
+    <Compile Include="Migrations\201708141022570_Test34.Designer.cs">
+      <DependentUpon>201708141022570_Test34.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708141023502_Test35.cs" />
+    <Compile Include="Migrations\201708141023502_Test35.Designer.cs">
+      <DependentUpon>201708141023502_Test35.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Abbreviation.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Degree.cs" />
     <Compile Include="Models\DegreeCore.cs" />
@@ -346,6 +359,7 @@
     <Compile Include="Models\Replacement.cs" />
     <Compile Include="Models\Semester.cs" />
     <Compile Include="Models\SemesterCourse.cs" />
+    <Compile Include="Models\StudyArea.cs" />
     <Compile Include="Models\Trimester.cs" />
     <Compile Include="Models\TrimesterCourse.cs" />
     <Compile Include="Models\User.cs" />
@@ -422,16 +436,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Categories\Create.cshtml" />
-    <Content Include="Views\Categories\Delete.cshtml" />
-    <Content Include="Views\Categories\Details.cshtml" />
-    <Content Include="Views\Categories\Edit.cshtml" />
-    <Content Include="Views\Categories\Index.cshtml" />
-    <Content Include="Views\Courses\Create.cshtml" />
-    <Content Include="Views\Courses\Delete.cshtml" />
-    <Content Include="Views\Courses\Details.cshtml" />
-    <Content Include="Views\Courses\Edit.cshtml" />
-    <Content Include="Views\Courses\Index.cshtml" />
     <Content Include="Views\Degrees\Create.cshtml" />
     <Content Include="Views\Degrees\Delete.cshtml" />
     <Content Include="Views\Degrees\Details.cshtml" />
@@ -539,6 +543,21 @@
     <Content Include="Views\PrerequisiteCourses\Index.cshtml" />
     <Content Include="Views\Plan\Index.cshtml" />
     <Content Include="Views\Plan\Submit.cshtml" />
+    <Content Include="Views\Abbreviations\Create.cshtml" />
+    <Content Include="Views\Abbreviations\Delete.cshtml" />
+    <Content Include="Views\Abbreviations\Details.cshtml" />
+    <Content Include="Views\Abbreviations\Edit.cshtml" />
+    <Content Include="Views\Abbreviations\Index.cshtml" />
+    <Content Include="Views\StudyAreas\Create.cshtml" />
+    <Content Include="Views\StudyAreas\Delete.cshtml" />
+    <Content Include="Views\StudyAreas\Details.cshtml" />
+    <Content Include="Views\StudyAreas\Edit.cshtml" />
+    <Content Include="Views\StudyAreas\Index.cshtml" />
+    <Content Include="Views\Courses\Create.cshtml" />
+    <Content Include="Views\Courses\Delete.cshtml" />
+    <Content Include="Views\Courses\Details.cshtml" />
+    <Content Include="Views\Courses\Edit.cshtml" />
+    <Content Include="Views\Courses\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -631,6 +650,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708140820596_Test28.resx">
       <DependentUpon>201708140820596_Test28.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708141020266_Test33.resx">
+      <DependentUpon>201708141020266_Test33.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708141022570_Test34.resx">
+      <DependentUpon>201708141022570_Test34.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708141023502_Test35.resx">
+      <DependentUpon>201708141023502_Test35.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

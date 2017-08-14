@@ -21,8 +21,6 @@ namespace ProgramPlanner.Models
 
         public DbSet<Course> Courses { get; set; }
 
-        public DbSet<Category> Categories { get; set; }
-
         public DbSet<YearDegree> YearDegrees { get; set; }
 
         public DbSet<Degree> Degrees { get; set; }
@@ -63,6 +61,9 @@ namespace ProgramPlanner.Models
 
         public DbSet<Replacement> Replacements { get; set; }
 
+        public DbSet<Abbreviation> Abbreviations { get; set; }
+
+        public DbSet<StudyArea> StudyAreas { get; set; }
         //-------------------------------------------------------------------------------------
         //----------------------------------DATABASE MODELS------------------------------------: 
         /// <summary>
@@ -100,6 +101,8 @@ namespace ProgramPlanner.Models
             ModelUser(modelbuilder);
             ModelProgramStructure(modelbuilder);
             ModelProgramOptionalCoreCourse(modelbuilder);
+            ModelAbbreviation(modelbuilder);
+            ModelStudyArea(modelbuilder);
         }
 
         /// <summary>
@@ -108,22 +111,11 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelCourse(DbModelBuilder modelbuilder)
         {
-            // Also referrenced in the class Course as data annotations (Required)
-            // Remove these later. 
-            modelbuilder.Entity<Course>()
-                .Property(y => y.CourseCode).IsRequired();
-
-            modelbuilder.Entity<Course>()
-                .Property(y => y.CourseName).IsRequired();
-
-            modelbuilder.Entity<Course>()
-                .Property(y => y.UniversityID).IsRequired();
-
-            modelbuilder.Entity<Course>()
-                .Property(y => y.Units).IsRequired();
-
-            modelbuilder.Entity<Course>().
-                Property(y => y.CategoryID).IsRequired();
+            modelbuilder.Entity<Course>().Property(y => y.CourseCode).IsRequired();
+            modelbuilder.Entity<Course>().Property(y => y.CourseName).IsRequired();
+            modelbuilder.Entity<Course>().Property(y => y.UniversityID).IsRequired();
+            modelbuilder.Entity<Course>().Property(y => y.Units).IsRequired();
+            modelbuilder.Entity<Course>().Property(y => y.AbbreviationID).IsRequired();
         }
         /// <summary>
         /// 
@@ -131,7 +123,7 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelProgramElective(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<ProgramElective>().HasKey(y => new {y.CourseID, y.ProgramStructureID});
+            modelbuilder.Entity<ProgramElective>().HasKey(y => new { y.CourseID, y.ProgramStructureID });
         }
 
         /// <summary>
@@ -159,7 +151,7 @@ namespace ProgramPlanner.Models
         private void ModelReplacement(DbModelBuilder modelbuilder)
         {
             // Creating a new composite Primary key for entity Replacement;
-            modelbuilder.Entity<Replacement>().HasKey(y => new {y.ReplacedCourseID, y.ReplacementCourseID, y.YearDegreeID});
+            modelbuilder.Entity<Replacement>().HasKey(y => new { y.ReplacedCourseID, y.ReplacementCourseID, y.YearDegreeID });
         }
         /// <summary>
         /// 
@@ -175,7 +167,7 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelDegreeCore(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<DegreeCore>().HasKey(y => new { y.CourseID, y.YearDegreeID});
+            modelbuilder.Entity<DegreeCore>().HasKey(y => new { y.CourseID, y.YearDegreeID });
         }
 
         /// <summary>
@@ -184,7 +176,7 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelMajorCore(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<MajorCore>().HasKey(y => new {y.CourseID, y.MajorID });
+            modelbuilder.Entity<MajorCore>().HasKey(y => new { y.CourseID, y.MajorID });
         }
         /// <summary>
         /// 
@@ -192,7 +184,7 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelSemester(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<Semester>().HasKey(y => new { y.SemesterID});
+            modelbuilder.Entity<Semester>().HasKey(y => new { y.SemesterID });
             modelbuilder.Entity<Semester>().Property(y => y.SemesterValue).IsRequired();
         }
 
@@ -212,7 +204,7 @@ namespace ProgramPlanner.Models
         private void ModelSemesterCourse(DbModelBuilder modelbuilder)
         {
             // Creating a new composite Primary key. 
-            modelbuilder.Entity<SemesterCourse>().HasKey(y => new { y.SemesterCourseID, y.SemesterID, y.CourseID});
+            modelbuilder.Entity<SemesterCourse>().HasKey(y => new { y.SemesterCourseID, y.SemesterID, y.CourseID });
         }
         /// <summary>
         /// 
@@ -229,7 +221,7 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelDirected(DbModelBuilder modelbuilder)
         {
-           // modelbuilder.Entity<Directed>().HasKey(y => new {y.DirectedID });
+            // modelbuilder.Entity<Directed>().HasKey(y => new {y.DirectedID });
         }
         /// <summary>
         /// 
@@ -282,7 +274,23 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelProgramOptionalCoreCourse(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<ProgramOptionalCoreCourse>().HasKey(y => new { y.ProgramStructureID, y.OptionalCoreID});
+            modelbuilder.Entity<ProgramOptionalCoreCourse>().HasKey(y => new { y.ProgramStructureID, y.OptionalCoreID });
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void ModelAbbreviation(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<Abbreviation>().Property(y => y.AbbrevName).IsRequired();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void ModelStudyArea(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<StudyArea>().Property(y => y.StudyAreaName).IsRequired();
         }
         //-------------------------------------------------------------------------------------
         //---------------------------------ENTITY ASSOCIATIONS---------------------------------:
@@ -297,7 +305,6 @@ namespace ProgramPlanner.Models
             RelationshipsForDegree(modelbuilder);
             RelationshipsForDegreeCore(modelbuilder);
             RelationshipsForReplacement(modelbuilder);
-            RelationshipsForMajorCore(modelbuilder);
             RelationshipsForProgramMajor(modelbuilder);
             RelationshipsForProgramElective(modelbuilder);
             RelationshipsForProgramDirected(modelbuilder);
@@ -305,9 +312,12 @@ namespace ProgramPlanner.Models
             RelationshipsForUser(modelbuilder);
             RelationshipsForMajors(modelbuilder);
             RelationshipsForOptionalCoreCourses(modelbuilder);
+            RelationshipsForTrimester(modelbuilder);
             RelationshipsForSemesterCourse(modelbuilder);
             RelationshipsForTrimesterCourse(modelbuilder);
             RelationshipsForProgramOptionalCoreCourse(modelbuilder);
+            RelationshipsForAbbreviation(modelbuilder);
+            RelationshipsForStudyArea(modelbuilder);
         }
 
         /// <summary>
@@ -316,38 +326,22 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void RelationshipsForCourse(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<Course>()
-                .HasRequired(y => y.Category)
-                .WithMany()
-                .HasForeignKey(y =>y.CategoryID)
-                .WillCascadeOnDelete(false);
+            modelbuilder.Entity<Course>().HasRequired(y => y.Abbreviation).WithMany().HasForeignKey(y => y.AbbreviationID).WillCascadeOnDelete(false);
+            modelbuilder.Entity<Course>().HasRequired(y => y.University).WithMany().HasForeignKey(y => y.UniversityID).WillCascadeOnDelete(false);
+            modelbuilder.Entity<Course>().HasMany(y => y.MandatoryPrerequisites).WithMany().Map(
+                Mandatory => {
+                    Mandatory.MapLeftKey("CourseID");
+                    Mandatory.MapRightKey("PrerequisiteID");
+                    Mandatory.ToTable("MandatoryPrerquisites");
+                });
+            modelbuilder.Entity<Course>().HasMany(y => y.OptionalPrerequisites).WithMany().Map(
+                Mandatory => {
+                    Mandatory.MapLeftKey("CourseID");
+                    Mandatory.MapRightKey("PrerequisiteID");
+                    Mandatory.ToTable("OptionalPrerequisites");
+                });
 
-            modelbuilder.Entity<Course>()
-                 .HasRequired(y => y.University)
-                 .WithMany()
-                 .HasForeignKey(y => y.UniversityID)
-                 .WillCascadeOnDelete(false);
-
-            modelbuilder.Entity<Course>()
-               .HasMany(y => y.MandatoryPrerequisites)
-               .WithMany()
-               .Map(
-                    Mandatory => {
-                        Mandatory.MapLeftKey("CourseID");
-                        Mandatory.MapRightKey("PrerequisiteID");
-                        Mandatory.ToTable("MandatoryPrerquisites");
-                    });
-
-
-            modelbuilder.Entity<Course>()
-               .HasMany(y => y.OptionalPrerequisites)
-               .WithMany()
-               .Map(
-                    Mandatory => {
-                        Mandatory.MapLeftKey("CourseID");
-                        Mandatory.MapRightKey("PrerequisiteID");
-                        Mandatory.ToTable("OptionalPrerequisites");
-                    });
+            modelbuilder.Entity<Course>().HasRequired(y => y.Abbreviation).WithMany().HasForeignKey(y => y.AbbreviationID).WillCascadeOnDelete(false);
         }
         /// <summary>
         /// 
@@ -373,34 +367,9 @@ namespace ProgramPlanner.Models
         private void RelationshipsForReplacement(DbModelBuilder modelbuilder)
         {
 
-            // Constraint: The attribute(ReplacedCourse) is not null 
-            modelbuilder.Entity<Replacement>()
-              .HasRequired(y => y.ReplacedCourse)
-              .WithMany()
-              .HasForeignKey(y => y.ReplacedCourseID)
-              .WillCascadeOnDelete(false);
-
-            // Constraint: The attribute(ReplacementCourse) is not null
-            modelbuilder.Entity<Replacement>()
-                .HasRequired(y => y.ReplacementCourse)
-                .WithMany()
-                .HasForeignKey(y => y.ReplacementCourseID)
-                .WillCascadeOnDelete(false);
-
-            // Constraint: The attribute(YearDegree) is not null
-            modelbuilder.Entity<Replacement>()
-                .HasRequired(y => y.YearDegree)
-                .WithMany()
-                .HasForeignKey(y => y.YearDegreeID)
-                .WillCascadeOnDelete(false);
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="modelbuilder"></param>
-        private void RelationshipsForMajorCore(DbModelBuilder modelbuilder)
-        {
-
+            modelbuilder.Entity<Replacement>().HasRequired(y => y.ReplacedCourse).WithMany().HasForeignKey(y => y.ReplacedCourseID).WillCascadeOnDelete(false);
+            modelbuilder.Entity<Replacement>().HasRequired(y => y.ReplacementCourse).WithMany().HasForeignKey(y => y.ReplacementCourseID).WillCascadeOnDelete(false);
+            modelbuilder.Entity<Replacement>().HasRequired(y => y.YearDegree).WithMany().HasForeignKey(y => y.YearDegreeID).WillCascadeOnDelete(false);
         }
         /// <summary>
         /// 
@@ -460,11 +429,14 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void RelationshipsForMajors(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<Major>()
-                .HasRequired(y => y.YearDegree)
-                .WithMany()
-                .HasForeignKey(y => y.YearDegreeID)
-                .WillCascadeOnDelete(false);
+            modelbuilder.Entity<Major>().HasRequired(y => y.YearDegree).WithMany().HasForeignKey(y => y.YearDegreeID).WillCascadeOnDelete(false);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="builder"></param>
+        private void RelationshipsForTrimester(DbModelBuilder modelbuilder)
+        {
         }
         /// <summary>
         /// 
@@ -472,17 +444,8 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void RelationshipsForSemesterCourse(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<SemesterCourse>()
-                .HasRequired(y => y.Semester)
-                .WithMany()
-                .HasForeignKey(y => y.SemesterID)
-                .WillCascadeOnDelete(false);
-
-            modelbuilder.Entity<SemesterCourse>()
-                .HasRequired(y => y.Course)
-                .WithMany()
-                .HasForeignKey(y => y.CourseID)
-                .WillCascadeOnDelete(false);
+            modelbuilder.Entity<SemesterCourse>().HasRequired(y => y.Semester).WithMany().HasForeignKey(y => y.SemesterID).WillCascadeOnDelete(false);
+            modelbuilder.Entity<SemesterCourse>().HasRequired(y => y.Course).WithMany().HasForeignKey(y => y.CourseID).WillCascadeOnDelete(false);
         }
         /// <summary>
         /// 
@@ -490,17 +453,8 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void RelationshipsForTrimesterCourse(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<TrimesterCourse>()
-                .HasRequired(y => y.Trimester)
-                .WithMany()
-                .HasForeignKey(y => y.TrimesterID)
-                .WillCascadeOnDelete(false);
-
-            modelbuilder.Entity<TrimesterCourse>()
-                .HasRequired(y => y.Course)
-                .WithMany()
-                .HasForeignKey(y => y.CourseID)
-                .WillCascadeOnDelete(false);
+            modelbuilder.Entity<TrimesterCourse>().HasRequired(y => y.Trimester).WithMany().HasForeignKey(y => y.TrimesterID).WillCascadeOnDelete(false);
+            modelbuilder.Entity<TrimesterCourse>().HasRequired(y => y.Course).WithMany().HasForeignKey(y => y.CourseID).WillCascadeOnDelete(false);
         }
         /// <summary>
         /// 
@@ -508,17 +462,8 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void RelationshipsForOptionalCoreCourses(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<OptionalCoreCourse>()
-                .HasRequired(y => y.DegreeCoreSlot)
-                .WithMany()
-                .HasForeignKey(y => y.DegreeCoreSlotID)
-                .WillCascadeOnDelete(false);
-
-            modelbuilder.Entity<OptionalCoreCourse>()
-                .HasRequired(y => y.Course)
-                .WithMany()
-                .HasForeignKey(y => y.CourseID)
-                .WillCascadeOnDelete(false);
+            modelbuilder.Entity<OptionalCoreCourse>().HasRequired(y => y.DegreeCoreSlot).WithMany().HasForeignKey(y => y.DegreeCoreSlotID).WillCascadeOnDelete(false);
+            modelbuilder.Entity<OptionalCoreCourse>().HasRequired(y => y.Course).WithMany().HasForeignKey(y => y.CourseID).WillCascadeOnDelete(false);
         }
         /// <summary>
         /// 
@@ -528,6 +473,23 @@ namespace ProgramPlanner.Models
         {
             modelbuilder.Entity<ProgramOptionalCoreCourse>().HasRequired(y => y.ProgramStructure).WithMany().HasForeignKey(y => y.ProgramStructureID).WillCascadeOnDelete(false);
             modelbuilder.Entity<ProgramOptionalCoreCourse>().HasRequired(y => y.OptionalCoreCourse).WithMany().HasForeignKey(y => y.OptionalCoreID).WillCascadeOnDelete(false);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void RelationshipsForAbbreviation(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<Abbreviation>().HasRequired(y => y.StudyArea).WithMany().HasForeignKey(y => y.StudyAreaID).WillCascadeOnDelete(false);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void RelationshipsForStudyArea(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<StudyArea>().HasMany(y => y.Abbrevations);
+            modelbuilder.Entity<StudyArea>().HasRequired(y => y.University).WithMany().HasForeignKey(y => y.UniversityID).WillCascadeOnDelete(false);
         }
     }
 }

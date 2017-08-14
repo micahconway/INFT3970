@@ -10,116 +10,112 @@ using ProgramPlanner.Models;
 
 namespace ProgramPlanner.Controllers
 {
-    public class CoursesController : Controller
+    public class StudyAreasController : Controller
     {
         private ProgramPlannerContext db = new ProgramPlannerContext();
 
-        // GET: Courses
+        // GET: StudyAreas
         public ActionResult Index()
         {
-            var courses = db.Courses.Include(c => c.Abbreviation).Include(c => c.University);
-            return View(courses.ToList());
+            var studyAreas = db.StudyAreas.Include(s => s.University);
+            return View(studyAreas.ToList());
         }
 
-        // GET: Courses/Details/5
+        // GET: StudyAreas/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Course course = db.Courses.Find(id);
-            if (course == null)
+            StudyArea studyArea = db.StudyAreas.Find(id);
+            if (studyArea == null)
             {
                 return HttpNotFound();
             }
-            return View(course);
+            return View(studyArea);
         }
 
-        // GET: Courses/Create
+        // GET: StudyAreas/Create
         public ActionResult Create()
         {
-            ViewBag.AbbreviationID = new SelectList(db.Abbreviations, "AbbreviationID", "AbbrevName");
             ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName");
             return View();
         }
 
-        // POST: Courses/Create
+        // POST: StudyAreas/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CourseID,CourseCode,CourseName,Units,UniversityID,AbbreviationID")] Course course)
+        public ActionResult Create([Bind(Include = "StudyAreaID,StudyAreaName,UniversityID")] StudyArea studyArea)
         {
             if (ModelState.IsValid)
             {
-                db.Courses.Add(course);
+                db.StudyAreas.Add(studyArea);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.AbbreviationID = new SelectList(db.Abbreviations, "AbbreviationID", "AbbrevName", course.AbbreviationID);
-            ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName", course.UniversityID);
-            return View(course);
+            ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName", studyArea.UniversityID);
+            return View(studyArea);
         }
 
-        // GET: Courses/Edit/5
+        // GET: StudyAreas/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Course course = db.Courses.Find(id);
-            if (course == null)
+            StudyArea studyArea = db.StudyAreas.Find(id);
+            if (studyArea == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.AbbreviationID = new SelectList(db.Abbreviations, "AbbreviationID", "AbbrevName", course.AbbreviationID);
-            ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName", course.UniversityID);
-            return View(course);
+            ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName", studyArea.UniversityID);
+            return View(studyArea);
         }
 
-        // POST: Courses/Edit/5
+        // POST: StudyAreas/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CourseID,CourseCode,CourseName,Units,UniversityID,AbbreviationID")] Course course)
+        public ActionResult Edit([Bind(Include = "StudyAreaID,StudyAreaName,UniversityID")] StudyArea studyArea)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(course).State = EntityState.Modified;
+                db.Entry(studyArea).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.AbbreviationID = new SelectList(db.Abbreviations, "AbbreviationID", "AbbrevName", course.AbbreviationID);
-            ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName", course.UniversityID);
-            return View(course);
+            ViewBag.UniversityID = new SelectList(db.Universities, "UniversityID", "UniName", studyArea.UniversityID);
+            return View(studyArea);
         }
 
-        // GET: Courses/Delete/5
+        // GET: StudyAreas/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Course course = db.Courses.Find(id);
-            if (course == null)
+            StudyArea studyArea = db.StudyAreas.Find(id);
+            if (studyArea == null)
             {
                 return HttpNotFound();
             }
-            return View(course);
+            return View(studyArea);
         }
 
-        // POST: Courses/Delete/5
+        // POST: StudyAreas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Course course = db.Courses.Find(id);
-            db.Courses.Remove(course);
+            StudyArea studyArea = db.StudyAreas.Find(id);
+            db.StudyAreas.Remove(studyArea);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
