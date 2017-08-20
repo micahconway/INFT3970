@@ -19,5 +19,6 @@ namespace ProgramPlanner.Models
 
         public virtual ProgramStructure ProgramStructure { get; set; }
 
+        public int Completed { get; set; }
     }
 }

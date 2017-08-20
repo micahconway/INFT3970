@@ -18,5 +18,7 @@ namespace ProgramPlanner.Models
         public int DirectedID { get; set; }
 
         public virtual Directed Directed { get; set; }
+
+        public int Completed { get; set; }
     }
 }

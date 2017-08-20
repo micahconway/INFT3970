@@ -18,5 +18,7 @@ namespace ProgramPlanner.Models
         public int OptionalCoreID { get; set; }
 
         public virtual OptionalCoreCourse OptionalCoreCourse { get; set; }
+
+        public int Completed { get; set; }
     }
 }
