@@ -116,6 +116,7 @@ namespace ProgramPlanner.Models
             modelbuilder.Entity<Course>().Property(y => y.UniversityID).IsRequired();
             modelbuilder.Entity<Course>().Property(y => y.Units).IsRequired();
             modelbuilder.Entity<Course>().Property(y => y.AbbreviationID).IsRequired();
+            modelbuilder.Entity<Course>().Property(y => y.Code).IsRequired();
         }
         /// <summary>
         /// 
@@ -490,12 +491,6 @@ namespace ProgramPlanner.Models
         {
             modelbuilder.Entity<StudyArea>().HasMany(y => y.Abbrevations);
             modelbuilder.Entity<StudyArea>().HasRequired(y => y.University).WithMany().HasForeignKey(y => y.UniversityID).WillCascadeOnDelete(false);
-            modelbuilder.Entity<StudyArea>().HasMany(y => y.Abbrevations).WithMany().Map(
-            StudyAreaAbbreviation => {
-                StudyAreaAbbreviation.MapLeftKey("StudyAreaID");
-                StudyAreaAbbreviation.MapRightKey("AbbreviationID");
-                StudyAreaAbbreviation.ToTable("StudyAreaAbbreviations");
-            });
         }
     }
 }
