@@ -1,9 +1,5 @@
-﻿.courseBoxContainer {
-    padding-right:5px;
-}
-
-.year {
-    margin-bottom: 10px;
+﻿body{
+    padding-top:30px;
 }
 
 #plan_all{
@@ -12,34 +8,104 @@
     top:100px;
 }
 
-.rowName{
-    line-height:100px;
+#headerRow {
+    margin-bottom:50px;
 }
 
-.semestername{
-    text-align:center;
-    position:relative;
-    top:100px;
+h1{
+    line-height:90px;
 }
+
+#imgHeader {
+    width:50%;
+}
+
+.rowName {
+    line-height: 100px;
+}
+
+.semesterName {
+    top: 5px;
+    text-align: center;
+    position: relative;
+    width: 90px;
+    float: left;
+    z-index: 1;    
+}
+
+#semester1Name {
+    left: 155px;
+}
+
+#semester2Name {
+    left:365px;
+}
+
+#yearNameColumn {
+    top:0px;
+    padding-left:20px;
+}
+
+.yearNames {
+    position: relative;
+    line-height:105px;
+    list-style:none;
+    font-size:18px;
+}
+
+#rowYearInnerPlan {
+    position: relative;
+    top: 5px;
+}
+
+#mainRow {
+    position: relative;
+}
+
 
 #plan{
     position:relative;
-    left:200px;
-    top:100px;
+    padding:0px;
+    
+}
+
+#innerPlan{
+    position:relative;
+}
+
+#colInnerPlan {
+    padding:0px;
 }
 
 .courseBox {
     position: absolute;
-    height: 100px;
-    width: 100px;
-    background-color:aliceblue;
+    height: 96px;
+    width: 96px;
+    background-color: aliceblue;
 }
 
+#semester1Box {
+    position: absolute;
+    height: 100%;
+    background-color: #fffbef;  
+}
+
+#semester2Box {
+    position: absolute;
+    height:100%;
+    background-color:#e7ffca;    
+    left:400px;
+}
+
+.semesterBox {
+    float: left;
+}
+
+
 #planMenu{
-    float:right;
     position:relative;
-    top:-300px;
     height:500px;
+    top:0px;
 }
 
 .directeds {
@@ -47,18 +113,24 @@
     margin-bottom: 2px;
     padding: 2px;
     background-color: aliceblue;
+    z-index:2;
 }
 
 .electives {
-    width: 100px;
     margin-bottom: 2px;
     padding: 2px;
     background-color: aliceblue;
-    float: right;
+    width: 100px;
+    z-index: 2;
 }
 
-#tabs{
-    height:100%;
+.subAccordion {
+    width:80%;
+    float:right;
+}
+
+#tabs {
+    height: 100%;
 }
 
 #tabs-2{

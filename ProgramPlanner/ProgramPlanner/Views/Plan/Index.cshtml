@@ -3,7 +3,7 @@
 }
 
 <!DOCTYPE html>
-
+<!-- -->
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -18,118 +18,180 @@
     <script src="~/Content/scripts/jquery-ui.min.js"></script>
     <script src="~/Content/scripts/jquery.shapeshift.js"></script>
     
-    <div class="row">
-        <div class="semestername col-md-4 col-md-offset-1">Semester 1</div>
-        <div class="semestername col-md-4">Semester 2</div>
+    <div id="headerRow" class="row">
+        <div id="imgHeaderContainer" class="col-md-2 col-md-offset-1" >
+            <img id="imgHeader" src="~/Content/images/adaymaycome.jpg" />
+        </div>
+        <h1>Various Instructions and pictures shall go here</h1>
+    </div>
+    <!--Row at top that contains the semester heading names -->
+    <div id="semesterRow" class="row">
+        
     </div>    
 
-    <div id="plan">
-        @for (var i = 1; i <= @ViewBag.YearsInDegree; i++)
-        {
-            for (var y = 1; y <= @ViewBag.SubjectsPerSemester * 2; y++)
-            {
-                <div class="courseBox droppable">Course @y</div>
-            }
-        }
-    </div>
+    <div id="mainRow" class="row"><!--Main row with most page items-->       
 
-    <div id="optionsMenu" class="col-md-1">
-        <input type="number" min="1" max="5" value="4" id="newNumOfSubjects" />
-        <input type="button" id="btnPicker" value="Update"/>
-        <input type="hidden" name="oldNumOfSubjects" id="oldNumOfSubjects" value="@ViewBag.SubjectsPerSemester"/>
-    </div>
+        <!--Main menu on right of page -->
+        <div id="planMenu" class="col-md-3">
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">Directed</a></li>
+                    <li><a href="#tabs-2">Electives</a></li>
+                    <li><a href="#tabs-3">Options</a></li>
+                </ul>
+                <div id="tabs-1">
+                    <!--Directeds tab -->
+                    <div class="draggable directeds">Course 1</div>
+                    <div class="draggable directeds">Course 2</div>
+                    <div class="draggable directeds">Course 3</div>
+                    <div class="draggable directeds">Course 4</div>
+                </div>
+                <div id="tabs-2">
+                    <!--Electives tab -->
+                    <div class="ui-widget">
 
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-        <form class="form-group">
-            <input type="hidden" name="InputData" id="courseInput"/>
-            <input type="submit" value="Index" class="btn btn-default" id="btnPicker"/>
-        </form>
-    }
+                        <!--Search box under electives tab -->
+                        <label for="searchBox">Search: </label>
+                        <input id="searchBox">
 
-    <div id="planMenu" class="col-md-2">       
-        <div id="tabs">
-            <ul>
-                <li><a href="#tabs-1">Directed</a></li>
-                <li><a href="#tabs-2">Electives</a></li>
-            </ul>
-            <div id="tabs-1">
-                <div class="draggable directeds">Course 1</div>
-                <div class="draggable directeds">Course 2</div>
-                <div class="draggable directeds">Course 3</div>
-                <div class="draggable directeds">Course 4</div>
-            </div>
-            <div id="tabs-2">
-                <div class="ui-widget">
-                    <label for="searchBox">Search: </label>
-                    <input id="searchBox">                    
+                        <!--Enables interactive menu that drops down when clicks -->
+                        <div id="accordion">
 
-                    <div id="accordion">
+                            <!--Each heading is a new menu item -->
+                            <h3>Communication and Creative Industries</h3>
+                            <div class="accordions">
+                                <h4>Architecture</h4>
+                                <div class="subAccordion">
+                                    <div class="draggable electives">ARCH1001</div>
+                                    <div class="draggable electives">ARCH1002</div>
+                                </div>
+                                <h4>Music</h4>
+                                <div class="subAccordion">
+                                    <div class="draggable electives">MUSC1001</div>
+                                    <div class="draggable electives">MUSC1002</div>
+                                </div>
+                                <h4>Visual Arts</h4>
+                                <div class="subAccordion">
+                                    <div class="draggable electives">ARTS1001</div>
+                                    <div class="draggable electives">ARTS1002</div>
+                                </div>
+                            </div>
 
-                        <h3>Communication and Creative Industries</h3>
-                        <div class="accordions">
-                            <h4>Architecture</h4>
-                            <div>
-                                <div class="draggable electives">ARCH1001</div>
-                                <div class="draggable electives">ARCH1002</div>
-                            </div>  
-                            <h4>Music</h4>
-                            <div>
-                                <div class="draggable electives">MUSC1001</div>
-                                <div class="draggable electives">MUSC1002</div>
-                            </div> 
-                            <h4>Visual Arts</h4>
-                            <div>
-                                <div class="draggable electives">ARTS1001</div>
-                                <div class="draggable electives">ARTS1002</div>
-                            </div> 
+                            <!--Another menu item -->
+                            <h3>Business and Entrepreneurship</h3>
+                            <div class="accordions">
+                                <h4>Commerce</h4>
+                                <div class="subAccordion">
+                                    <div class="draggable electives">COMM1100</div>
+                                    <div class="draggable electives">COMM1110</div>
+                                </div>
+                                <h4>Marketing</h4>
+                                <div class="subAccordion">
+                                    <div class="draggable electives">BUSN1100</div>
+                                    <div class="draggable electives">BUSN1110</div>
+                                </div>
+                            </div>
+
+                            <!--Anothr menu item -->
+                            <h3>Computing, Maths and Technology</h3>
+                            <div class="accordions">
+                                <h4>Computer Science</h4>
+                                <div class="subAccordion">
+                                    <div class="draggable electives">COMP1100</div>
+                                    <div class="draggable electives">COMP1110</div>
+                                </div>
+                                <h4>Information Technology</h4>
+                                <div class="subAccordion">
+                                    <div class="draggable electives">INFT1100</div>
+                                    <div class="draggable electives">INFT1110</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tabs-3">
+                    <!--Menu on left of page that has page options for the user -->
+                    <div>
+                        <div id="optionsMenu">
+                            <input type="number" min="1" max="5" value="4" id="newNumOfSubjects" />
+                            <input type="button" id="btnPicker" value="Update" />
+                            <input type="hidden" name="oldNumOfSubjects" id="oldNumOfSubjects" value="@ViewBag.SubjectsPerSemester" />
+                            <input type="hidden" name="unitsPerDegree" id="unitsPerDegree" value="@ViewBag.UnitsPerDegree" />
                         </div>
 
-
-                        <h3>Business and Entrepreneurship</h3>
-                        <div class="accordions">
-                            <h4>Commerce</h4>
-                            <div>
-                                <div class="draggable electives">COMM1100</div>
-                                <div class="draggable electives">COMM1110</div>
-                            </div>
-                            <h4>Marketing</h4>
-                            <div>
-                                <div class="draggable electives">BUSN1100</div>
-                                <div class="draggable electives">BUSN1110</div>
-                            </div>
-                        </div>   
-                        
-
-                        <h3>Computing, Maths and Technology</h3>
-                        <div class="accordions">
-                            <h4>Computer Science</h4>
-                            <div>
-                                <div class="draggable electives">COMP1100</div>
-                                <div class="draggable electives">COMP1110</div>
-                            </div>
-                            <h4>Information Technology</h4>
-                            <div>
-                                <div class="draggable electives">INFT1100</div>
-                                <div class="draggable electives">INFT1110</div>
-                            </div>
-                        </div> 
+                        <!--Form for submitting page and saving grid to a user account -->
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+                            <form class="form-group">
+                                <input type="hidden" name="InputData" id="courseInput" />
+                                <input type="submit" value="Index" class="btn btn-default" id="btnPicker" />
+                            </form>
+                        }
 
                     </div>
                 </div>
             </div>
         </div>
+
+        <!--Main plan grid -->
+        <div id="plan" class="col-md-9">
+                           
+            <div id="semester1Name" class="semesterName col-md-offset-1">Semester 1</div>
+            <div id="semester2Name" class="semesterName col-md-offset-1">Semester 2</div>           
+            
+            <div class="row">
+                <div id="semester1Box" class="col-md-offset-1 semesterBox"></div>
+                <div id="semester2Box" class="col-md-offset-1 semesterBox" ></div>
+            </div>
+
+            <div class="row" id="rowYearInnerPlan">
+                <ul id="yearNameColumn" class="col-md-1">
+                    @for (var i = 1; i <= @ViewBag.UnitsPerDegree/80; i++)
+                    {
+                        <li class="yearNames">Year @i</li>
+                    }
+                </ul>
+
+                <div class="col-md-11" id="colInnerPlan">                    
+                    <div id="innerPlan">
+                        @for (var i = 1; i <= @ViewBag.UnitsPerDegree/80; i++)
+                        {
+                            for (var y = 1; y <= @ViewBag.SubjectsPerSemester * 2; y++)
+                            {
+                                <div class="courseBox droppable">Course @y</div>
+                            }
+                        }
+                    </div>
+                </div>
+                
+            </div>  
+            </div>
+            
+
+                  
+
     </div>
+    
 
 
     <script type="text/javascript">
+        //set-up script
         $(function () {     
+            //sets grid width depending on how many items to be displayed
+            var planWidth = 2 * $("#oldNumOfSubjects").val() * 103;            
+            $("#innerPlan").css("width", planWidth);      
 
-            var planWidth = 2 * $("#oldNumOfSubjects").val() * 115;
-            $("#plan").css("width", planWidth);
+            //whole box that contains grid and year/column headings, set height depending on num of years in degree
+            var planHeight = $("#unitsPerDegree").val()/80 * 107 + 30; 
+            $("#plan").css("height", planHeight);
 
-            $('#plan').shapeshift({
+            $(".semesterBox").css("width", planWidth/2 + 3); 
+
+            //enable grid to work
+            $('#innerPlan').shapeshift({
                 gutterX: 5,
             });
 
@@ -145,19 +207,25 @@
                 $("#tabs").tabs();
             });
 
-        });
+        });        
 
+    </script>
+
+    <script>
         //every time a box is dropped and dragged, loop through all the boxes and reset the value of the hidden field that stores the
         //html values of all the boxes. when submit button is clicked, that value is sent through to the plancontroller.
-        $container = $("#plan");
+
+        $container = $("#innerPlan");
         $container.on("ss-rearranged", function (e, selected) {
             var courseText = "";
             $(".courseBox").each(function () {
                 courseText = courseText + $(this).text() + ",";
             });
             $("#courseInput").val(courseText);
-        });
+        });       
+    </script>
 
+    <script>
         //on click to change number of subjects per semester
         $("#btnPicker").click(function () {
 
@@ -167,44 +235,71 @@
 
             if (difference != 0) {//if a change was actually made
                 //change width to fit new number of courseBoxes
-                var planWidth = 2 * newNumber * 115;
-                $("#plan").css("width", planWidth);
+                var planWidth = 2 * newNumber * 103;
+                if (newNumber == 1 || newNumber == 2 || newNumber == 3) {
+                    planWidth = planWidth + 11;
+                }
+                $("#innerPlan").css("width", planWidth);
 
-                var counter = 1;
-                if (difference > 0) {
-                    $(".courseBox").each(function () {
-                        if (counter % oldNumber == 0) {
-                            for (var i = 0; i < difference; i++) {
-                                //$(this).after("<div class='courseBox'>Empty Course</div>");
-                            }
-                            
-                        }
-                        counter = counter + 1;                            
-                    });
-                    
+                //new number of years the degree will now take
+                var newYears = Math.ceil($("#unitsPerDegree").val() / (newNumber * 20));
+
+                //new height of plan div
+                var planHeight = newYears * 107 + 30; 
+                $("#plan").css("height", planHeight);
+
+                //fill in extra or less years on the side column
+                $(".yearNames").remove();                
+                for (var i = 1; i <= newYears; i++){
+                    $("#yearNameColumn").append(" <li class='yearNames'>Year " + i + "</li>");
+                }       
+
+                //change position of semester name headings
+                var semester1NameLeft;
+                var semester2NameLeft;
+                //depending on how many courses per semester, push the headings along a different amount
+                switch (newNumber) {
+                    case "1":
+                        semester1NameLeft = -2;
+                        semester2NameLeft = -87;
+                        break;
+                    case "2":
+                        semester1NameLeft = 55;
+                        semester2NameLeft = 70;
+                        break;
+                    case "3":
+                        semester1NameLeft = 102;
+                        semester2NameLeft = 217;
+                        break;
+                    case "4":
+                        semester1NameLeft = 155;
+                        semester2NameLeft = 365;
+                        break;
+                    case "5":
+                        semester1NameLeft = 202;
+                        semester2NameLeft = 520;
+                        break;
+                    default:
+                        semester1NameLeft = 0;
+                        semester2NameLeft = 0;
+
                 }
-                else {//remove courseBox
-                    for (var i = 0; i > difference; i--) {
-                        $(".courseBox").each(function () {
-                            if (counter % oldNumber == 0) {
-                                //$(this).remove();
-                            }
-                            counter = counter + 1;
-                        });
-                        oldNumber = oldNumber - 1;
-                    }
-                }
+                $("#semester1Name").css("left", semester1NameLeft);
+                $("#semester2Name").css("left", semester2NameLeft);
+
+                //semester background box colour divs
+                $(".semesterBox").css("width", planWidth / 2 + 3);
+                $("#semester2Box").css("left", planWidth / 2-12);
 
                 $("#oldNumOfSubjects").val(newNumber);
 
 
-                $('#plan').shapeshift({
+                $('#innerPlan').shapeshift({
                     gutterX: 5,
                 });
-            }       
+            }
 
         });
-
     </script>
 
     
