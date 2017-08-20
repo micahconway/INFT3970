@@ -10,8 +10,14 @@ namespace ProgramPlanner.Models
     {
         public int CourseID { get; set; }
 
+        public int Code { get; set; }
+
         [MaxLength(8)]
-        public string CourseCode { get; set; }
+        public string CourseCode
+        {
+            get { return CourseCode; }
+            set { value = Abbreviation.AbbrevName + Code; }
+        }
 
         public string CourseName { get; set; }
 

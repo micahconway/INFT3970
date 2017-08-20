@@ -15,7 +15,7 @@ namespace ProgramPlanner.Models
 
         public University University { get; set; }
 
-        public ICollection<Abbreviation> Abbrevations { get; set; }
+        public virtual ICollection<Abbreviation> Abbrevations { get; set; }
 
     }
 }

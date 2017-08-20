@@ -111,7 +111,7 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelCourse(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<Course>().Property(y => y.CourseCode).IsRequired();
+            modelbuilder.Entity<Course>().Ignore(y => y.CourseCode);
             modelbuilder.Entity<Course>().Property(y => y.CourseName).IsRequired();
             modelbuilder.Entity<Course>().Property(y => y.UniversityID).IsRequired();
             modelbuilder.Entity<Course>().Property(y => y.Units).IsRequired();
@@ -204,7 +204,7 @@ namespace ProgramPlanner.Models
         private void ModelSemesterCourse(DbModelBuilder modelbuilder)
         {
             // Creating a new composite Primary key. 
-            modelbuilder.Entity<SemesterCourse>().HasKey(y => new { y.SemesterCourseID, y.SemesterID, y.CourseID });
+            modelbuilder.Entity<SemesterCourse>().HasKey(y => new { y.SemesterID, y.CourseID });
         }
         /// <summary>
         /// 
@@ -213,7 +213,7 @@ namespace ProgramPlanner.Models
         private void ModelTrimesterCourse(DbModelBuilder modelbuilder)
         {
             // Creating a new composite Primary key. 
-            modelbuilder.Entity<TrimesterCourse>().HasKey(y => new { y.TrimesterCourseID, y.TrimesterID, y.CourseID });
+            modelbuilder.Entity<TrimesterCourse>().HasKey(y => new { y.TrimesterID, y.CourseID });
         }
         /// <summary>
         /// 
