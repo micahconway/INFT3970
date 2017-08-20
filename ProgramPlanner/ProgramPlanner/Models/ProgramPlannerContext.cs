@@ -1,8 +1,14 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+/// <summary>
+/// Author: Ryan Cunneen
+/// Date created: 05-Aug-2017
+/// Date Modified: 20-Aug-2017
+/// </summary>
 namespace ProgramPlanner.Models
 
 {
@@ -67,7 +73,7 @@ namespace ProgramPlanner.Models
         //-------------------------------------------------------------------------------------
         //----------------------------------DATABASE MODELS------------------------------------: 
         /// <summary>
-        /// Constructs model schemas for database context. 
+        /// 
         /// </summary>
         /// <param name="modelbuilder"></param>
         protected override void OnModelCreating(DbModelBuilder modelbuilder)
@@ -106,7 +112,7 @@ namespace ProgramPlanner.Models
         }
 
         /// <summary>
-        /// 
+        /// Constructs all constraints (not relationships) associcated with the entity Course.
         /// </summary>
         /// <param name="modelbuilder"></param>
         private void ModelCourse(DbModelBuilder modelbuilder)
@@ -119,7 +125,7 @@ namespace ProgramPlanner.Models
             modelbuilder.Entity<Course>().Property(y => y.Code).IsRequired();
         }
         /// <summary>
-        /// 
+        /// Constructs all constraints (not relationships) associcated with the entity ProgramElective.
         /// </summary>
         /// <param name="modelbuilder"></param>
         private void ModelProgramElective(DbModelBuilder modelbuilder)
@@ -128,7 +134,7 @@ namespace ProgramPlanner.Models
         }
 
         /// <summary>
-        /// Constructs the schema for entity YearDegree in the database context.
+        /// Constructs all constraints (not relationships) associcated with the entity YearDegrees
         /// </summary>
         /// <param name="modelbuilder"></param>
         private void ModelYearDegree(DbModelBuilder modelbuilder)
@@ -332,14 +338,14 @@ namespace ProgramPlanner.Models
             modelbuilder.Entity<Course>().HasMany(y => y.MandatoryPrerequisites).WithMany().Map(
                 Mandatory => {
                     Mandatory.MapLeftKey("CourseID");
-                    Mandatory.MapRightKey("PrerequisiteID");
-                    Mandatory.ToTable("MandatoryPrerquisites");
+                    Mandatory.MapRightKey("AssumedKnowledgeID");
+                    Mandatory.ToTable("AssumedKnowledge");
                 });
             modelbuilder.Entity<Course>().HasMany(y => y.OptionalPrerequisites).WithMany().Map(
                 Mandatory => {
                     Mandatory.MapLeftKey("CourseID");
-                    Mandatory.MapRightKey("PrerequisiteID");
-                    Mandatory.ToTable("OptionalPrerequisites");
+                    Mandatory.MapRightKey("AlternativeAKID");
+                    Mandatory.ToTable("AlternativeAssumedKnowledge");
                 });
 
             modelbuilder.Entity<Course>().HasRequired(y => y.Abbreviation).WithMany().HasForeignKey(y => y.AbbreviationID).WillCascadeOnDelete(false);
