@@ -343,6 +343,7 @@
     <Compile Include="Migrations\201708141211283_Test41.Designer.cs">
       <DependentUpon>201708141211283_Test41.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Migrations\201708190327548_test46.cs" />
     <Compile Include="Migrations\201708190327548_test46.Designer.cs">
       <DependentUpon>201708190327548_test46.cs</DependentUpon>
@@ -363,6 +364,8 @@
     <Compile Include="Migrations\201708190359563_tes50.Designer.cs">
       <DependentUpon>201708190359563_tes50.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> d55edd8f9aad765b617c572b831bcd6919d6f327
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Abbreviation.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -693,6 +696,7 @@
     <EmbeddedResource Include="Migrations\201708141211283_Test41.resx">
       <DependentUpon>201708141211283_Test41.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201708190327548_test46.resx">
       <DependentUpon>201708190327548_test46.cs</DependentUpon>
     </EmbeddedResource>
@@ -708,6 +712,8 @@
     <EmbeddedResource Include="Migrations\201708190359563_tes50.resx">
       <DependentUpon>201708190359563_tes50.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> d55edd8f9aad765b617c572b831bcd6919d6f327
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
