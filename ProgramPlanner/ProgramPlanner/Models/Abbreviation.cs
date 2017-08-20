@@ -12,7 +12,7 @@ namespace ProgramPlanner.Models
         public string AbbrevName { get; set; }
 
         public int StudyAreaID { get; set; }
-
-        public StudyArea StudyArea { get; set; }
+        
+        public virtual StudyArea StudyArea { get; set; }
     }
 }

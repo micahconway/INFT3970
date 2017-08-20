@@ -188,7 +188,6 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AbbreviationsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\DegreeCoresController.cs" />
@@ -344,6 +343,29 @@
     <Compile Include="Migrations\201708141211283_Test41.Designer.cs">
       <DependentUpon>201708141211283_Test41.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="Migrations\201708190327548_test46.cs" />
+    <Compile Include="Migrations\201708190327548_test46.Designer.cs">
+      <DependentUpon>201708190327548_test46.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708190328315_test47.cs" />
+    <Compile Include="Migrations\201708190328315_test47.Designer.cs">
+      <DependentUpon>201708190328315_test47.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708190335475_test48.cs" />
+    <Compile Include="Migrations\201708190335475_test48.Designer.cs">
+      <DependentUpon>201708190335475_test48.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708190357308_test49.cs" />
+    <Compile Include="Migrations\201708190357308_test49.Designer.cs">
+      <DependentUpon>201708190357308_test49.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708190359563_tes50.cs" />
+    <Compile Include="Migrations\201708190359563_tes50.Designer.cs">
+      <DependentUpon>201708190359563_tes50.cs</DependentUpon>
+    </Compile>
+=======
+>>>>>>> d55edd8f9aad765b617c572b831bcd6919d6f327
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Abbreviation.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -674,6 +696,24 @@
     <EmbeddedResource Include="Migrations\201708141211283_Test41.resx">
       <DependentUpon>201708141211283_Test41.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="Migrations\201708190327548_test46.resx">
+      <DependentUpon>201708190327548_test46.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708190328315_test47.resx">
+      <DependentUpon>201708190328315_test47.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708190335475_test48.resx">
+      <DependentUpon>201708190335475_test48.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708190357308_test49.resx">
+      <DependentUpon>201708190357308_test49.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708190359563_tes50.resx">
+      <DependentUpon>201708190359563_tes50.cs</DependentUpon>
+    </EmbeddedResource>
+=======
+>>>>>>> d55edd8f9aad765b617c572b831bcd6919d6f327
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

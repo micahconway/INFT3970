@@ -13,8 +13,6 @@ namespace ProgramPlanner.Models
 {
     public class TrimesterCourse
     {
-        public int TrimesterCourseID { get; set; }
-
         public int TrimesterID { get; set; }
 
         public Trimester Trimester { get; set; }

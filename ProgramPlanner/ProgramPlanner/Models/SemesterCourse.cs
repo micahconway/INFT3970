@@ -13,8 +13,6 @@ namespace ProgramPlanner.Models
 {
     public class SemesterCourse
     {
-        public int SemesterCourseID { get; set; }
-
         public int SemesterID { get; set; }
 
         public Semester Semester { get; set; }
