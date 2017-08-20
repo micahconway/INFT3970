@@ -17,7 +17,7 @@ namespace ProgramPlanner.Controllers
         // GET: Plan
         public ActionResult Index()
         {
-            ViewBag.YearsInDegree = 3;
+            ViewBag.UnitsPerDegree = 240;
             ViewBag.SubjectsPerSemester = 4;
 
             //YearDegree yearDegree = db.YearDegrees.Find("1");            
