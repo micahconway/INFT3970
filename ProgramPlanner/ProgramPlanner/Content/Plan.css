@@ -1,23 +1,23 @@
-﻿body{
-    padding-top:30px;
+﻿body {
+    padding-top: 30px;
 }
 
-#plan_all{
-    position:relative;
-    left:50px;
-    top:100px;
+#plan_all {
+    position: relative;
+    left: 50px;
+    top: 100px;
 }
 
 #headerRow {
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }
 
-h1{
-    line-height:90px;
+h1 {
+    line-height: 90px;
 }
 
 #imgHeader {
-    width:50%;
+    width: 50%;
 }
 
 .rowName {
@@ -30,7 +30,7 @@ h1{
     position: relative;
     width: 90px;
     float: left;
-    z-index: 1;    
+    z-index: 1;
 }
 
 #semester1Name {
@@ -38,19 +38,19 @@ h1{
 }
 
 #semester2Name {
-    left:365px;
+    left: 365px;
 }
 
 #yearNameColumn {
-    top:0px;
-    padding-left:20px;
+    top: 0px;
+    padding-left: 20px;
 }
 
 .yearNames {
     position: relative;
-    line-height:105px;
-    list-style:none;
-    font-size:18px;
+    line-height: 105px;
+    list-style: none;
+    font-size: 18px;
 }
 
 #rowYearInnerPlan {
@@ -63,18 +63,17 @@ h1{
 }
 
 
-#plan{
-    position:relative;
-    padding:0px;
-    
+#plan {
+    position: relative;
+    padding: 0px;
 }
 
-#innerPlan{
-    position:relative;
+#innerPlan {
+    position: relative;
 }
 
 #colInnerPlan {
-    padding:0px;
+    padding: 0px;
 }
 
 .courseBox {
@@ -87,14 +86,14 @@ h1{
 #semester1Box {
     position: absolute;
     height: 100%;
-    background-color: #fffbef;  
+    background-color: #fffbef;
 }
 
 #semester2Box {
     position: absolute;
-    height:100%;
-    background-color:#e7ffca;    
-    left:400px;
+    height: 100%;
+    background-color: #e7ffca;
+    left: 400px;
 }
 
 .semesterBox {
@@ -102,10 +101,10 @@ h1{
 }
 
 
-#planMenu{
-    position:relative;
-    height:500px;
-    top:0px;
+#planMenu {
+    position: relative;
+    height: 500px;
+    top: 0px;
 }
 
 .directeds {
@@ -113,7 +112,7 @@ h1{
     margin-bottom: 2px;
     padding: 2px;
     background-color: aliceblue;
-    z-index:2;
+    z-index: 2;
 }
 
 .electives {
@@ -125,29 +124,36 @@ h1{
 }
 
 .subAccordion {
-    width:80%;
-    float:right;
+    width: 80%;
+    float: right;
 }
 
 #tabs {
     height: 100%;
 }
 
-#tabs-2{
-    padding:10px;
-    
+#tabs-2 {
+    padding: 10px;
 }
 
-#accordion{
-    position:relative;
-    top:10px;
+#tabs-3 {
+    height: 100%;
+}
+
+#accordion {
+    position: relative;
+    top: 10px;
 }
 
 .accordions {
     padding: 0px !important;
 }
 
-h4{
-    width:80%;
-    float:right;
+h4 {
+    width: 80%;
+    float: right;
+}
+
+#optionsMenu {
+    height: 100%;
 }

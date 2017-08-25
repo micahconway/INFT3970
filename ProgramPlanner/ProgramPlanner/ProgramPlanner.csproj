@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -412,10 +413,23 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\YearDegree.cs" />
     <Compile Include="Models\University.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-ProgramPlanner-20170724023334.mdf" />
+    <Content Include="App_Data\aspnet-ProgramPlanner-20170724023334_log.ldf">
+      <DependentUpon>aspnet-ProgramPlanner-20170724023334.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\ProgramPlannerContext-20170729114207.mdf" />
+    <Content Include="App_Data\ProgramPlannerContext-20170729114207_log.ldf">
+      <DependentUpon>ProgramPlannerContext-20170729114207.mdf</DependentUpon>
+    </Content>
+    <Content Include="bin\ProgramPlanner.dll" />
+    <Content Include="bin\ProgramPlanner.pdb" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -483,26 +497,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Degrees\Create.cshtml" />
-    <Content Include="Views\Degrees\Delete.cshtml" />
-    <Content Include="Views\Degrees\Details.cshtml" />
-    <Content Include="Views\Degrees\Edit.cshtml" />
-    <Content Include="Views\Degrees\Index.cshtml" />
     <Content Include="Views\Directeds\Create.cshtml" />
     <Content Include="Views\Directeds\Delete.cshtml" />
     <Content Include="Views\Directeds\Details.cshtml" />
     <Content Include="Views\Directeds\Edit.cshtml" />
     <Content Include="Views\Directeds\Index.cshtml" />
-    <Content Include="Views\Universities\Create.cshtml" />
-    <Content Include="Views\Universities\Delete.cshtml" />
-    <Content Include="Views\Universities\Details.cshtml" />
-    <Content Include="Views\Universities\Edit.cshtml" />
-    <Content Include="Views\Universities\Index.cshtml" />
-    <Content Include="Views\YearDegrees\Create.cshtml" />
-    <Content Include="Views\YearDegrees\Delete.cshtml" />
-    <Content Include="Views\YearDegrees\Details.cshtml" />
-    <Content Include="Views\YearDegrees\Edit.cshtml" />
-    <Content Include="Views\YearDegrees\Index.cshtml" />
     <Content Include="Views\Majors\Create.cshtml" />
     <Content Include="Views\Majors\Delete.cshtml" />
     <Content Include="Views\Majors\Details.cshtml" />
@@ -606,10 +605,25 @@
     <Content Include="Views\Courses\Edit.cshtml" />
     <Content Include="Views\Courses\Index.cshtml" />
     <Content Include="Views\PM_Home\Index.cshtml" />
+    <Content Include="Views\Degrees\Create.cshtml" />
+    <Content Include="Views\Degrees\Delete.cshtml" />
+    <Content Include="Views\Degrees\Details.cshtml" />
+    <Content Include="Views\Degrees\Edit.cshtml" />
+    <Content Include="Views\Degrees\Index.cshtml" />
+    <Content Include="Views\YearDegrees\Create.cshtml" />
+    <Content Include="Views\YearDegrees\Delete.cshtml" />
+    <Content Include="Views\YearDegrees\Details.cshtml" />
+    <Content Include="Views\YearDegrees\Edit.cshtml" />
+    <Content Include="Views\YearDegrees\Index.cshtml" />
+    <Content Include="Views\Universities\Create.cshtml" />
+    <Content Include="Views\Universities\Delete.cshtml" />
+    <Content Include="Views\Universities\Details.cshtml" />
+    <Content Include="Views\Universities\Edit.cshtml" />
+    <Content Include="Views\Universities\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="BusinessLogic\" />
+    <Folder Include="obj\Release\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

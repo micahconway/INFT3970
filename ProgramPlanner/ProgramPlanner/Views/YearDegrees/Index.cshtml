@@ -15,10 +15,10 @@
             @Html.DisplayNameFor(model => model.Degree.DegreeName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.YearDegreeName)
+            @Html.DisplayNameFor(model => model.Year)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Year)
+            @Html.DisplayNameFor(model => model.Units)
         </th>
         <th></th>
     </tr>
@@ -29,10 +29,10 @@
             @Html.DisplayFor(modelItem => item.Degree.DegreeName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.YearDegreeName)
+            @Html.DisplayFor(modelItem => item.Year)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Year)
+            @Html.DisplayFor(modelItem => item.Units)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.YearDegreeID }) |

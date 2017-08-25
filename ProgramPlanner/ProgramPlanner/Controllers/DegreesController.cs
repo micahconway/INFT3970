@@ -48,7 +48,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "DegreeID,DegreeName,UniversityID")] Degree degree)
+        public ActionResult Create([Bind(Include = "DegreeID,DegreeName,Duration,UniversityID")] Degree degree)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "DegreeID,DegreeName,UniversityID")] Degree degree)
+        public ActionResult Edit([Bind(Include = "DegreeID,DegreeName,Duration,UniversityID")] Degree degree)
         {
             if (ModelState.IsValid)
             {

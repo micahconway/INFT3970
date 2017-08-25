@@ -20,6 +20,8 @@ namespace ProgramPlanner.Controllers
             ViewBag.UnitsPerDegree = 240;
             ViewBag.SubjectsPerSemester = 4;
 
+            //ViewBag.Directeds = new SelectList(db.Courses, "CourseID", "CourseCode");
+
             //YearDegree yearDegree = db.YearDegrees.Find("1");            
             //ViewBag.YearDegreeSelected = "";
             //ViewBag.DegreeCoreCourses = 
