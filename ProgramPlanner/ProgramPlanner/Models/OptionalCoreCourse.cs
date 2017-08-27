@@ -20,5 +20,7 @@ namespace ProgramPlanner.Models
         public int CourseID { get; set; }
 
         public virtual Course Course { get; set; }
+
+        public virtual ICollection<ProgramOptionalCoreCourse> ProgramOptionalCoreCourse { get; set; }
     }
 }

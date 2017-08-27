@@ -17,7 +17,7 @@ namespace ProgramPlanner.Controllers
         // GET: ProgramOptionalCoreCourses
         public ActionResult Index()
         {
-            var programOptionalCoreCourses = db.ProgramOptionalCoreCourses.Include(p => p.ProgramStructure);
+            var programOptionalCoreCourses = db.ProgramOptionalCoreCourses.Include(p => p.OptionalCoreCourse).Include(p => p.ProgramStructure);
             return View(programOptionalCoreCourses.ToList());
         }
 
@@ -39,7 +39,8 @@ namespace ProgramPlanner.Controllers
         // GET: ProgramOptionalCoreCourses/Create
         public ActionResult Create()
         {
-            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID");
+            ViewBag.OptionalCoreID = new SelectList(db.OptionalCoreCourses, "OptionalCoreCourseID", "OptionalCoreCourseID");
+            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "Email");
             return View();
         }
 
@@ -48,7 +49,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProgramOptionalCoreCourseID,ProgramStructureID,OptionalCoreID")] ProgramOptionalCoreCourse programOptionalCoreCourse)
+        public ActionResult Create([Bind(Include = "ProgramStructureID,OptionalCoreID,Completed")] ProgramOptionalCoreCourse programOptionalCoreCourse)
         {
             if (ModelState.IsValid)
             {
@@ -57,7 +58,8 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID", programOptionalCoreCourse.ProgramStructureID);
+            ViewBag.OptionalCoreID = new SelectList(db.OptionalCoreCourses, "OptionalCoreCourseID", "OptionalCoreCourseID", programOptionalCoreCourse.OptionalCoreID);
+            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "Email", programOptionalCoreCourse.ProgramStructureID);
             return View(programOptionalCoreCourse);
         }
 
@@ -73,7 +75,8 @@ namespace ProgramPlanner.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID", programOptionalCoreCourse.ProgramStructureID);
+            ViewBag.OptionalCoreID = new SelectList(db.OptionalCoreCourses, "OptionalCoreCourseID", "OptionalCoreCourseID", programOptionalCoreCourse.OptionalCoreID);
+            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "Email", programOptionalCoreCourse.ProgramStructureID);
             return View(programOptionalCoreCourse);
         }
 
@@ -82,7 +85,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProgramOptionalCoreCourseID,ProgramStructureID,OptionalCoreID")] ProgramOptionalCoreCourse programOptionalCoreCourse)
+        public ActionResult Edit([Bind(Include = "ProgramStructureID,OptionalCoreID,Completed")] ProgramOptionalCoreCourse programOptionalCoreCourse)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +93,8 @@ namespace ProgramPlanner.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID", programOptionalCoreCourse.ProgramStructureID);
+            ViewBag.OptionalCoreID = new SelectList(db.OptionalCoreCourses, "OptionalCoreCourseID", "OptionalCoreCourseID", programOptionalCoreCourse.OptionalCoreID);
+            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "Email", programOptionalCoreCourse.ProgramStructureID);
             return View(programOptionalCoreCourse);
         }
 
