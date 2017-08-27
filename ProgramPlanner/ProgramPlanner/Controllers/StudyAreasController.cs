@@ -28,7 +28,11 @@ namespace ProgramPlanner.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            StudyArea studyArea = db.StudyAreas.Find(id);
+
+            StudyArea studyArea = db.StudyAreas
+                .Include(sa => sa.University)
+                .SingleOrDefault(sa => sa.StudyAreaID == id);
+
             if (studyArea == null)
             {
                 return HttpNotFound();
@@ -101,7 +105,10 @@ namespace ProgramPlanner.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            StudyArea studyArea = db.StudyAreas.Find(id);
+            StudyArea studyArea = db.StudyAreas
+                .Include(sa => sa.University)
+                .SingleOrDefault(sa => sa.StudyAreaID == id);
+
             if (studyArea == null)
             {
                 return HttpNotFound();

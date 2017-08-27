@@ -18,6 +18,10 @@ namespace ProgramPlanner.Controllers
         public ActionResult Index()
         {
             var courses = db.Courses.Include(c => c.Abbreviation).Include(c => c.University);
+
+            // Setup up the data for course codes.
+            Setup.InitializeCourseCode(db);
+
             return View(courses.ToList());
         }
 
@@ -49,7 +53,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CourseID,CourseCode,CourseName,Units,UniversityID,AbbreviationID")] Course course)
+        public ActionResult Create([Bind(Include = "CourseID,Code,CourseName,Units,UniversityID,AbbreviationID")] Course course)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +89,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CourseID,CourseCode,CourseName,Units,UniversityID,AbbreviationID")] Course course)
+        public ActionResult Edit([Bind(Include = "CourseID,Code,CourseName,Units,UniversityID,AbbreviationID")] Course course)
         {
             if (ModelState.IsValid)
             {
@@ -132,5 +136,7 @@ namespace ProgramPlanner.Controllers
             }
             base.Dispose(disposing);
         }
+
+
     }
 }

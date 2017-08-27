@@ -17,7 +17,11 @@ namespace ProgramPlanner.Controllers
         // GET: Replacements
         public ActionResult Index()
         {
-            return View(db.Replacements.ToList());
+            var replacements = db.Replacements
+                .Include(r => r.ReplacedCourse)
+                .Include(r => r.ReplacementCourse)
+                .Include(r => r.YearDegree);
+            return View(replacements.ToList());
         }
 
         // GET: Replacements/Details/5
@@ -38,8 +42,9 @@ namespace ProgramPlanner.Controllers
         // GET: Replacements/Create
         public ActionResult Create()
         {
-            ViewBag.ReplacementCourseID = new SelectList(db.Courses, "CourseID", "CourseCode");
-            ViewBag.ReplacedCourseID = new SelectList(db.Courses, "CourseID", "CourseCode");
+            ViewBag.ReplacedCourseID = new SelectList(db.Courses, "CourseID", "CourseName");
+            ViewBag.ReplacementCourseID = new SelectList(db.Courses, "CourseID", "CourseName");
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "YearDegreeID", "YearDegreeID");
             return View();
         }
 
@@ -48,7 +53,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ReplacementID,ReplacementCourseID,ReplacedCourseID")] Replacement replacement)
+        public ActionResult Create([Bind(Include = "ReplacedCourseID,ReplacementCourseID,YearDegreeID")] Replacement replacement)
         {
             if (ModelState.IsValid)
             {
@@ -57,12 +62,15 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.ReplacedCourseID = new SelectList(db.Courses, "CourseID", "CourseName", replacement.ReplacedCourseID);
+            ViewBag.ReplacementCourseID = new SelectList(db.Courses, "CourseID", "CourseName", replacement.ReplacementCourseID);
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "YearDegreeID", "YearDegreeID", replacement.YearDegreeID);
             return View(replacement);
         }
 
         // GET: Replacements/Edit/5
         public ActionResult Edit(int? id)
-        {            
+        {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -72,13 +80,9 @@ namespace ProgramPlanner.Controllers
             {
                 return HttpNotFound();
             }
-
-            Course replacementCourse = db.Courses.Find(replacement.ReplacementCourseID);
-            ViewBag.ReplacementCourseID = new SelectList(db.Courses, "CourseID", "CourseCode", replacement.ReplacementCourseID);
-
-            Course replacedCourse = db.Courses.Find(replacement.ReplacedCourseID);
-            ViewBag.ReplacedCourseID = new SelectList(db.Courses, "CourseID", "CourseCode", replacement.ReplacedCourseID);
-
+            ViewBag.ReplacedCourseID = new SelectList(db.Courses, "CourseID", "CourseName", replacement.ReplacedCourseID);
+            ViewBag.ReplacementCourseID = new SelectList(db.Courses, "CourseID", "CourseName", replacement.ReplacementCourseID);
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "YearDegreeID", "YearDegreeID", replacement.YearDegreeID);
             return View(replacement);
         }
 
@@ -87,7 +91,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ReplacementID,ReplacementCourseID,ReplacedCourseID")] Replacement replacement)
+        public ActionResult Edit([Bind(Include = "ReplacedCourseID,ReplacementCourseID,YearDegreeID")] Replacement replacement)
         {
             if (ModelState.IsValid)
             {
@@ -95,6 +99,9 @@ namespace ProgramPlanner.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.ReplacedCourseID = new SelectList(db.Courses, "CourseID", "CourseName", replacement.ReplacedCourseID);
+            ViewBag.ReplacementCourseID = new SelectList(db.Courses, "CourseID", "CourseName", replacement.ReplacementCourseID);
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "YearDegreeID", "YearDegreeID", replacement.YearDegreeID);
             return View(replacement);
         }
 

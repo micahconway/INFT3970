@@ -16,8 +16,6 @@ namespace ProgramPlanner.Models
         [EmailAddress]
         public string Email { get; set; }
         
-        [MaxLength(100, ErrorMessage = "The {0} must be less than or equal to 100 in length.")]
-        [MinLength(5, ErrorMessage ="Cannot be less than 5 characters.")]
         [Display(Name ="Password")]
         public string Password { get; set; }
 

@@ -14,5 +14,7 @@ namespace ProgramPlanner.Models
         public int MajorID { get; set; }
 
         public virtual Major Major { get; set; }
+
+        public virtual ICollection<ProgramDirected> ProgramDirecteds { get; set; }
     }
 }

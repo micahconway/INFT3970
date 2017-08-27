@@ -8,16 +8,13 @@ namespace ProgramPlanner.Models
 {
     public class Course
     {
+
         public int CourseID { get; set; }
 
         public int Code { get; set; }
 
         [MaxLength(8)]
-        public string CourseCode
-        {
-            get { return CourseCode; }
-            set { value = Abbreviation.AbbrevName + Code; }
-        }
+        public string CourseCode{ get; set; }
 
         public string CourseName { get; set; }
 
@@ -39,5 +36,19 @@ namespace ProgramPlanner.Models
         // These are your 'OR' prerequisites
         // A Course can have zero-to-many optional prerequisites. 
         public virtual ICollection<Course> OptionalPrerequisites { get; set; }
+
+        public virtual ICollection<ProgramElective> ProgramElectives { get; set; }
+
+        public virtual ICollection<ProgramDirected> ProgramDirecteds { get; set; }
+
+        public virtual ICollection<MajorCore> MajorCores { get; set; }
+
+        public virtual ICollection<DegreeCore> DegreeCores { get; set; }
+
+        public virtual ICollection<TrimesterCourse> TrimesterCourses { get; set; }
+
+        public virtual ICollection<SemesterCourse> SemesterCourses { get; set; }
+
+        public virtual Replacement Replacement { get; set; }
     }
 }

@@ -23,12 +23,12 @@ namespace ProgramPlanner.Models
 
         public virtual User User { get; set; }
 
-        public virtual List<ProgramMajor> ProgramMajors { get; set; }
+        public virtual ICollection<ProgramMajor> ProgramMajors { get; set; }
 
-        public virtual List<ProgramDirected> ProgramDirected { get; set; }
+        public virtual ICollection<ProgramDirected> ProgramDirected { get; set; }
 
-        public virtual List<ProgramElective> ProgramElectives { get; set; }
+        public virtual ICollection<ProgramElective> ProgramElectives { get; set; }
 
-        public virtual List<ProgramOptionalCoreCourse> ProgramOptionalCores { get; set; }
+        public virtual ICollection<ProgramOptionalCoreCourse> ProgramOptionalCores { get; set; }
     }
 }
