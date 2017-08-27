@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Course.CourseCode)
+            @Html.DisplayNameFor(model => model.Course.CourseName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Trimester.TrimesterID)
@@ -26,7 +26,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Course.CourseCode)
+            @Html.DisplayFor(modelItem => item.Course.CourseName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Trimester.TrimesterID)
@@ -35,9 +35,9 @@
             @Html.DisplayFor(modelItem => item.Year)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.TrimesterCourseID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.TrimesterCourseID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TrimesterCourseID })
+            @Html.ActionLink("Edit", "Edit", new { TrimesterID = item.TrimesterID, CourseID = item.CourseID }) |
+            @Html.ActionLink("Details", "Details", new { TrimesterID = item.TrimesterID, CourseID = item.CourseID }) |
+            @Html.ActionLink("Delete", "Delete", new { TrimesterID = item.TrimesterID, CourseID = item.CourseID })
         </td>
     </tr>
 }

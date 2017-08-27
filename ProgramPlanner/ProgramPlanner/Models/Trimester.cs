@@ -15,7 +15,9 @@ namespace ProgramPlanner.Models
     {
         public int TrimesterID { get; set; }
 
-        [Range(1, 3)]
+        //[Range(1, 3)]
         public int TrimesterValue { get; set; }
+
+        public virtual ICollection<TrimesterCourse> TrimesterCourses{ get; set; }
     }
 }

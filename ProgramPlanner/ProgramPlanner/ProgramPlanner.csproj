@@ -189,6 +189,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AbbreviationsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\DegreeCoresController.cs" />
@@ -208,7 +209,10 @@
     <Compile Include="Controllers\ProgramStructuresController.cs" />
     <Compile Include="Controllers\ReplacementsController.cs" />
     <Compile Include="Controllers\SemesterCoursesController.cs" />
+    <Compile Include="Controllers\SemestersController.cs" />
+    <Compile Include="Controllers\Setup.cs" />
     <Compile Include="Controllers\StudyAreasController.cs" />
+    <Compile Include="Controllers\TrimesterCoursesController.cs" />
     <Compile Include="Controllers\TrimestersController.cs" />
     <Compile Include="Controllers\UniversitiesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
@@ -384,6 +388,102 @@
     <Compile Include="Migrations\201708200223415_Test541.Designer.cs">
       <DependentUpon>201708200223415_Test541.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708250732045_Update.cs" />
+    <Compile Include="Migrations\201708250732045_Update.Designer.cs">
+      <DependentUpon>201708250732045_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708250756064_Update2.cs" />
+    <Compile Include="Migrations\201708250756064_Update2.Designer.cs">
+      <DependentUpon>201708250756064_Update2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708250759090_Update3.cs" />
+    <Compile Include="Migrations\201708250759090_Update3.Designer.cs">
+      <DependentUpon>201708250759090_Update3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708250809311_Update4.cs" />
+    <Compile Include="Migrations\201708250809311_Update4.Designer.cs">
+      <DependentUpon>201708250809311_Update4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708250812087_Update5.cs" />
+    <Compile Include="Migrations\201708250812087_Update5.Designer.cs">
+      <DependentUpon>201708250812087_Update5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708250821082_Update6.cs" />
+    <Compile Include="Migrations\201708250821082_Update6.Designer.cs">
+      <DependentUpon>201708250821082_Update6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260000494_Update7.cs" />
+    <Compile Include="Migrations\201708260000494_Update7.Designer.cs">
+      <DependentUpon>201708260000494_Update7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260008397_Update10.cs" />
+    <Compile Include="Migrations\201708260008397_Update10.Designer.cs">
+      <DependentUpon>201708260008397_Update10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260357294_Update11.cs" />
+    <Compile Include="Migrations\201708260357294_Update11.Designer.cs">
+      <DependentUpon>201708260357294_Update11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260434039_Update14.cs" />
+    <Compile Include="Migrations\201708260434039_Update14.Designer.cs">
+      <DependentUpon>201708260434039_Update14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260445441_Update15.cs" />
+    <Compile Include="Migrations\201708260445441_Update15.Designer.cs">
+      <DependentUpon>201708260445441_Update15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260447488_Update16.cs" />
+    <Compile Include="Migrations\201708260447488_Update16.Designer.cs">
+      <DependentUpon>201708260447488_Update16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260453271_Update161.cs" />
+    <Compile Include="Migrations\201708260453271_Update161.Designer.cs">
+      <DependentUpon>201708260453271_Update161.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260500252_Update17.cs" />
+    <Compile Include="Migrations\201708260500252_Update17.Designer.cs">
+      <DependentUpon>201708260500252_Update17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260511556_Update162.cs" />
+    <Compile Include="Migrations\201708260511556_Update162.Designer.cs">
+      <DependentUpon>201708260511556_Update162.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260524175_Update18.cs" />
+    <Compile Include="Migrations\201708260524175_Update18.Designer.cs">
+      <DependentUpon>201708260524175_Update18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260526329_Update19.cs" />
+    <Compile Include="Migrations\201708260526329_Update19.Designer.cs">
+      <DependentUpon>201708260526329_Update19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260552577_Update20.cs" />
+    <Compile Include="Migrations\201708260552577_Update20.Designer.cs">
+      <DependentUpon>201708260552577_Update20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260610108_Update21.cs" />
+    <Compile Include="Migrations\201708260610108_Update21.Designer.cs">
+      <DependentUpon>201708260610108_Update21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260615294_Update22.cs" />
+    <Compile Include="Migrations\201708260615294_Update22.Designer.cs">
+      <DependentUpon>201708260615294_Update22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260617282_Update23.cs" />
+    <Compile Include="Migrations\201708260617282_Update23.Designer.cs">
+      <DependentUpon>201708260617282_Update23.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260628287_Update26.cs" />
+    <Compile Include="Migrations\201708260628287_Update26.Designer.cs">
+      <DependentUpon>201708260628287_Update26.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260647313_Update29.cs" />
+    <Compile Include="Migrations\201708260647313_Update29.Designer.cs">
+      <DependentUpon>201708260647313_Update29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260655498_Update291.cs" />
+    <Compile Include="Migrations\201708260655498_Update291.Designer.cs">
+      <DependentUpon>201708260655498_Update291.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Abbreviation.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -517,16 +617,6 @@
     <Content Include="Views\DegreeCores\Details.cshtml" />
     <Content Include="Views\DegreeCores\Edit.cshtml" />
     <Content Include="Views\DegreeCores\Index.cshtml" />
-    <Content Include="Views\Users\Create.cshtml" />
-    <Content Include="Views\Users\Delete.cshtml" />
-    <Content Include="Views\Users\Details.cshtml" />
-    <Content Include="Views\Users\Edit.cshtml" />
-    <Content Include="Views\Users\Index.cshtml" />
-    <Content Include="Views\ProgramStructures\Create.cshtml" />
-    <Content Include="Views\ProgramStructures\Delete.cshtml" />
-    <Content Include="Views\ProgramStructures\Details.cshtml" />
-    <Content Include="Views\ProgramStructures\Edit.cshtml" />
-    <Content Include="Views\ProgramStructures\Index.cshtml" />
     <Content Include="Views\ProgramMajors\Create.cshtml" />
     <Content Include="Views\ProgramMajors\Delete.cshtml" />
     <Content Include="Views\ProgramMajors\Details.cshtml" />
@@ -557,26 +647,11 @@
     <Content Include="Views\DegreeCoreSlots\Details.cshtml" />
     <Content Include="Views\DegreeCoreSlots\Edit.cshtml" />
     <Content Include="Views\DegreeCoreSlots\Index.cshtml" />
-    <Content Include="Views\SemesterCourses\Create.cshtml" />
-    <Content Include="Views\SemesterCourses\Delete.cshtml" />
-    <Content Include="Views\SemesterCourses\Details.cshtml" />
-    <Content Include="Views\SemesterCourses\Edit.cshtml" />
-    <Content Include="Views\SemesterCourses\Index.cshtml" />
     <Content Include="Views\TrimesterCourses\Create.cshtml" />
     <Content Include="Views\TrimesterCourses\Delete.cshtml" />
     <Content Include="Views\TrimesterCourses\Details.cshtml" />
     <Content Include="Views\TrimesterCourses\Edit.cshtml" />
     <Content Include="Views\TrimesterCourses\Index.cshtml" />
-    <Content Include="Views\Replacements\Create.cshtml" />
-    <Content Include="Views\Replacements\Delete.cshtml" />
-    <Content Include="Views\Replacements\Details.cshtml" />
-    <Content Include="Views\Replacements\Edit.cshtml" />
-    <Content Include="Views\Replacements\Index.cshtml" />
-    <Content Include="Views\Semesters\Create.cshtml" />
-    <Content Include="Views\Semesters\Delete.cshtml" />
-    <Content Include="Views\Semesters\Details.cshtml" />
-    <Content Include="Views\Semesters\Edit.cshtml" />
-    <Content Include="Views\Semesters\Index.cshtml" />
     <Content Include="Views\Trimesters\Create.cshtml" />
     <Content Include="Views\Trimesters\Delete.cshtml" />
     <Content Include="Views\Trimesters\Details.cshtml" />
@@ -589,27 +664,37 @@
     <Content Include="Views\PrerequisiteCourses\Index.cshtml" />
     <Content Include="Views\Plan\Index.cshtml" />
     <Content Include="Views\Plan\Submit.cshtml" />
-    <Content Include="Views\Abbreviations\Create.cshtml" />
-    <Content Include="Views\Abbreviations\Delete.cshtml" />
-    <Content Include="Views\Abbreviations\Details.cshtml" />
-    <Content Include="Views\Abbreviations\Edit.cshtml" />
-    <Content Include="Views\Abbreviations\Index.cshtml" />
     <Content Include="Views\StudyAreas\Create.cshtml" />
     <Content Include="Views\StudyAreas\Delete.cshtml" />
     <Content Include="Views\StudyAreas\Details.cshtml" />
     <Content Include="Views\StudyAreas\Edit.cshtml" />
     <Content Include="Views\StudyAreas\Index.cshtml" />
-    <Content Include="Views\Courses\Create.cshtml" />
-    <Content Include="Views\Courses\Delete.cshtml" />
-    <Content Include="Views\Courses\Details.cshtml" />
-    <Content Include="Views\Courses\Edit.cshtml" />
-    <Content Include="Views\Courses\Index.cshtml" />
     <Content Include="Views\PM_Home\Index.cshtml" />
     <Content Include="Views\Degrees\Create.cshtml" />
     <Content Include="Views\Degrees\Delete.cshtml" />
     <Content Include="Views\Degrees\Details.cshtml" />
     <Content Include="Views\Degrees\Edit.cshtml" />
     <Content Include="Views\Degrees\Index.cshtml" />
+    <Content Include="Views\Courses\Create.cshtml" />
+    <Content Include="Views\Courses\Delete.cshtml" />
+    <Content Include="Views\Courses\Details.cshtml" />
+    <Content Include="Views\Courses\Edit.cshtml" />
+    <Content Include="Views\Courses\Index.cshtml" />
+    <Content Include="Views\Abbreviations\Create.cshtml" />
+    <Content Include="Views\Abbreviations\Delete.cshtml" />
+    <Content Include="Views\Abbreviations\Details.cshtml" />
+    <Content Include="Views\Abbreviations\Edit.cshtml" />
+    <Content Include="Views\Abbreviations\Index.cshtml" />
+    <Content Include="Views\Semesters\Create.cshtml" />
+    <Content Include="Views\Semesters\Delete.cshtml" />
+    <Content Include="Views\Semesters\Details.cshtml" />
+    <Content Include="Views\Semesters\Edit.cshtml" />
+    <Content Include="Views\Semesters\Index.cshtml" />
+    <Content Include="Views\SemesterCourses\Create.cshtml" />
+    <Content Include="Views\SemesterCourses\Delete.cshtml" />
+    <Content Include="Views\SemesterCourses\Details.cshtml" />
+    <Content Include="Views\SemesterCourses\Edit.cshtml" />
+    <Content Include="Views\SemesterCourses\Index.cshtml" />
     <Content Include="Views\YearDegrees\Create.cshtml" />
     <Content Include="Views\YearDegrees\Delete.cshtml" />
     <Content Include="Views\YearDegrees\Details.cshtml" />
@@ -620,6 +705,21 @@
     <Content Include="Views\Universities\Details.cshtml" />
     <Content Include="Views\Universities\Edit.cshtml" />
     <Content Include="Views\Universities\Index.cshtml" />
+    <Content Include="Views\Replacements\Create.cshtml" />
+    <Content Include="Views\Replacements\Delete.cshtml" />
+    <Content Include="Views\Replacements\Details.cshtml" />
+    <Content Include="Views\Replacements\Edit.cshtml" />
+    <Content Include="Views\Replacements\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\ProgramStructures\Create.cshtml" />
+    <Content Include="Views\ProgramStructures\Delete.cshtml" />
+    <Content Include="Views\ProgramStructures\Details.cshtml" />
+    <Content Include="Views\ProgramStructures\Edit.cshtml" />
+    <Content Include="Views\ProgramStructures\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BusinessLogic\" />
@@ -757,6 +857,78 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708200223415_Test541.resx">
       <DependentUpon>201708200223415_Test541.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708250732045_Update.resx">
+      <DependentUpon>201708250732045_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708250756064_Update2.resx">
+      <DependentUpon>201708250756064_Update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708250759090_Update3.resx">
+      <DependentUpon>201708250759090_Update3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708250809311_Update4.resx">
+      <DependentUpon>201708250809311_Update4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708250812087_Update5.resx">
+      <DependentUpon>201708250812087_Update5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708250821082_Update6.resx">
+      <DependentUpon>201708250821082_Update6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260000494_Update7.resx">
+      <DependentUpon>201708260000494_Update7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260008397_Update10.resx">
+      <DependentUpon>201708260008397_Update10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260357294_Update11.resx">
+      <DependentUpon>201708260357294_Update11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260434039_Update14.resx">
+      <DependentUpon>201708260434039_Update14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260445441_Update15.resx">
+      <DependentUpon>201708260445441_Update15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260447488_Update16.resx">
+      <DependentUpon>201708260447488_Update16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260453271_Update161.resx">
+      <DependentUpon>201708260453271_Update161.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260500252_Update17.resx">
+      <DependentUpon>201708260500252_Update17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260511556_Update162.resx">
+      <DependentUpon>201708260511556_Update162.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260524175_Update18.resx">
+      <DependentUpon>201708260524175_Update18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260526329_Update19.resx">
+      <DependentUpon>201708260526329_Update19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260552577_Update20.resx">
+      <DependentUpon>201708260552577_Update20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260610108_Update21.resx">
+      <DependentUpon>201708260610108_Update21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260615294_Update22.resx">
+      <DependentUpon>201708260615294_Update22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260617282_Update23.resx">
+      <DependentUpon>201708260617282_Update23.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260628287_Update26.resx">
+      <DependentUpon>201708260628287_Update26.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260647313_Update29.resx">
+      <DependentUpon>201708260647313_Update29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260655498_Update291.resx">
+      <DependentUpon>201708260655498_Update291.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

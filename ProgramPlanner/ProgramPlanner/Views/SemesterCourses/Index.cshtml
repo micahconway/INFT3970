@@ -12,10 +12,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Course.CourseCode)
+            @Html.DisplayNameFor(model => model.Semester.SemesterValue)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Semester.SemesterID)
+            @Html.DisplayNameFor(model => model.Course.CourseCode)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Year)
@@ -26,18 +26,18 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Course.CourseCode)
+            @Html.DisplayFor(modelItem => item.Semester.SemesterValue)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Semester.SemesterID)
+            @Html.DisplayFor(modelItem => item.Course.CourseCode)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Year)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.SemesterCourseID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.SemesterCourseID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.SemesterCourseID })
+            @Html.ActionLink("Edit", "Edit", new { SemesterID = item.SemesterID, CourseID = item.CourseID }) |
+            @Html.ActionLink("Details", "Details", new { SemesterID = item.SemesterID, CourseID = item.CourseID }) |
+            @Html.ActionLink("Delete", "Delete", new { SemesterID = item.SemesterID, CourseID = item.CourseID })
         </td>
     </tr>
 }

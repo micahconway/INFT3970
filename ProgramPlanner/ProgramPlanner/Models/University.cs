@@ -15,5 +15,7 @@ namespace ProgramPlanner.Models
         public virtual ICollection<Course> Courses { get; set; }
 
         public virtual ICollection<Degree> Degrees { get; set; }
+
+        public virtual ICollection<StudyArea> StudyAreas { get; set; }
     }
 }

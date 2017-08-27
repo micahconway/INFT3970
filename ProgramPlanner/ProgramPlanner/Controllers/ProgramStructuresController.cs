@@ -17,7 +17,7 @@ namespace ProgramPlanner.Controllers
         // GET: ProgramStructures
         public ActionResult Index()
         {
-            var programStructures = db.ProgramStructures.Include(p => p.User);
+            var programStructures = db.ProgramStructures.Include(ps => ps.User);
             return View(programStructures.ToList());
         }
 
@@ -39,7 +39,6 @@ namespace ProgramPlanner.Controllers
         // GET: ProgramStructures/Create
         public ActionResult Create()
         {
-            ViewBag.UserID = new SelectList(db.Users, "UserID", "Email");
             return View();
         }
 
@@ -57,7 +56,6 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.UserID = new SelectList(db.Users, "Email", programStructure.Email);
             return View(programStructure);
         }
 
@@ -73,7 +71,6 @@ namespace ProgramPlanner.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.UserID = new SelectList(db.Users, "Email", programStructure.Email);
             return View(programStructure);
         }
 
@@ -90,7 +87,6 @@ namespace ProgramPlanner.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.UserID = new SelectList(db.Users, "Email", programStructure.Email);
             return View(programStructure);
         }
 

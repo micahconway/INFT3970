@@ -4,31 +4,47 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<!DOCTYPE html>
 
-<div>
-    <h4>Replacement</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ReplacementCourseID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ReplacementCourseID)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ReplacedCourseID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ReplacedCourseID)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ReplacementID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Replacement</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ReplacedCourse.CourseName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ReplacedCourse.CourseName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ReplacementCourse.CourseName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ReplacementCourse.CourseName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.YearDegree.YearDegreeID)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.YearDegree.YearDegreeID)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

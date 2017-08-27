@@ -14,7 +14,7 @@ namespace ProgramPlanner.Models
 
         public int Duration { get; set; }
 
-        public int UniversityID { get; set; }
+        public virtual int UniversityID { get; set; }
 
         public virtual University University { get; set; }
 

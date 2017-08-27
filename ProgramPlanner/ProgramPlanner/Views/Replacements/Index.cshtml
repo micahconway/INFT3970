@@ -4,36 +4,50 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<!DOCTYPE html>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ReplacementCourseID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ReplacedCourseID)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ReplacementCourseID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ReplacedCourseID)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ReplacementID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ReplacementID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ReplacementID })
-        </td>
-    </tr>
-}
-
-</table>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ReplacedCourse.CourseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReplacementCourse.CourseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YearDegree.YearDegreeID)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReplacedCourse.CourseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReplacementCourse.CourseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YearDegree.YearDegreeID)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

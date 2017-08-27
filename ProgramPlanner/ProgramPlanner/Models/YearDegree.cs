@@ -12,9 +12,7 @@ namespace ProgramPlanner.Models
 
         public int YearDegreeID { get; set; }
 
-        public string YearDegreeName { get; set; }
-
-        public DateTime Year { get; set; }
+        public int Year { get; set; }
 
         public int DegreeID { get; set; }
 
@@ -27,6 +25,8 @@ namespace ProgramPlanner.Models
         public virtual ICollection<DegreeCore> DegreeCores { get; set; }
 
         public virtual ICollection<DegreeCoreSlot> DegreeCoreSlots { get; set; }
+
+        public virtual ICollection<Replacement> Replacements { get; set; }
 
     }
 }
