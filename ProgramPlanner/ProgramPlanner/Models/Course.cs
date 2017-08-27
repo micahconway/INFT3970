@@ -49,6 +49,8 @@ namespace ProgramPlanner.Models
 
         public virtual ICollection<SemesterCourse> SemesterCourses { get; set; }
 
-        public virtual Replacement Replacement { get; set; }
+        public virtual ICollection<Directed> Directeds { get; set; }
+
+        // public virtual Replacement Replacement { get; set; }
     }
 }

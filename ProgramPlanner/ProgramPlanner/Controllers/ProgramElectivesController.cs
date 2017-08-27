@@ -39,8 +39,8 @@ namespace ProgramPlanner.Controllers
         // GET: ProgramElectives/Create
         public ActionResult Create()
         {
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode");
-            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID");
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseName");
+            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "Email");
             return View();
         }
 
@@ -49,7 +49,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProgramElectiveID,CourseID,ProgramStructureID")] ProgramElective programElective)
+        public ActionResult Create([Bind(Include = "CourseID,ProgramStructureID,Completed")] ProgramElective programElective)
         {
             if (ModelState.IsValid)
             {
@@ -58,8 +58,8 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", programElective.CourseID);
-            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID", programElective.ProgramStructureID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseName", programElective.CourseID);
+            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "Email", programElective.ProgramStructureID);
             return View(programElective);
         }
 
@@ -75,8 +75,8 @@ namespace ProgramPlanner.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", programElective.CourseID);
-            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID", programElective.ProgramStructureID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseName", programElective.CourseID);
+            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "Email", programElective.ProgramStructureID);
             return View(programElective);
         }
 
@@ -85,7 +85,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProgramElectiveID,CourseID,ProgramStructureID")] ProgramElective programElective)
+        public ActionResult Edit([Bind(Include = "CourseID,ProgramStructureID,Completed")] ProgramElective programElective)
         {
             if (ModelState.IsValid)
             {
@@ -93,8 +93,8 @@ namespace ProgramPlanner.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", programElective.CourseID);
-            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID", programElective.ProgramStructureID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseName", programElective.CourseID);
+            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "Email", programElective.ProgramStructureID);
             return View(programElective);
         }
 
