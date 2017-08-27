@@ -59,51 +59,51 @@
 
                             <!--Each heading is a new menu item -->
                             <h3>Communication and Creative Industries</h3>
-                            <div class="accordions">
+                            <div id="accord1" class="accordions">
                                 <h4>Architecture</h4>
                                 <div class="subAccordion">
-                                    <div class="draggable electives">ARCH1001</div>
-                                    <div class="draggable electives">ARCH1002</div>
+                                    <div id="ARCH1001" class="draggable electives">ARCH1001</div>
+                                    <div id="ARCH1002" class="draggable electives">ARCH1002</div>
                                 </div>
                                 <h4>Music</h4>
                                 <div class="subAccordion">
-                                    <div class="draggable electives">MUSC1001</div>
-                                    <div class="draggable electives">MUSC1002</div>
+                                    <div id="MUSC1001" class="draggable electives">MUSC1001</div>
+                                    <div id="MUSC1002" class="draggable electives">MUSC1002</div>
                                 </div>
                                 <h4>Visual Arts</h4>
                                 <div class="subAccordion">
-                                    <div class="draggable electives">ARTS1001</div>
-                                    <div class="draggable electives">ARTS1002</div>
+                                    <div id="ARTS1001" class="draggable electives">ARTS1001</div>
+                                    <div id="ARTS1002" class="draggable electives">ARTS1002</div>
                                 </div>
                             </div>
 
                             <!--Another menu item -->
                             <h3>Business and Entrepreneurship</h3>
-                            <div class="accordions">
+                            <div id="accord2" class="accordions">
                                 <h4>Commerce</h4>
                                 <div class="subAccordion">
-                                    <div class="draggable electives">COMM1100</div>
-                                    <div class="draggable electives">COMM1110</div>
+                                    <div id="COMM1100" class="draggable electives">COMM1100</div>
+                                    <div id="COMM1110" class="draggable electives">COMM1110</div>
                                 </div>
                                 <h4>Marketing</h4>
                                 <div class="subAccordion">
-                                    <div class="draggable electives">BUSN1100</div>
-                                    <div class="draggable electives">BUSN1110</div>
+                                    <div id="BUSN1100" class="draggable electives">BUSN1100</div>
+                                    <div id="BUSN1110" class="draggable electives">BUSN1110</div>
                                 </div>
                             </div>
 
                             <!--Anothr menu item -->
                             <h3>Computing, Maths and Technology</h3>
-                            <div class="accordions">
+                            <div id="accord3" class="accordions">
                                 <h4>Computer Science</h4>
                                 <div class="subAccordion">
-                                    <div class="draggable electives">COMP1100</div>
-                                    <div class="draggable electives">COMP1110</div>
+                                    <div id="COMP1100" class="draggable electives">COMP1100</div>
+                                    <div id="COMP1110" class="draggable electives">COMP1110</div>
                                 </div>
                                 <h4>Information Technology</h4>
                                 <div class="subAccordion">
-                                    <div class="draggable electives">INFT1100</div>
-                                    <div class="draggable electives">INFT1110</div>
+                                    <div id="INFT1100" class="draggable electives">INFT1100</div>
+                                    <div id="INFT1110" class="draggable electives">INFT1110</div>
                                 </div>
                             </div>
 
@@ -307,32 +307,53 @@
         //search box
         $(function () {
             var availableTags = [
-                "ActionScript",
-                "AppleScript",
-                "Asp",
-                "BASIC",
-                "C",
-                "C++",
-                "Clojure",
-                "COBOL",
-                "ColdFusion",
-                "Erlang",
-                "Fortran",
-                "Groovy",
-                "Haskell",
-                "Java",
-                "JavaScript",
-                "Lisp",
-                "Perl",
-                "PHP",
-                "Python",
-                "Ruby",
-                "Scala",
-                "Scheme"
+                "ARCH1001",
+                "ARCH1002",
+                "MUSC1001",
+                "MUSC1002",
+                "ARTS1001",
+                "ARTS1002",
+                "COMM1100",
+                "COMM1110",
+                "BUSN1100",
+                "BUSN1110",
+                "COMP1100",
+                "COMP1110",
+                "INFT1100",
+                "INFT1110"
             ];
             $("#searchBox").autocomplete({
                 source: availableTags
             });
+        });
+
+        $("#searchBox").on("autocompleteselect", function (event, ui) {            
+            //$(".accordions").accordion("active", '.accordions > div:has(#ARCH1001) > h3');
+            var courseSelected = "#" + ui.item.value;   //select the course we want
+
+            //outside accordion
+            var studyArea = $(courseSelected).parent().parent(); //get the study area div
+            //get the index of the study area div so that the accordion can use it
+            var studyAreaIndex = $('#accordion .accordions').index(studyArea);           
+            $("#accordion").accordion("option", "active", studyAreaIndex); //activate study area accordion (outside accordion)
+
+            //inner accordion
+            var abbr = $(courseSelected).parent();
+            var abbrSelector = studyArea.find(".subAccordion");
+            var abbrIndex = abbrSelector.index(abbr); 
+            studyArea.accordion("option", "active", abbrIndex); 
+
+            //change colour of selected course for a couple of seconds just to make it more obvious
+            var el = $(courseSelected),
+                x = 2000,
+                originalColor = el.css("background");
+
+            el.css("background", "yellow");
+            setTimeout(function () {
+                el.css("background", originalColor);
+            }, x);
+
+
         });
     </script>
 
