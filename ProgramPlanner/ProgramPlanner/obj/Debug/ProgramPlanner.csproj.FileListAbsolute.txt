@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 \\Mac\Home\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\ApplicationInsights.config
 \\Mac\Home\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\roslyn\csc.exe
 \\Mac\Home\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\roslyn\csc.exe.config
@@ -164,6 +165,8 @@
 \\Mac\Home\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.pdb
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> a8054d4fefab34f4ef67eb71c3e05f728d7bb44e
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\ApplicationInsights.config
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\roslyn\csc.exe
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\roslyn\csc.exe.config
@@ -257,6 +260,7 @@ C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\Mic
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\Microsoft.AI.Web.xml
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csprojResolveAssemblyReference.cache
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Test2.resources
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Test3.resources
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Test4.resources
@@ -299,10 +303,36 @@ C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Deb
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Test53.resources
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Test54.resources
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Test541.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update2.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update3.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update4.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update5.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update6.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update7.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update10.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update11.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update14.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update15.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update16.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update161.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update17.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update162.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update18.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update19.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update20.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update21.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update22.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update23.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update26.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update29.resources
+C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations.Update291.resources
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csproj.GenerateResource.Cache
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csproj.CoreCompileInputs.cache
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.dll
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.pdb
+<<<<<<< HEAD
+=======
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csprojResolveAssemblyReference.cache
 =======
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\bin\ApplicationInsights.config
