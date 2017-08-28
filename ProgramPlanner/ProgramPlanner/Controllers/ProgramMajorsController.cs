@@ -40,7 +40,7 @@ namespace ProgramPlanner.Controllers
         public ActionResult Create()
         {
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName");
-            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID");
+            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "Email");
             return View();
         }
 
@@ -49,7 +49,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProgramMajorID,ProgramStructureID,MajorID")] ProgramMajor programMajor)
+        public ActionResult Create([Bind(Include = "ProgramStructureID,MajorID")] ProgramMajor programMajor)
         {
             if (ModelState.IsValid)
             {
@@ -59,7 +59,7 @@ namespace ProgramPlanner.Controllers
             }
 
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName", programMajor.MajorID);
-            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID", programMajor.ProgramStructureID);
+            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "Email", programMajor.ProgramStructureID);
             return View(programMajor);
         }
 
@@ -76,7 +76,7 @@ namespace ProgramPlanner.Controllers
                 return HttpNotFound();
             }
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName", programMajor.MajorID);
-            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID", programMajor.ProgramStructureID);
+            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "Email", programMajor.ProgramStructureID);
             return View(programMajor);
         }
 
@@ -85,7 +85,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProgramMajorID,ProgramStructureID,MajorID")] ProgramMajor programMajor)
+        public ActionResult Edit([Bind(Include = "ProgramStructureID,MajorID")] ProgramMajor programMajor)
         {
             if (ModelState.IsValid)
             {
@@ -94,7 +94,7 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName", programMajor.MajorID);
-            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID", programMajor.ProgramStructureID);
+            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "Email", programMajor.ProgramStructureID);
             return View(programMajor);
         }
 

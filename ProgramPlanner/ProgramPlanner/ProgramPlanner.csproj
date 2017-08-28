@@ -484,9 +484,39 @@
     <Compile Include="Migrations\201708260655498_Update291.Designer.cs">
       <DependentUpon>201708260655498_Update291.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Migrations\201708270408406_Test31.cs" />
     <Compile Include="Migrations\201708270408406_Test31.Designer.cs">
       <DependentUpon>201708270408406_Test31.cs</DependentUpon>
+=======
+    <Compile Include="Migrations\201708270417157_test45.cs" />
+    <Compile Include="Migrations\201708270417157_test45.Designer.cs">
+      <DependentUpon>201708270417157_test45.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708270536466_27-Aug-2016-1.cs" />
+    <Compile Include="Migrations\201708270536466_27-Aug-2016-1.Designer.cs">
+      <DependentUpon>201708270536466_27-Aug-2016-1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708270602287_27-Aug-17-2.cs" />
+    <Compile Include="Migrations\201708270602287_27-Aug-17-2.Designer.cs">
+      <DependentUpon>201708270602287_27-Aug-17-2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708270616143_27-Aug-2017-3.cs" />
+    <Compile Include="Migrations\201708270616143_27-Aug-2017-3.Designer.cs">
+      <DependentUpon>201708270616143_27-Aug-2017-3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708270618555_27-Aug-2017-4.cs" />
+    <Compile Include="Migrations\201708270618555_27-Aug-2017-4.Designer.cs">
+      <DependentUpon>201708270618555_27-Aug-2017-4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708270621197_27-Aug-2017-5.cs" />
+    <Compile Include="Migrations\201708270621197_27-Aug-2017-5.Designer.cs">
+      <DependentUpon>201708270621197_27-Aug-2017-5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708270426109_test43.cs" />
+    <Compile Include="Migrations\201708270426109_test43.Designer.cs">
+      <DependentUpon>201708270426109_test43.cs</DependentUpon>
+>>>>>>> 06d474929752474c9056fac50a6a0de86b118f7d
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Abbreviation.cs" />
@@ -621,26 +651,11 @@
     <Content Include="Views\DegreeCores\Details.cshtml" />
     <Content Include="Views\DegreeCores\Edit.cshtml" />
     <Content Include="Views\DegreeCores\Index.cshtml" />
-    <Content Include="Views\ProgramMajors\Create.cshtml" />
-    <Content Include="Views\ProgramMajors\Delete.cshtml" />
-    <Content Include="Views\ProgramMajors\Details.cshtml" />
-    <Content Include="Views\ProgramMajors\Edit.cshtml" />
-    <Content Include="Views\ProgramMajors\Index.cshtml" />
-    <Content Include="Views\ProgramElectives\Create.cshtml" />
-    <Content Include="Views\ProgramElectives\Delete.cshtml" />
-    <Content Include="Views\ProgramElectives\Details.cshtml" />
-    <Content Include="Views\ProgramElectives\Edit.cshtml" />
-    <Content Include="Views\ProgramElectives\Index.cshtml" />
     <Content Include="Views\ProgramDirecteds\Create.cshtml" />
     <Content Include="Views\ProgramDirecteds\Delete.cshtml" />
     <Content Include="Views\ProgramDirecteds\Details.cshtml" />
     <Content Include="Views\ProgramDirecteds\Edit.cshtml" />
     <Content Include="Views\ProgramDirecteds\Index.cshtml" />
-    <Content Include="Views\ProgramOptionalCoreCourses\Create.cshtml" />
-    <Content Include="Views\ProgramOptionalCoreCourses\Delete.cshtml" />
-    <Content Include="Views\ProgramOptionalCoreCourses\Details.cshtml" />
-    <Content Include="Views\ProgramOptionalCoreCourses\Edit.cshtml" />
-    <Content Include="Views\ProgramOptionalCoreCourses\Index.cshtml" />
     <Content Include="Views\OptionalCoreCourses\Create.cshtml" />
     <Content Include="Views\OptionalCoreCourses\Delete.cshtml" />
     <Content Include="Views\OptionalCoreCourses\Details.cshtml" />
@@ -724,6 +739,21 @@
     <Content Include="Views\ProgramStructures\Details.cshtml" />
     <Content Include="Views\ProgramStructures\Edit.cshtml" />
     <Content Include="Views\ProgramStructures\Index.cshtml" />
+    <Content Include="Views\ProgramElectives\Create.cshtml" />
+    <Content Include="Views\ProgramElectives\Delete.cshtml" />
+    <Content Include="Views\ProgramElectives\Details.cshtml" />
+    <Content Include="Views\ProgramElectives\Edit.cshtml" />
+    <Content Include="Views\ProgramElectives\Index.cshtml" />
+    <Content Include="Views\ProgramMajors\Create.cshtml" />
+    <Content Include="Views\ProgramMajors\Delete.cshtml" />
+    <Content Include="Views\ProgramMajors\Details.cshtml" />
+    <Content Include="Views\ProgramMajors\Edit.cshtml" />
+    <Content Include="Views\ProgramMajors\Index.cshtml" />
+    <Content Include="Views\ProgramOptionalCoreCourses\Create.cshtml" />
+    <Content Include="Views\ProgramOptionalCoreCourses\Delete.cshtml" />
+    <Content Include="Views\ProgramOptionalCoreCourses\Details.cshtml" />
+    <Content Include="Views\ProgramOptionalCoreCourses\Edit.cshtml" />
+    <Content Include="Views\ProgramOptionalCoreCourses\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BusinessLogic\" />
@@ -934,8 +964,31 @@
     <EmbeddedResource Include="Migrations\201708260655498_Update291.resx">
       <DependentUpon>201708260655498_Update291.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201708270408406_Test31.resx">
       <DependentUpon>201708270408406_Test31.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Migrations\201708270417157_test45.resx">
+      <DependentUpon>201708270417157_test45.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708270536466_27-Aug-2016-1.resx">
+      <DependentUpon>201708270536466_27-Aug-2016-1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708270602287_27-Aug-17-2.resx">
+      <DependentUpon>201708270602287_27-Aug-17-2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708270616143_27-Aug-2017-3.resx">
+      <DependentUpon>201708270616143_27-Aug-2017-3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708270618555_27-Aug-2017-4.resx">
+      <DependentUpon>201708270618555_27-Aug-2017-4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708270621197_27-Aug-2017-5.resx">
+      <DependentUpon>201708270621197_27-Aug-2017-5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708270426109_test43.resx">
+      <DependentUpon>201708270426109_test43.cs</DependentUpon>
+>>>>>>> 06d474929752474c9056fac50a6a0de86b118f7d
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
