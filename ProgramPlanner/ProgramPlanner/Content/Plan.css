@@ -126,10 +126,11 @@ h1 {
 .subAccordion {
     width: 80%;
     float: right;
+    height:100%;
 }
 
 #tabs {
-    height: 100%;
+    height: 500px;
 }
 
 #tabs-2 {
@@ -143,6 +144,8 @@ h1 {
 #accordion {
     position: relative;
     top: 10px;
+    height: 400px;
+    overflow-y: auto;
 }
 
 .accordions {

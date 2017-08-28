@@ -17,8 +17,18 @@ namespace ProgramPlanner.Controllers
         // GET: Plan
         public ActionResult Index()
         {
+            Setup.InitializeCourseCode(db);
+
             ViewBag.UnitsPerDegree = 240;
             ViewBag.SubjectsPerSemester = 4;
+
+            //courses to be searched for in the search box
+            List<String> courseCodes = new List<String>();
+            foreach (var item in db.Courses)
+            {
+                courseCodes.Add(item.CourseCode);
+            }
+            ViewBag.CourseCodeList = courseCodes;
 
             //ViewBag.Directeds = new SelectList(db.Courses, "CourseID", "CourseCode");
 
@@ -26,7 +36,8 @@ namespace ProgramPlanner.Controllers
             //ViewBag.YearDegreeSelected = "";
             //ViewBag.DegreeCoreCourses = 
 
-            return View();
+            
+            return View(db.StudyAreas.ToList());
         }
 
         [HttpPost]
