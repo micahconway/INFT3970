@@ -721,7 +721,6 @@
     <Content Include="Views\StudyAreas\Details.cshtml" />
     <Content Include="Views\StudyAreas\Edit.cshtml" />
     <Content Include="Views\StudyAreas\Index.cshtml" />
-    <Content Include="Views\PM_Home\Index.cshtml" />
     <Content Include="Views\Degrees\Create.cshtml" />
     <Content Include="Views\Degrees\Delete.cshtml" />
     <Content Include="Views\Degrees\Details.cshtml" />
@@ -782,6 +781,7 @@
     <Content Include="Views\ProgramOptionalCoreCourses\Details.cshtml" />
     <Content Include="Views\ProgramOptionalCoreCourses\Edit.cshtml" />
     <Content Include="Views\ProgramOptionalCoreCourses\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Replacements\Create.cshtml" />
     <Content Include="Views\Replacements\Delete.cshtml" />
     <Content Include="Views\Replacements\Details.cshtml" />
@@ -792,6 +792,9 @@
     <Content Include="Views\Directeds\Details.cshtml" />
     <Content Include="Views\Directeds\Edit.cshtml" />
     <Content Include="Views\Directeds\Index.cshtml" />
+=======
+    <Content Include="Views\PM_Home\Index.cshtml" />
+>>>>>>> 9f1c0874577d09118af182794a97972fb5440476
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BusinessLogic\" />
