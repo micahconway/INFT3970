@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ProgramPlanner.Models.Replacement>
+﻿@model IEnumerable<ProgramPlanner.Models.Test>
 
 @{
    
@@ -32,18 +32,18 @@
     @foreach (var item in Model) {
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ReplacementCourse.CourseName)
+                @item.Replaced.CourseCode
             </th>
             <td>
-                @Html.DisplayFor(modelItem => item.ReplacementCourse.CourseName)
+                @item.Replacement.ReplacementCourse.CourseCode
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.YearDegree.YearDegreeID)
+                @item.YearDegree.Year
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.ReplacementID }) |
-                @Html.ActionLink("Details", "Details", new { id=item.ReplacementID }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.ReplacementID })
+                @Html.ActionLink("Edit", "Edit", new { id=item.Replacement.ReplacementID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Replacement.ReplacementID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Replacement.ReplacementID })
             </td>
         </tr>
     }

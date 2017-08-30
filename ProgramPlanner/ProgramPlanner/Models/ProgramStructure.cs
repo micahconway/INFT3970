@@ -25,7 +25,7 @@ namespace ProgramPlanner.Models
 
         public virtual ICollection<ProgramMajor> ProgramMajors { get; set; }
 
-        public virtual ICollection<ProgramDirected> ProgramDirected { get; set; }
+        public virtual ICollection<ProgramDirected> ProgramDirecteds { get; set; }
 
         public virtual ICollection<ProgramElective> ProgramElectives { get; set; }
 

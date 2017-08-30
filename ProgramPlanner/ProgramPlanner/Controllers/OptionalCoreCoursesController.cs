@@ -18,6 +18,7 @@ namespace ProgramPlanner.Controllers
         public ActionResult Index()
         {
             var optionalCoreCourses = db.OptionalCoreCourses.Include(o => o.Course).Include(o => o.DegreeCoreSlot);
+            Setup.InitializeCourseCode(db);
             return View(optionalCoreCourses.ToList());
         }
 

@@ -18,6 +18,10 @@ namespace ProgramPlanner.Controllers
         public ActionResult Index()
         {
             var majorCores = db.MajorCores.Include(m => m.Course).Include(m => m.Major);
+
+            // Setup up the data for course codes.
+            Setup.InitializeCourseCode(db);
+
             return View(majorCores.ToList());
         }
 
@@ -39,7 +43,7 @@ namespace ProgramPlanner.Controllers
         // GET: MajorCores/Create
         public ActionResult Create()
         {
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode");
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseName");
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName");
             return View();
         }
@@ -49,7 +53,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MajorCoreID,CourseID,MajorID")] MajorCore majorCore)
+        public ActionResult Create([Bind(Include = "CourseID,MajorID")] MajorCore majorCore)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +62,7 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", majorCore.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseName", majorCore.CourseID);
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName", majorCore.MajorID);
             return View(majorCore);
         }
@@ -75,7 +79,7 @@ namespace ProgramPlanner.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", majorCore.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseName", majorCore.CourseID);
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName", majorCore.MajorID);
             return View(majorCore);
         }
@@ -85,7 +89,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MajorCoreID,CourseID,MajorID")] MajorCore majorCore)
+        public ActionResult Edit([Bind(Include = "CourseID,MajorID")] MajorCore majorCore)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +97,7 @@ namespace ProgramPlanner.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", majorCore.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseName", majorCore.CourseID);
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName", majorCore.MajorID);
             return View(majorCore);
         }

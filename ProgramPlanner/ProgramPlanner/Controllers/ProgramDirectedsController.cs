@@ -39,8 +39,8 @@ namespace ProgramPlanner.Controllers
         // GET: ProgramDirecteds/Create
         public ActionResult Create()
         {
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode");
-            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID");
+            ViewBag.DirectedID = new SelectList(db.Directeds, "DirectedID", "DirectedID");
+            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "Email");
             return View();
         }
 
@@ -49,7 +49,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProgramDirectedID,ProgramStructureID,CourseID")] ProgramDirected programDirected)
+        public ActionResult Create([Bind(Include = "ProgramStructureID,DirectedID,Completed")] ProgramDirected programDirected)
         {
             if (ModelState.IsValid)
             {
@@ -58,8 +58,8 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", programDirected.DirectedID);
-            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID", programDirected.ProgramStructureID);
+            ViewBag.DirectedID = new SelectList(db.Directeds, "DirectedID", "DirectedID", programDirected.DirectedID);
+            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "Email", programDirected.ProgramStructureID);
             return View(programDirected);
         }
 
@@ -75,8 +75,8 @@ namespace ProgramPlanner.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", programDirected.DirectedID);
-            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID", programDirected.ProgramStructureID);
+            ViewBag.DirectedID = new SelectList(db.Directeds, "DirectedID", "DirectedID", programDirected.DirectedID);
+            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "Email", programDirected.ProgramStructureID);
             return View(programDirected);
         }
 
@@ -85,7 +85,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProgramDirectedID,ProgramStructureID,CourseID")] ProgramDirected programDirected)
+        public ActionResult Edit([Bind(Include = "ProgramStructureID,DirectedID,Completed")] ProgramDirected programDirected)
         {
             if (ModelState.IsValid)
             {
@@ -93,8 +93,8 @@ namespace ProgramPlanner.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", programDirected.DirectedID);
-            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "ProgramStructureID", programDirected.ProgramStructureID);
+            ViewBag.DirectedID = new SelectList(db.Directeds, "DirectedID", "DirectedID", programDirected.DirectedID);
+            ViewBag.ProgramStructureID = new SelectList(db.ProgramStructures, "ProgramStructureID", "Email", programDirected.ProgramStructureID);
             return View(programDirected);
         }
 

@@ -17,6 +17,8 @@ namespace ProgramPlanner.Models
 
         public virtual ICollection<OptionalCoreCourse> OptionalCoreCourses { get; set; }
 
+        public int YearDegreeID { get; set; }
+
         public virtual YearDegree YearDegree { get; set; }
     }
 }

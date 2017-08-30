@@ -25,51 +25,28 @@ namespace ProgramPlanner.Models
         public ProgramPlannerContext() : base("name=ProgramPlannerContext")
         {
         }
-
         public DbSet<Course> Courses { get; set; }
-
         public DbSet<YearDegree> YearDegrees { get; set; }
-
         public DbSet<Degree> Degrees { get; set; }
-
         public DbSet<Major> Majors { get; set; }
-
         public DbSet<University> Universities { get; set; }
-
         public DbSet<Directed> Directeds { get; set; }
-
         public DbSet<MajorCore> MajorCores { get; set; }
-
         public DbSet<DegreeCore> DegreeCores { get; set; }
-
         public DbSet<User> Users { get; set; }
-
         public DbSet<ProgramStructure> ProgramStructures { get; set; }
-
         public DbSet<ProgramMajor> ProgramMajors { get; set; }
-
         public DbSet<ProgramElective> ProgramElectives { get; set; }
-
         public DbSet<ProgramDirected> ProgramDirecteds { get; set; }
-
         public DbSet<ProgramOptionalCoreCourse> ProgramOptionalCoreCourses { get; set; }
-
         public DbSet<OptionalCoreCourse> OptionalCoreCourses { get; set; }
-
         public DbSet<DegreeCoreSlot> DegreeCoreSlots { get; set; }
-
         public DbSet<Semester> Semesters { get; set; }
-
         public DbSet<Trimester> Trimesters { get; set; }
-
         public DbSet<SemesterCourse> SemesterCourses { get; set; }
-
         public DbSet<TrimesterCourse> TrimesterCourses { get; set; }
-
         public DbSet<Replacement> Replacements { get; set; }
-
         public DbSet<Abbreviation> Abbreviations { get; set; }
-
         public DbSet<StudyArea> StudyAreas { get; set; }
         //-------------------------------------------------------------------------------------
         //----------------------------------DATABASE MODELS------------------------------------: 
@@ -82,7 +59,6 @@ namespace ProgramPlanner.Models
             Models(modelbuilder);
             Relationships(modelbuilder);
         }
-
         /// <summary>
         /// 
         /// </summary>
@@ -111,19 +87,33 @@ namespace ProgramPlanner.Models
             ModelAbbreviation(modelbuilder);
             ModelStudyArea(modelbuilder);
         }
-
         /// <summary>
         /// Constructs all constraints (not relationships) associcated with the entity Course.
         /// </summary>
         /// <param name="modelbuilder"></param>
         private void ModelCourse(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<Course>().Ignore(y => y.CourseCode);
-            modelbuilder.Entity<Course>().Property(y => y.CourseName).IsRequired();
-            modelbuilder.Entity<Course>().Property(y => y.UniversityID).IsRequired();
-            modelbuilder.Entity<Course>().Property(y => y.Units).IsRequired();
-            modelbuilder.Entity<Course>().Property(y => y.AbbreviationID).IsRequired();
-            modelbuilder.Entity<Course>().Property(y => y.Code).IsRequired();
+            modelbuilder.Entity<Course>()
+                .Ignore(y => y.CourseCode);
+
+            modelbuilder.Entity<Course>()
+                .Property(y => y.CourseName).IsRequired();
+
+            modelbuilder.Entity<Course>()
+                .Property(y => y.UniversityID)
+                .IsRequired();
+
+            modelbuilder.Entity<Course>()
+                .Property(y => y.Units)
+                .IsRequired();
+
+            modelbuilder.Entity<Course>()
+                .Property(y => y.AbbreviationID)
+                .IsRequired();
+
+            modelbuilder.Entity<Course>()
+                .Property(y => y.Code)
+                .IsRequired();
         }
         /// <summary>
         /// Constructs all constraints (not relationships) associcated with the entity ProgramElective.
@@ -131,9 +121,9 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelProgramElective(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<ProgramElective>().HasKey(y => new { y.CourseID, y.ProgramStructureID });
+            modelbuilder.Entity<ProgramElective>()
+                .HasKey(y => new { y.CourseID, y.ProgramStructureID });
         }
-
         /// <summary>
         /// Constructs all constraints (not relationships) associcated with the entity YearDegrees
         /// </summary>
@@ -143,47 +133,56 @@ namespace ProgramPlanner.Models
             // Ignore the Class attribute YearDegreeName.
         }
         /// <summary>
-        /// 
+        /// Constructs all constraints (not relationships) associcated with the entity Major.
         /// </summary>
         /// <param name="modelbuilder"></param>
         private void ModelMajors(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<Major>().Property(y => y.MajorName).IsRequired();
-            modelbuilder.Entity<Major>().Property(y => y.YearDegreeID).IsRequired();
+            modelbuilder.Entity<Major>()
+                .Property(y => y.MajorName)
+                .IsRequired();
+
+            modelbuilder.Entity<Major>()
+                .Property(y => y.YearDegreeID)
+                .IsRequired();
         }
         /// <summary>
-        /// Constructs the schema for entity Replacement in the database context;
+        /// Constructs all constraints (not relationships) associcated with the entity Replacement.
         /// </summary>
         /// <param name="modelbuilder"></param>
         private void ModelReplacement(DbModelBuilder modelbuilder)
         {
             // Creating a new composite Primary key for entity Replacement;
-            modelbuilder.Entity<Replacement>().HasKey(y => new { y.ReplacementID});
+            modelbuilder.Entity<Replacement>()
+                .HasKey(y => new { y.ReplacementID});
         }
         /// <summary>
-        /// 
+        /// Constructs all constraints (not relationships) associcated with the entity Degree.
         /// </summary>
         /// <param name="modelbuilder"></param>
         private void ModelDegree(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<Degree>().Property(y => y.DegreeName).IsRequired();
+            modelbuilder.Entity<Degree>()
+                .Property(y => y.DegreeName)
+                .IsRequired();
         }
         /// <summary>
-        /// 
+        /// Constructs all constraints (not relationships) associcated with the entity DegreeCore.
         /// </summary>
         /// <param name="modelbuilder"></param>
         private void ModelDegreeCore(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<DegreeCore>().HasKey(y => new { y.CourseID, y.YearDegreeID });
+            modelbuilder.Entity<DegreeCore>()
+                .HasKey(y => new { y.CourseID, y.YearDegreeID });
         }
-
         /// <summary>
-        /// 
+        /// Constructs all constraints (not relationships) associcated with the entity MajorCore.
         /// </summary>
         /// <param name="modelbuilder"></param>
         private void ModelMajorCore(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<MajorCore>().HasKey(y => new { y.CourseID, y.MajorID });
+            modelbuilder.Entity<MajorCore>()
+                .HasKey(y => new { y.CourseID, y.MajorID });
         }
         /// <summary>
         /// 
@@ -191,18 +190,25 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelSemester(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<Semester>().HasKey(y => new { y.SemesterID });
-            modelbuilder.Entity<Semester>().Property(y => y.SemesterValue).IsRequired();
-        }
+            modelbuilder.Entity<Semester>()
+                .HasKey(y => new { y.SemesterID });
 
+            modelbuilder.Entity<Semester>()
+                .Property(y => y.SemesterValue)
+                .IsRequired();
+        }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="modelbuilder"></param>
         private void ModelTrimester(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<Trimester>().HasKey(y => new { y.TrimesterID });
-            modelbuilder.Entity<Trimester>().Property(y => y.TrimesterValue).IsRequired();
+            modelbuilder.Entity<Trimester>()
+                .HasKey(y => new { y.TrimesterID });
+
+            modelbuilder.Entity<Trimester>()
+                .Property(y => y.TrimesterValue)
+                .IsRequired();
         }
         /// <summary>
         /// 
@@ -211,7 +217,8 @@ namespace ProgramPlanner.Models
         private void ModelSemesterCourse(DbModelBuilder modelbuilder)
         {
             // Creating a new composite Primary key. 
-            modelbuilder.Entity<SemesterCourse>().HasKey(y => new { y.SemesterID, y.CourseID });
+            modelbuilder.Entity<SemesterCourse>()
+                .HasKey(y => new { y.SemesterID, y.CourseID });
         }
         /// <summary>
         /// 
@@ -220,7 +227,8 @@ namespace ProgramPlanner.Models
         private void ModelTrimesterCourse(DbModelBuilder modelbuilder)
         {
             // Creating a new composite Primary key. 
-            modelbuilder.Entity<TrimesterCourse>().HasKey(y => new { y.TrimesterID, y.CourseID });
+            modelbuilder.Entity<TrimesterCourse>()
+                .HasKey(y => new { y.TrimesterID, y.CourseID });
         }
         /// <summary>
         /// 
@@ -236,7 +244,8 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelProgramMajor(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<ProgramMajor>().HasKey(y => new { y.ProgramStructureID, y.MajorID });
+            modelbuilder.Entity<ProgramMajor>()
+                .HasKey(y => new { y.ProgramStructureID, y.MajorID });
         }
         /// <summary>
         /// 
@@ -244,7 +253,8 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelProgramDirected(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<ProgramDirected>().HasKey(y => new { y.ProgramStructureID, y.DirectedID });
+            modelbuilder.Entity<ProgramDirected>()
+                .HasKey(y => new { y.ProgramStructureID, y.DirectedID});
         }
         /// <summary>
         /// 
@@ -252,8 +262,13 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelUniversity(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<University>().Property(y => y.UniName).IsRequired();
-            modelbuilder.Entity<University>().Property(y => y.UniName).HasMaxLength(250);
+            modelbuilder.Entity<University>()
+                .Property(y => y.UniName)
+                .IsRequired();
+
+            modelbuilder.Entity<University>()
+                .Property(y => y.UniName)
+                .HasMaxLength(250);
         }
         /// <summary>
         /// 
@@ -261,9 +276,16 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelUser(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<User>().Property(y => y.Email).IsRequired();
-            modelbuilder.Entity<User>().Property(y => y.Password).IsRequired();
-            modelbuilder.Entity<User>().HasKey(y => y.Email);
+            modelbuilder.Entity<User>()
+                .Property(y => y.Email)
+                .IsRequired();
+
+            modelbuilder.Entity<User>()
+                .Property(y => y.Password)
+                .IsRequired();
+
+            modelbuilder.Entity<User>()
+                .HasKey(y => y.Email);
 
         }
         /// <summary>
@@ -272,8 +294,13 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelProgramStructure(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<ProgramStructure>().Property(y => y.DateCreated).IsRequired();
-            modelbuilder.Entity<ProgramStructure>().Property(y => y.DateModified).IsRequired();
+            modelbuilder.Entity<ProgramStructure>()
+                .Property(y => y.DateCreated)
+                .IsRequired();
+
+            modelbuilder.Entity<ProgramStructure>()
+                .Property(y => y.DateModified)
+                .IsRequired();
         }
         /// <summary>
         /// 
@@ -281,7 +308,8 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelProgramOptionalCoreCourse(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<ProgramOptionalCoreCourse>().HasKey(y => new { y.ProgramStructureID, y.OptionalCoreID });
+            modelbuilder.Entity<ProgramOptionalCoreCourse>()
+                .HasKey(y => new { y.ProgramStructureID, y.OptionalCoreID });
         }
         /// <summary>
         /// 
@@ -289,7 +317,9 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelAbbreviation(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<Abbreviation>().Property(y => y.AbbrevName).IsRequired();
+            modelbuilder.Entity<Abbreviation>()
+                .Property(y => y.AbbrevName)
+                .IsRequired();
         }
         /// <summary>
         /// 
@@ -297,7 +327,9 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void ModelStudyArea(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<StudyArea>().Property(y => y.StudyAreaName).IsRequired();
+            modelbuilder.Entity<StudyArea>()
+                .Property(y => y.StudyAreaName)
+                .IsRequired();
         }
         //-------------------------------------------------------------------------------------
         //---------------------------------ENTITY ASSOCIATIONS---------------------------------:
@@ -318,8 +350,10 @@ namespace ProgramPlanner.Models
             RelationshipsForProgramStructures(modelbuilder);
             RelationshipsForUser(modelbuilder);
             RelationshipsForMajors(modelbuilder);
+            RelationshipsForMajorCores(modelbuilder);
             RelationshipsForOptionalCoreCourses(modelbuilder);
             RelationshipsForTrimester(modelbuilder);
+            RelationshipsForSemester(modelbuilder);
             RelationshipsForSemesterCourse(modelbuilder);
             RelationshipsForTrimesterCourse(modelbuilder);
             RelationshipsForProgramOptionalCoreCourse(modelbuilder);
@@ -327,7 +361,9 @@ namespace ProgramPlanner.Models
             RelationshipsForStudyArea(modelbuilder);
             RelationshipsForUniversity(modelbuilder);
             RelationshipsForDirected(modelbuilder);
+            RelationshipsForDegreeCoreSlot(modelbuilder);
         }
+
         /// <summary>
         /// Defines the relationships for the entity Course.  
         /// </summary>
@@ -346,13 +382,13 @@ namespace ProgramPlanner.Models
                 .HasForeignKey(y => y.UniversityID)
                 .WillCascadeOnDelete(false);
 
-
             modelbuilder.Entity<Course>().HasMany(y => y.MandatoryPrerequisites).WithMany().Map(
                 Mandatory => {
                     Mandatory.MapLeftKey("CourseID");
                     Mandatory.MapRightKey("AssumedKnowledgeID");
                     Mandatory.ToTable("AssumedKnowledge");
                 });
+
             modelbuilder.Entity<Course>().HasMany(y => y.OptionalPrerequisites).WithMany().Map(
                 Mandatory => {
                     Mandatory.MapLeftKey("CourseID");
@@ -369,8 +405,34 @@ namespace ProgramPlanner.Models
                 .WithRequired(y => y.Course)
                 .HasForeignKey(y => y.CourseID)
                 .WillCascadeOnDelete(false);
-        }
 
+            modelbuilder.Entity<Course>()
+                .HasMany(y => y.MajorCores);
+
+            modelbuilder.Entity<Course>()
+                .HasMany(y => y.DegreeCores)
+                .WithRequired(y => y.Course)
+                .HasForeignKey(y => y.CourseID)
+                .WillCascadeOnDelete(false);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void RelationshipsForMajorCores(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<MajorCore>()
+                .HasRequired(y => y.Major)
+                .WithMany(y => y.MajorCores)
+                .HasForeignKey(y => y.MajorID)
+                .WillCascadeOnDelete(false);
+
+            modelbuilder.Entity<MajorCore>()
+                .HasRequired(y => y.Course)
+                .WithMany(y => y.MajorCores)
+                .HasForeignKey(y => y.CourseID)
+                .WillCascadeOnDelete(false);
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -384,7 +446,19 @@ namespace ProgramPlanner.Models
                 .WillCascadeOnDelete(false);
 
             modelbuilder.Entity<YearDegree>()
+                .HasMany(y => y.DegreeCores)
+                .WithRequired(y => y.YearDegree)
+                .HasForeignKey(y => y.YearDegreeID)
+                .WillCascadeOnDelete(false);
+
+            modelbuilder.Entity<YearDegree>()
                 .HasMany(y => y.Replacements);
+
+            modelbuilder.Entity<YearDegree>()
+                .HasMany(y => y.DegreeCoreSlots)
+                .WithRequired(y => y.YearDegree)
+                .HasForeignKey(y => y.YearDegreeID)
+                .WillCascadeOnDelete(false);
         }
         /// <summary>
         /// 
@@ -416,13 +490,13 @@ namespace ProgramPlanner.Models
         {
             modelbuilder.Entity<DegreeCore>()
                 .HasRequired(y => y.Course)
-                .WithMany()
+                .WithMany(y => y.DegreeCores)
                 .HasForeignKey(y => y.CourseID)
                 .WillCascadeOnDelete(false);
 
             modelbuilder.Entity<DegreeCore>()
                 .HasRequired(y => y.YearDegree)
-                .WithMany()
+                .WithMany(y => y.DegreeCores)
                 .HasForeignKey(y => y.YearDegreeID)
                 .WillCascadeOnDelete(false);
         }
@@ -433,11 +507,6 @@ namespace ProgramPlanner.Models
         private void RelationshipsForProgramDirected(DbModelBuilder modelbuilder)
         {
             modelbuilder.Entity<ProgramDirected>()
-                .HasRequired(y => y.ProgramStructure)
-                .WithMany(y => y.ProgramDirected)
-                .WillCascadeOnDelete(false);
-
-            modelbuilder.Entity<ProgramDirected>()
                 .HasRequired(y => y.Directed)
                 .WithMany(y => y.ProgramDirecteds)
                 .HasForeignKey(y => y.DirectedID)
@@ -445,8 +514,9 @@ namespace ProgramPlanner.Models
 
             modelbuilder.Entity<ProgramDirected>()
                 .HasRequired(y => y.ProgramStructure)
-                .WithMany(y => y.ProgramDirected)
-                .HasForeignKey(y => y.ProgramStructureID);
+                .WithMany(y => y.ProgramDirecteds)
+                .HasForeignKey(y => y.ProgramStructureID)
+                .WillCascadeOnDelete(false);
         }
         /// <summary>
         /// 
@@ -457,6 +527,7 @@ namespace ProgramPlanner.Models
             modelbuilder.Entity<ProgramElective>()
                 .HasRequired(y => y.ProgramStructure)
                 .WithMany(y => y.ProgramElectives)
+                .HasForeignKey(y => y.ProgramStructureID)
                 .WillCascadeOnDelete(false);
 
             modelbuilder.Entity<ProgramElective>()
@@ -464,11 +535,6 @@ namespace ProgramPlanner.Models
                 .WithMany(y => y.ProgramElectives)
                 .HasForeignKey(y => y.CourseID)
                 .WillCascadeOnDelete(false);
-
-            modelbuilder.Entity<ProgramElective>()
-                .HasRequired(y => y.ProgramStructure)
-                .WithMany(y => y.ProgramElectives)
-                .HasForeignKey(y => y.ProgramStructureID);
         }
         /// <summary>
         /// 
@@ -494,18 +560,29 @@ namespace ProgramPlanner.Models
         /// <param name="modelbuilder"></param>
         private void RelationshipsForProgramStructures(DbModelBuilder modelbuilder)
         {
+            modelbuilder.Entity<ProgramStructure>()
+                .HasMany(y => y.ProgramDirecteds)
+                .WithRequired(y => y.ProgramStructure)
+                .HasForeignKey(y => y.ProgramStructureID)
+                .WillCascadeOnDelete(false);
 
             modelbuilder.Entity<ProgramStructure>()
-                .HasMany(y => y.ProgramDirected);
+                .HasMany(y => y.ProgramElectives)
+                .WithRequired(y => y.ProgramStructure)
+                .HasForeignKey(y => y.ProgramStructureID)
+                .WillCascadeOnDelete(false);
 
             modelbuilder.Entity<ProgramStructure>()
-                .HasMany(y => y.ProgramElectives);
+               .HasMany(y => y.ProgramMajors)
+               .WithRequired(y => y.ProgramStructure)
+               .HasForeignKey(y => y.ProgramStructureID)
+               .WillCascadeOnDelete(false);
 
             modelbuilder.Entity<ProgramStructure>()
-               .HasMany(y => y.ProgramMajors);
-
-            modelbuilder.Entity<ProgramStructure>()
-               .HasMany(y => y.ProgramOptionalCores);
+               .HasMany(y => y.ProgramOptionalCores)
+               .WithRequired(y => y.ProgramStructure)
+               .HasForeignKey(y => y.ProgramStructureID)
+               .WillCascadeOnDelete(false);
 
             modelbuilder.Entity<ProgramStructure>()
                .HasRequired(y => y.User)
@@ -533,6 +610,12 @@ namespace ProgramPlanner.Models
                 .WithMany(y => y.Majors)
                 .HasForeignKey(y => y.YearDegreeID)
                 .WillCascadeOnDelete(false);
+
+            modelbuilder.Entity<Major>()
+                .HasMany(y => y.MajorCores)
+                .WithRequired(y => y.Major)
+                .HasForeignKey(y => y.MajorID)
+                .WillCascadeOnDelete(false);
         }
         /// <summary>
         /// 
@@ -540,6 +623,23 @@ namespace ProgramPlanner.Models
         /// <param name="builder"></param>
         private void RelationshipsForTrimester(DbModelBuilder modelbuilder)
         {
+            modelbuilder.Entity<Trimester>()
+                .HasMany(y => y.TrimesterCourses)
+                .WithRequired(y => y.Trimester)
+                .HasForeignKey(y => y.TrimesterID)
+                .WillCascadeOnDelete(false);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void RelationshipsForSemester(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<Semester>()
+                .HasMany(y => y.SemesterCourses)
+                .WithRequired(y => y.Semester)
+                .HasForeignKey(y => y.SemesterID)
+                .WillCascadeOnDelete(false);
         }
         /// <summary>
         /// 
@@ -591,9 +691,15 @@ namespace ProgramPlanner.Models
 
             modelbuilder.Entity<OptionalCoreCourse>()
                 .HasRequired(y => y.Course)
-                .WithMany()
+                .WithMany( y=> y.OptionalCoreCourses)
                 .HasForeignKey(y => y.CourseID)
                 .WillCascadeOnDelete(false);
+
+            modelbuilder.Entity<OptionalCoreCourse>()
+               .HasRequired(y => y.DegreeCoreSlot)
+               .WithMany(y => y.OptionalCoreCourses)
+               .HasForeignKey(y => y.DegreeCoreSlotID)
+               .WillCascadeOnDelete(false);
         }
         /// <summary>
         /// 
@@ -643,7 +749,6 @@ namespace ProgramPlanner.Models
                 .HasForeignKey(y => y.UniversityID)
                 .WillCascadeOnDelete(false);
         }
-
         /// <summary>
         /// 
         /// </summary>
@@ -653,14 +758,41 @@ namespace ProgramPlanner.Models
             modelbuilder.Entity<University>()
                 .HasMany(y => y.StudyAreas);
         }
-
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
         private void RelationshipsForDirected(DbModelBuilder modelbuilder)
         {
             modelbuilder.Entity<Directed>()
                 .HasRequired(y => y.Course)
                 .WithMany(y => y.Directeds)
-                .HasForeignKey(y => y.CourseID);
+                .HasForeignKey(y => y.CourseID)
+                .WillCascadeOnDelete(false);
+
+            modelbuilder.Entity<Directed>()
+                .HasMany(y => y.ProgramDirecteds)
+                .WithRequired(y => y.Directed)
+                .HasForeignKey(y => y.DirectedID)
+                .WillCascadeOnDelete(false);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelbuilder"></param>
+        private void RelationshipsForDegreeCoreSlot(DbModelBuilder modelbuilder)
+        {
+            modelbuilder.Entity<DegreeCoreSlot>()
+                .HasMany(y => y.OptionalCoreCourses)
+                .WithRequired(y => y.DegreeCoreSlot)
+                .HasForeignKey(y => y.DegreeCoreSlotID)
+                .WillCascadeOnDelete(false);
+
+            modelbuilder.Entity<DegreeCoreSlot>()
+               .HasRequired(y => y.YearDegree)
+               .WithMany(y => y.DegreeCoreSlots)
+               .HasForeignKey(y => y.YearDegreeID)
+               .WillCascadeOnDelete(false);
         }
     }
 }

@@ -556,6 +556,42 @@
     <Compile Include="Migrations\201708300222047_30-Aug=2017Test6.Designer.cs">
       <DependentUpon>201708300222047_30-Aug=2017Test6.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708300245318_30-Aug-2017Test11.cs" />
+    <Compile Include="Migrations\201708300245318_30-Aug-2017Test11.Designer.cs">
+      <DependentUpon>201708300245318_30-Aug-2017Test11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300258268_30-Aug-2017Test12.cs" />
+    <Compile Include="Migrations\201708300258268_30-Aug-2017Test12.Designer.cs">
+      <DependentUpon>201708300258268_30-Aug-2017Test12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300308322_30-Aug-2017Test13.cs" />
+    <Compile Include="Migrations\201708300308322_30-Aug-2017Test13.Designer.cs">
+      <DependentUpon>201708300308322_30-Aug-2017Test13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300319265_30-Aug-2017Test14.cs" />
+    <Compile Include="Migrations\201708300319265_30-Aug-2017Test14.Designer.cs">
+      <DependentUpon>201708300319265_30-Aug-2017Test14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300323248_30-Aug-2017Test15.cs" />
+    <Compile Include="Migrations\201708300323248_30-Aug-2017Test15.Designer.cs">
+      <DependentUpon>201708300323248_30-Aug-2017Test15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300601294_30-Aug-2017Test22.cs" />
+    <Compile Include="Migrations\201708300601294_30-Aug-2017Test22.Designer.cs">
+      <DependentUpon>201708300601294_30-Aug-2017Test22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300602405_30-Aug-2017Test23.cs" />
+    <Compile Include="Migrations\201708300602405_30-Aug-2017Test23.Designer.cs">
+      <DependentUpon>201708300602405_30-Aug-2017Test23.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300610145_30-Aug-2017Test24.cs" />
+    <Compile Include="Migrations\201708300610145_30-Aug-2017Test24.Designer.cs">
+      <DependentUpon>201708300610145_30-Aug-2017Test24.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300614085_30-Aug-2017Test25.cs" />
+    <Compile Include="Migrations\201708300614085_30-Aug-2017Test25.Designer.cs">
+      <DependentUpon>201708300614085_30-Aug-2017Test25.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Abbreviation.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -580,6 +616,7 @@
     <Compile Include="Models\Semester.cs" />
     <Compile Include="Models\SemesterCourse.cs" />
     <Compile Include="Models\StudyArea.cs" />
+    <Compile Include="Models\Test.cs" />
     <Compile Include="Models\Trimester.cs" />
     <Compile Include="Models\TrimesterCourse.cs" />
     <Compile Include="Models\User.cs" />
@@ -674,31 +711,11 @@
     <Content Include="Views\Majors\Details.cshtml" />
     <Content Include="Views\Majors\Edit.cshtml" />
     <Content Include="Views\Majors\Index.cshtml" />
-    <Content Include="Views\MajorCores\Create.cshtml" />
-    <Content Include="Views\MajorCores\Delete.cshtml" />
-    <Content Include="Views\MajorCores\Details.cshtml" />
-    <Content Include="Views\MajorCores\Edit.cshtml" />
-    <Content Include="Views\MajorCores\Index.cshtml" />
-    <Content Include="Views\DegreeCores\Create.cshtml" />
-    <Content Include="Views\DegreeCores\Delete.cshtml" />
-    <Content Include="Views\DegreeCores\Details.cshtml" />
-    <Content Include="Views\DegreeCores\Edit.cshtml" />
-    <Content Include="Views\DegreeCores\Index.cshtml" />
-    <Content Include="Views\ProgramDirecteds\Create.cshtml" />
-    <Content Include="Views\ProgramDirecteds\Delete.cshtml" />
-    <Content Include="Views\ProgramDirecteds\Details.cshtml" />
-    <Content Include="Views\ProgramDirecteds\Edit.cshtml" />
-    <Content Include="Views\ProgramDirecteds\Index.cshtml" />
     <Content Include="Views\OptionalCoreCourses\Create.cshtml" />
     <Content Include="Views\OptionalCoreCourses\Delete.cshtml" />
     <Content Include="Views\OptionalCoreCourses\Details.cshtml" />
     <Content Include="Views\OptionalCoreCourses\Edit.cshtml" />
     <Content Include="Views\OptionalCoreCourses\Index.cshtml" />
-    <Content Include="Views\DegreeCoreSlots\Create.cshtml" />
-    <Content Include="Views\DegreeCoreSlots\Delete.cshtml" />
-    <Content Include="Views\DegreeCoreSlots\Details.cshtml" />
-    <Content Include="Views\DegreeCoreSlots\Edit.cshtml" />
-    <Content Include="Views\DegreeCoreSlots\Index.cshtml" />
     <Content Include="Views\TrimesterCourses\Create.cshtml" />
     <Content Include="Views\TrimesterCourses\Delete.cshtml" />
     <Content Include="Views\TrimesterCourses\Details.cshtml" />
@@ -781,7 +798,6 @@
     <Content Include="Views\ProgramOptionalCoreCourses\Details.cshtml" />
     <Content Include="Views\ProgramOptionalCoreCourses\Edit.cshtml" />
     <Content Include="Views\ProgramOptionalCoreCourses\Index.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Replacements\Create.cshtml" />
     <Content Include="Views\Replacements\Delete.cshtml" />
     <Content Include="Views\Replacements\Details.cshtml" />
@@ -792,9 +808,27 @@
     <Content Include="Views\Directeds\Details.cshtml" />
     <Content Include="Views\Directeds\Edit.cshtml" />
     <Content Include="Views\Directeds\Index.cshtml" />
-=======
     <Content Include="Views\PM_Home\Index.cshtml" />
->>>>>>> 9f1c0874577d09118af182794a97972fb5440476
+    <Content Include="Views\MajorCores\Create.cshtml" />
+    <Content Include="Views\MajorCores\Delete.cshtml" />
+    <Content Include="Views\MajorCores\Details.cshtml" />
+    <Content Include="Views\MajorCores\Edit.cshtml" />
+    <Content Include="Views\MajorCores\Index.cshtml" />
+    <Content Include="Views\DegreeCores\Create.cshtml" />
+    <Content Include="Views\DegreeCores\Delete.cshtml" />
+    <Content Include="Views\DegreeCores\Details.cshtml" />
+    <Content Include="Views\DegreeCores\Edit.cshtml" />
+    <Content Include="Views\DegreeCores\Index.cshtml" />
+    <Content Include="Views\DegreeCoreSlots\Create.cshtml" />
+    <Content Include="Views\DegreeCoreSlots\Delete.cshtml" />
+    <Content Include="Views\DegreeCoreSlots\Details.cshtml" />
+    <Content Include="Views\DegreeCoreSlots\Edit.cshtml" />
+    <Content Include="Views\DegreeCoreSlots\Index.cshtml" />
+    <Content Include="Views\ProgramDirecteds\Create.cshtml" />
+    <Content Include="Views\ProgramDirecteds\Delete.cshtml" />
+    <Content Include="Views\ProgramDirecteds\Details.cshtml" />
+    <Content Include="Views\ProgramDirecteds\Edit.cshtml" />
+    <Content Include="Views\ProgramDirecteds\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BusinessLogic\" />
@@ -1058,6 +1092,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708300222047_30-Aug=2017Test6.resx">
       <DependentUpon>201708300222047_30-Aug=2017Test6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300245318_30-Aug-2017Test11.resx">
+      <DependentUpon>201708300245318_30-Aug-2017Test11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300258268_30-Aug-2017Test12.resx">
+      <DependentUpon>201708300258268_30-Aug-2017Test12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300308322_30-Aug-2017Test13.resx">
+      <DependentUpon>201708300308322_30-Aug-2017Test13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300319265_30-Aug-2017Test14.resx">
+      <DependentUpon>201708300319265_30-Aug-2017Test14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300323248_30-Aug-2017Test15.resx">
+      <DependentUpon>201708300323248_30-Aug-2017Test15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300601294_30-Aug-2017Test22.resx">
+      <DependentUpon>201708300601294_30-Aug-2017Test22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300602405_30-Aug-2017Test23.resx">
+      <DependentUpon>201708300602405_30-Aug-2017Test23.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300610145_30-Aug-2017Test24.resx">
+      <DependentUpon>201708300610145_30-Aug-2017Test24.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300614085_30-Aug-2017Test25.resx">
+      <DependentUpon>201708300614085_30-Aug-2017Test25.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

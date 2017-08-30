@@ -29,6 +29,10 @@ namespace ProgramPlanner.Models
 
         public virtual Abbreviation Abbreviation { get; set; }
 
+        public int ReplacementID { get; set; }
+
+        public virtual Replacement Replacement { get; set; }
+
         // These are your 'AND' prerequisites.
         // A Course can one-to-many mandatory prerequisites. 
         public virtual ICollection<Course> MandatoryPrerequisites { get; set; }
@@ -39,8 +43,6 @@ namespace ProgramPlanner.Models
 
         public virtual ICollection<ProgramElective> ProgramElectives { get; set; }
 
-        public virtual ICollection<ProgramDirected> ProgramDirecteds { get; set; }
-
         public virtual ICollection<MajorCore> MajorCores { get; set; }
 
         public virtual ICollection<DegreeCore> DegreeCores { get; set; }
@@ -49,9 +51,7 @@ namespace ProgramPlanner.Models
 
         public virtual ICollection<SemesterCourse> SemesterCourses { get; set; }
 
-        public int? ReplacementID { get; set; }
-
-        public virtual Replacement Replacement { get; set; }
+        public virtual ICollection<OptionalCoreCourse> OptionalCoreCourses { get; set; }
 
         public virtual ICollection<Directed> Directeds { get; set; }
     }

@@ -17,13 +17,9 @@ namespace ProgramPlanner.Controllers
         // GET: Replacements
         public ActionResult Index()
         {
-            //var replacements = db.Replacements.Include(r => r.ReplacementCourse).Include(r => r.YearDegree);
-            var replacements = 
-                (from c in db.Courses
-                    join r in db.Replacements
-                        on c.CourseID equals r.ReplacementID
-                 select new { c.CourseCode, r.ReplacementCourse.CourseID});
-            return View(replacements.ToList());
+            List<Test> replacementList = Setup.InitializeReplacements(db);
+            Setup.InitializeCourseCode(db);
+            return View(replacementList.ToList());
         }
 
         // GET: Replacements/Details/5
