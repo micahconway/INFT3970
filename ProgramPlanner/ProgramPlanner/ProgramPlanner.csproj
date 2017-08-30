@@ -686,7 +686,6 @@
     <Content Include="Views\StudyAreas\Details.cshtml" />
     <Content Include="Views\StudyAreas\Edit.cshtml" />
     <Content Include="Views\StudyAreas\Index.cshtml" />
-    <Content Include="Views\PM_Home\Index.cshtml" />
     <Content Include="Views\Degrees\Create.cshtml" />
     <Content Include="Views\Degrees\Delete.cshtml" />
     <Content Include="Views\Degrees\Details.cshtml" />
@@ -752,6 +751,7 @@
     <Content Include="Views\ProgramOptionalCoreCourses\Details.cshtml" />
     <Content Include="Views\ProgramOptionalCoreCourses\Edit.cshtml" />
     <Content Include="Views\ProgramOptionalCoreCourses\Index.cshtml" />
+    <Content Include="Views\PM_Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BusinessLogic\" />

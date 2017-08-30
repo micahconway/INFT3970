@@ -67,7 +67,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3 centered">
-                <p>Copyright</p>
+                <p>INFT3970 IT Major Project</p>
             </div>
         </div>
     </div>
@@ -76,7 +76,9 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/retina-1.1.0.js"></script>
-<script src="assets/js/jquery.unveilEffects.js"></script>
+@section Scripts {
+    @Scripts.Render("assets/js/jquery.min.js")
+    @Scripts.Render("assets/js/bootstrap.min.js")
+    @Scripts.Render("assets/js/retina-1.1.0.js")
+    @Scripts.Render("assets/js/jquery.unveilEffects.js")
+}
