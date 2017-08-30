@@ -158,7 +158,7 @@ namespace ProgramPlanner.Models
         private void ModelReplacement(DbModelBuilder modelbuilder)
         {
             // Creating a new composite Primary key for entity Replacement;
-            modelbuilder.Entity<Replacement>().HasKey(y => new { y.ReplacedCourseID, y.ReplacementCourseID, y.YearDegreeID });
+            modelbuilder.Entity<Replacement>().HasKey(y => new { y.ReplacementID});
         }
         /// <summary>
         /// 
@@ -360,12 +360,17 @@ namespace ProgramPlanner.Models
                     Mandatory.ToTable("AlternativeAssumedKnowledge");
                 });
 
-            /*
             modelbuilder.Entity<Course>()
                 .HasOptional(y => y.Replacement)
-                .WithOptionalPrincipal()
-                .Map(replacement => replacement.MapKey(""));*/
+                .WithRequired(y => y.ReplacementCourse);
+
+            modelbuilder.Entity<Course>()
+                .HasMany(y => y.Directeds)
+                .WithRequired(y => y.Course)
+                .HasForeignKey(y => y.CourseID)
+                .WillCascadeOnDelete(false);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -400,10 +405,8 @@ namespace ProgramPlanner.Models
         private void RelationshipsForReplacement(DbModelBuilder modelbuilder)
         {
             modelbuilder.Entity<Replacement>()
-                .HasRequired(y => y.YearDegree)
-                .WithMany(y => y.Replacements)
-                .HasForeignKey(y => y.YearDegreeID)
-                .WillCascadeOnDelete(false);
+             .HasRequired(y => y.ReplacementCourse)
+             .WithOptional(y => y.Replacement);
         }
         /// <summary>
         /// 
@@ -657,8 +660,7 @@ namespace ProgramPlanner.Models
             modelbuilder.Entity<Directed>()
                 .HasRequired(y => y.Course)
                 .WithMany(y => y.Directeds)
-                .HasForeignKey(y => y.DirectedID)
-                .WillCascadeOnDelete(false);
+                .HasForeignKey(y => y.CourseID);
         }
     }
 }

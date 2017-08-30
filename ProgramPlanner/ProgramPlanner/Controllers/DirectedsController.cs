@@ -18,6 +18,7 @@ namespace ProgramPlanner.Controllers
         public ActionResult Index()
         {
             var directeds = db.Directeds.Include(d => d.Course).Include(d => d.Major);
+            Setup.InitializeCourseCode(db);
             return View(directeds.ToList());
         }
 
@@ -39,7 +40,7 @@ namespace ProgramPlanner.Controllers
         // GET: Directeds/Create
         public ActionResult Create()
         {
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode");
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseName");
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName");
             return View();
         }
@@ -58,7 +59,7 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", directed.DirectedID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseName", directed.CourseID);
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName", directed.MajorID);
             return View(directed);
         }
@@ -75,7 +76,7 @@ namespace ProgramPlanner.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", directed.DirectedID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseName", directed.CourseID);
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName", directed.MajorID);
             return View(directed);
         }
@@ -93,7 +94,7 @@ namespace ProgramPlanner.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", directed.DirectedID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseName", directed.CourseID);
             ViewBag.MajorID = new SelectList(db.Majors, "MajorID", "MajorName", directed.MajorID);
             return View(directed);
         }

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<ProgramPlanner.Models.Replacement>
 
 @{
-    ViewBag.Title = "Index";
+   
 }
 
 <!DOCTYPE html>
@@ -18,22 +18,22 @@
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ReplacedCourse.CourseName)
+                Replaced
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReplacementCourse.CourseName)
+                Replacement
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.YearDegree.YearDegreeID)
+                Year Degree
             </th>
             <th></th>
         </tr>
     
     @foreach (var item in Model) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReplacedCourse.CourseName)
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.ReplacementCourse.CourseName)
+            </th>
             <td>
                 @Html.DisplayFor(modelItem => item.ReplacementCourse.CourseName)
             </td>
@@ -41,9 +41,9 @@
                 @Html.DisplayFor(modelItem => item.YearDegree.YearDegreeID)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", new { id=item.ReplacementID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ReplacementID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ReplacementID })
             </td>
         </tr>
     }

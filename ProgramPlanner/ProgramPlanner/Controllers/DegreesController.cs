@@ -17,7 +17,7 @@ namespace ProgramPlanner.Controllers
         // GET: Degrees
         public ActionResult Index()
         {
-            var degrees = db.Degrees.Include(d => d.University);
+            var degrees = db.Degrees.Include(d => d.University).Include(y => y.YearDegrees);
             return View(degrees.ToList());
         }
 

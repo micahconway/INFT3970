@@ -13,13 +13,9 @@ namespace ProgramPlanner.Models
 {
     public class Replacement
     {
-        public int ReplacementCourseID { get; set; }
+        public int ReplacementID { get; set; }
 
         public virtual Course ReplacementCourse { get; set; }
-  
-        public int ReplacedCourseID { get; set; }
-
-        public virtual Course ReplacedCourse { get; set; }
         
         public int YearDegreeID { get; set; }
 
