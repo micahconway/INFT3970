@@ -7,13 +7,13 @@ namespace ProgramPlanner.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class _30Aug2017Test25 : IMigrationMetadata
+    public sealed partial class _31Aug2017Update1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(_30Aug2017Test25));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(_31Aug2017Update1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201708300614085_30-Aug-2017Test25"; }
+            get { return "201708310236332_31-Aug-2017Update1"; }
         }
         
         string IMigrationMetadata.Source

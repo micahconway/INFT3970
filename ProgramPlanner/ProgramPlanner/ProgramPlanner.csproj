@@ -195,12 +195,13 @@
     <Compile Include="Controllers\DegreeCoresController.cs" />
     <Compile Include="Controllers\DegreeCoreSlotsController.cs" />
     <Compile Include="Controllers\DegreesController.cs" />
-    <Compile Include="Controllers\DirectedsController.cs" />
+    <Compile Include="Controllers\DirectedSlotsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MajorCoresController.cs" />
     <Compile Include="Controllers\MajorsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OptionalCoreCoursesController.cs" />
+    <Compile Include="Controllers\OptionalDirectedsController.cs" />
     <Compile Include="Controllers\PlanController.cs" />
     <Compile Include="Controllers\ProgramDirectedsController.cs" />
     <Compile Include="Controllers\ProgramElectivesController.cs" />
@@ -589,8 +590,57 @@
       <DependentUpon>201708300610145_30-Aug-2017Test24.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201708300614085_30-Aug-2017Test25.cs" />
-    <Compile Include="Migrations\201708300614085_30-Aug-2017Test25.Designer.cs">
-      <DependentUpon>201708300614085_30-Aug-2017Test25.cs</DependentUpon>
+    <Compile Include="Migrations\201708310236332_31-Aug-2017Update1.cs" />
+    <Compile Include="Migrations\201708310236332_31-Aug-2017Update1.Designer.cs">
+      <DependentUpon>201708310236332_31-Aug-2017Update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310249169_31-Aug-2017Update2.cs" />
+    <Compile Include="Migrations\201708310249169_31-Aug-2017Update2.Designer.cs">
+      <DependentUpon>201708310249169_31-Aug-2017Update2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310252213_31-Aug-2017Update3.cs" />
+    <Compile Include="Migrations\201708310252213_31-Aug-2017Update3.Designer.cs">
+      <DependentUpon>201708310252213_31-Aug-2017Update3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310255177_31-Aug-2017Update4.cs" />
+    <Compile Include="Migrations\201708310255177_31-Aug-2017Update4.Designer.cs">
+      <DependentUpon>201708310255177_31-Aug-2017Update4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310256188_31-Aug-2017Update5.cs" />
+    <Compile Include="Migrations\201708310256188_31-Aug-2017Update5.Designer.cs">
+      <DependentUpon>201708310256188_31-Aug-2017Update5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310259346_31-Aug-2017Update6.cs" />
+    <Compile Include="Migrations\201708310259346_31-Aug-2017Update6.Designer.cs">
+      <DependentUpon>201708310259346_31-Aug-2017Update6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310309575_31-Aug-2017Update7.cs" />
+    <Compile Include="Migrations\201708310309575_31-Aug-2017Update7.Designer.cs">
+      <DependentUpon>201708310309575_31-Aug-2017Update7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310334270_31-Aug-2017Update8.cs" />
+    <Compile Include="Migrations\201708310334270_31-Aug-2017Update8.Designer.cs">
+      <DependentUpon>201708310334270_31-Aug-2017Update8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310342187_31-Aug-2017Update9.cs" />
+    <Compile Include="Migrations\201708310342187_31-Aug-2017Update9.Designer.cs">
+      <DependentUpon>201708310342187_31-Aug-2017Update9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310346513_31-Aug-2017Update10.cs" />
+    <Compile Include="Migrations\201708310346513_31-Aug-2017Update10.Designer.cs">
+      <DependentUpon>201708310346513_31-Aug-2017Update10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310350434_31-Aug-2017Update11.cs" />
+    <Compile Include="Migrations\201708310350434_31-Aug-2017Update11.Designer.cs">
+      <DependentUpon>201708310350434_31-Aug-2017Update11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310358013_31-Aug-2017UpdateWhoKnows.cs" />
+    <Compile Include="Migrations\201708310358013_31-Aug-2017UpdateWhoKnows.Designer.cs">
+      <DependentUpon>201708310358013_31-Aug-2017UpdateWhoKnows.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310359337_31-Aug-2017UpdateWhoKnows1.cs" />
+    <Compile Include="Migrations\201708310359337_31-Aug-2017UpdateWhoKnows1.Designer.cs">
+      <DependentUpon>201708310359337_31-Aug-2017UpdateWhoKnows1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Abbreviation.cs" />
@@ -599,7 +649,8 @@
     <Compile Include="Models\Degree.cs" />
     <Compile Include="Models\DegreeCore.cs" />
     <Compile Include="Models\DegreeCoreSlot.cs" />
-    <Compile Include="Models\Directed.cs" />
+    <Compile Include="Models\OptionalDirected.cs" />
+    <Compile Include="Models\DirectedSlot.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Major.cs" />
     <Compile Include="Models\MajorCore.cs" />
@@ -726,11 +777,6 @@
     <Content Include="Views\Trimesters\Details.cshtml" />
     <Content Include="Views\Trimesters\Edit.cshtml" />
     <Content Include="Views\Trimesters\Index.cshtml" />
-    <Content Include="Views\PrerequisiteCourses\Create.cshtml" />
-    <Content Include="Views\PrerequisiteCourses\Delete.cshtml" />
-    <Content Include="Views\PrerequisiteCourses\Details.cshtml" />
-    <Content Include="Views\PrerequisiteCourses\Edit.cshtml" />
-    <Content Include="Views\PrerequisiteCourses\Index.cshtml" />
     <Content Include="Views\Plan\Index.cshtml" />
     <Content Include="Views\Plan\Submit.cshtml" />
     <Content Include="Views\StudyAreas\Create.cshtml" />
@@ -803,11 +849,6 @@
     <Content Include="Views\Replacements\Details.cshtml" />
     <Content Include="Views\Replacements\Edit.cshtml" />
     <Content Include="Views\Replacements\Index.cshtml" />
-    <Content Include="Views\Directeds\Create.cshtml" />
-    <Content Include="Views\Directeds\Delete.cshtml" />
-    <Content Include="Views\Directeds\Details.cshtml" />
-    <Content Include="Views\Directeds\Edit.cshtml" />
-    <Content Include="Views\Directeds\Index.cshtml" />
     <Content Include="Views\PM_Home\Index.cshtml" />
     <Content Include="Views\MajorCores\Create.cshtml" />
     <Content Include="Views\MajorCores\Delete.cshtml" />
@@ -824,11 +865,21 @@
     <Content Include="Views\DegreeCoreSlots\Details.cshtml" />
     <Content Include="Views\DegreeCoreSlots\Edit.cshtml" />
     <Content Include="Views\DegreeCoreSlots\Index.cshtml" />
+    <Content Include="Views\DirectedSlots\Create.cshtml" />
+    <Content Include="Views\DirectedSlots\Delete.cshtml" />
+    <Content Include="Views\DirectedSlots\Details.cshtml" />
+    <Content Include="Views\DirectedSlots\Edit.cshtml" />
+    <Content Include="Views\DirectedSlots\Index.cshtml" />
     <Content Include="Views\ProgramDirecteds\Create.cshtml" />
     <Content Include="Views\ProgramDirecteds\Delete.cshtml" />
     <Content Include="Views\ProgramDirecteds\Details.cshtml" />
     <Content Include="Views\ProgramDirecteds\Edit.cshtml" />
     <Content Include="Views\ProgramDirecteds\Index.cshtml" />
+    <Content Include="Views\OptionalDirecteds\Create.cshtml" />
+    <Content Include="Views\OptionalDirecteds\Delete.cshtml" />
+    <Content Include="Views\OptionalDirecteds\Details.cshtml" />
+    <Content Include="Views\OptionalDirecteds\Edit.cshtml" />
+    <Content Include="Views\OptionalDirecteds\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BusinessLogic\" />
@@ -1117,8 +1168,44 @@
     <EmbeddedResource Include="Migrations\201708300610145_30-Aug-2017Test24.resx">
       <DependentUpon>201708300610145_30-Aug-2017Test24.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708300614085_30-Aug-2017Test25.resx">
-      <DependentUpon>201708300614085_30-Aug-2017Test25.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708310236332_31-Aug-2017Update1.resx">
+      <DependentUpon>201708310236332_31-Aug-2017Update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310249169_31-Aug-2017Update2.resx">
+      <DependentUpon>201708310249169_31-Aug-2017Update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310252213_31-Aug-2017Update3.resx">
+      <DependentUpon>201708310252213_31-Aug-2017Update3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310255177_31-Aug-2017Update4.resx">
+      <DependentUpon>201708310255177_31-Aug-2017Update4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310256188_31-Aug-2017Update5.resx">
+      <DependentUpon>201708310256188_31-Aug-2017Update5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310259346_31-Aug-2017Update6.resx">
+      <DependentUpon>201708310259346_31-Aug-2017Update6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310309575_31-Aug-2017Update7.resx">
+      <DependentUpon>201708310309575_31-Aug-2017Update7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310334270_31-Aug-2017Update8.resx">
+      <DependentUpon>201708310334270_31-Aug-2017Update8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310342187_31-Aug-2017Update9.resx">
+      <DependentUpon>201708310342187_31-Aug-2017Update9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310346513_31-Aug-2017Update10.resx">
+      <DependentUpon>201708310346513_31-Aug-2017Update10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310350434_31-Aug-2017Update11.resx">
+      <DependentUpon>201708310350434_31-Aug-2017Update11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310358013_31-Aug-2017UpdateWhoKnows.resx">
+      <DependentUpon>201708310358013_31-Aug-2017UpdateWhoKnows.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310359337_31-Aug-2017UpdateWhoKnows1.resx">
+      <DependentUpon>201708310359337_31-Aug-2017UpdateWhoKnows1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

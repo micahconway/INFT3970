@@ -7,9 +7,7 @@ namespace ProgramPlanner.Migrations
     {
         public override void Up()
         {
-            DropIndex("dbo.DegreeCores", new[] { "YearDegree_YearDegreeID" });
-            CreateIndex("dbo.DegreeCores", "YearDegreeID");
-            AlterColumn("dbo.Courses", "ReplacementID", c => c.Int(nullable: false));
+
         }
         
         public override void Down()
