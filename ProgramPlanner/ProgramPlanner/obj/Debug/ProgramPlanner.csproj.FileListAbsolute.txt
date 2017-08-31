@@ -193,10 +193,12 @@ C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._31Aug2017Update8.resources
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._31Aug2017Update9.resources
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._31Aug2017Update10.resources
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._31Aug2017Update11.resources
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._31Aug2017UpdateWhoKnows.resources
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._31Aug2017UpdateWhoKnows1.resources
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._31Aug2017UpdateWhoKnows4.resources
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csproj.GenerateResource.Cache
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.dll
 C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.pdb
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._31Aug2017Update11.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.csprojResolveAssemblyReference.cache
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._31Aug2017UpdateWhoKnows.resources
-C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._31Aug2017UpdateWhoKnows1.resources
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._31Aug2017UpdateWhoKnows5.resources
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner\obj\Debug\ProgramPlanner.Migrations._31Aug2017UpdateWhoKnows6.resources

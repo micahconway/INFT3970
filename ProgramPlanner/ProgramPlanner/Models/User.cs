@@ -13,12 +13,8 @@ namespace ProgramPlanner.Models
 {
     public class User
     {
-        [EmailAddress]
         public string Email { get; set; }
-        
-        [Display(Name ="Password")]
         public string Password { get; set; }
-
         public virtual ICollection<ProgramStructure> ProgramStructures { get; set; }
     }
 }

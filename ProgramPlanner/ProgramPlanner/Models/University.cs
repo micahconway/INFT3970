@@ -9,13 +9,9 @@ namespace ProgramPlanner.Models
     public class University
     {
         public int UniversityID { get; set; }
-
         public string UniName { get; set; }
-
         public virtual ICollection<Course> Courses { get; set; }
-
         public virtual ICollection<Degree> Degrees { get; set; }
-
         public virtual ICollection<StudyArea> StudyAreas { get; set; }
     }
 }

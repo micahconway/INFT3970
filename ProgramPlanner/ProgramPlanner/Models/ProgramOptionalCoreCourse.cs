@@ -12,13 +12,9 @@ namespace ProgramPlanner.Models
     public class ProgramOptionalCoreCourse
     {
         public int ProgramStructureID { get; set; }
-
         public virtual ProgramStructure ProgramStructure { get; set; }
-
         public int OptionalCoreID { get; set; }
-
         public virtual OptionalCoreCourse OptionalCoreCourse { get; set; }
-
         public int Completed { get; set; }
     }
 }

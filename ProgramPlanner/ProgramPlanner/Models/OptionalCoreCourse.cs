@@ -12,15 +12,10 @@ namespace ProgramPlanner.Models
     public class OptionalCoreCourse
     {
         public int OptionalCoreCourseID { get; set; }
-
         public int DegreeCoreSlotID { get; set; }
-
         public virtual DegreeCoreSlot DegreeCoreSlot { get; set; }
-
         public int CourseID { get; set; }
-
         public virtual Course Course { get; set; }
-
         public virtual ICollection<ProgramOptionalCoreCourse> ProgramOptionalCoreCourse { get; set; }
     }
 }

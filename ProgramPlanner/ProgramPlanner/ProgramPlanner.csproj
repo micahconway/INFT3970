@@ -642,6 +642,18 @@
     <Compile Include="Migrations\201708310359337_31-Aug-2017UpdateWhoKnows1.Designer.cs">
       <DependentUpon>201708310359337_31-Aug-2017UpdateWhoKnows1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708310517266_31-Aug-2017UpdateWhoKnows4.cs" />
+    <Compile Include="Migrations\201708310517266_31-Aug-2017UpdateWhoKnows4.Designer.cs">
+      <DependentUpon>201708310517266_31-Aug-2017UpdateWhoKnows4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310537124_31-Aug-2017UpdateWhoKnows5.cs" />
+    <Compile Include="Migrations\201708310537124_31-Aug-2017UpdateWhoKnows5.Designer.cs">
+      <DependentUpon>201708310537124_31-Aug-2017UpdateWhoKnows5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310539566_31-Aug-2017UpdateWhoKnows6.cs" />
+    <Compile Include="Migrations\201708310539566_31-Aug-2017UpdateWhoKnows6.Designer.cs">
+      <DependentUpon>201708310539566_31-Aug-2017UpdateWhoKnows6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Abbreviation.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -1206,6 +1218,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708310359337_31-Aug-2017UpdateWhoKnows1.resx">
       <DependentUpon>201708310359337_31-Aug-2017UpdateWhoKnows1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310517266_31-Aug-2017UpdateWhoKnows4.resx">
+      <DependentUpon>201708310517266_31-Aug-2017UpdateWhoKnows4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310537124_31-Aug-2017UpdateWhoKnows5.resx">
+      <DependentUpon>201708310537124_31-Aug-2017UpdateWhoKnows5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310539566_31-Aug-2017UpdateWhoKnows6.resx">
+      <DependentUpon>201708310539566_31-Aug-2017UpdateWhoKnows6.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

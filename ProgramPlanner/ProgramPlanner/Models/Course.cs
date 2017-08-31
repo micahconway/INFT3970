@@ -10,12 +10,10 @@ namespace ProgramPlanner.Models
     {
         public int CourseID { get; set; }
         public int Code { get; set; }
-        [MaxLength(8)]
         public string CourseCode{ get; set; }
         public string CourseName { get; set; }
-        [Range(10, 20)]
         public int Units { get; set; }
-        public string details { get; set; }
+        public string Information { get; set; }
         public int UniversityID { get; set; }
         public virtual University University { get; set; }
         public int AbbreviationID { get; set; }

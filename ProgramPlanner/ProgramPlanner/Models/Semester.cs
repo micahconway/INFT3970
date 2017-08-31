@@ -14,11 +14,7 @@ namespace ProgramPlanner.Models
     public class Semester
     {
         public int SemesterID { get; set; }
-
-        [Required]
-        // [Range(1,2)]
         public int SemesterValue { get; set; }
-
         public virtual ICollection<SemesterCourse> SemesterCourses { get; set; }
     }
 }
