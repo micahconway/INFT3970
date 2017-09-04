@@ -49,10 +49,10 @@ namespace ProgramPlanner.Models
 
         public virtual ICollection<SemesterCourse> SemesterCourses { get; set; }
 
-<<<<<<< HEAD
+
         // public virtual Replacement Replacement { get; set; }
-=======
+
         public virtual ICollection<Directed> Directeds { get; set; }
->>>>>>> 06d474929752474c9056fac50a6a0de86b118f7d
+
     }
 }

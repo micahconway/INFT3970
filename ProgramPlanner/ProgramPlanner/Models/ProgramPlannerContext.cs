@@ -654,11 +654,7 @@ namespace ProgramPlanner.Models
 
         private void RelationshipsForDirected(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<Directed>()
-                .HasRequired(y => y.Course)
-                .WithMany(y => y.Directeds)
-                .HasForeignKey(y => y.DirectedID)
-                .WillCascadeOnDelete(false);
+
         }
     }
 }
