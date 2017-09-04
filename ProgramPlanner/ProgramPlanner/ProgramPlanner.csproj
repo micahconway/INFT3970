@@ -488,12 +488,10 @@
     <Compile Include="Migrations\201708270408406_Test31.cs" />
     <Compile Include="Migrations\201708270408406_Test31.Designer.cs">
       <DependentUpon>201708270408406_Test31.cs</DependentUpon>
-<<<<<<< HEAD
     </Compile>
     <Compile Include="Migrations\201708280351085_Test100.cs" />
     <Compile Include="Migrations\201708280351085_Test100.Designer.cs">
       <DependentUpon>201708280351085_Test100.cs</DependentUpon>
-=======
     </Compile>
     <Compile Include="Migrations\201708270417157_test45.cs" />
     <Compile Include="Migrations\201708270417157_test45.Designer.cs">
@@ -659,7 +657,6 @@
     <Compile Include="Migrations\201708310539566_31-Aug-2017UpdateWhoKnows6.cs" />
     <Compile Include="Migrations\201708310539566_31-Aug-2017UpdateWhoKnows6.Designer.cs">
       <DependentUpon>201708310539566_31-Aug-2017UpdateWhoKnows6.cs</DependentUpon>
->>>>>>> 3de65001a3a88a7b9ea8a6b81b26a8b20a4bc211
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Abbreviation.cs" />
@@ -1111,11 +1108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708270408406_Test31.resx">
       <DependentUpon>201708270408406_Test31.cs</DependentUpon>
-<<<<<<< HEAD
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708280351085_Test100.resx">
       <DependentUpon>201708280351085_Test100.cs</DependentUpon>
-=======
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708270417157_test45.resx">
       <DependentUpon>201708270417157_test45.cs</DependentUpon>
@@ -1239,7 +1234,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708310539566_31-Aug-2017UpdateWhoKnows6.resx">
       <DependentUpon>201708310539566_31-Aug-2017UpdateWhoKnows6.cs</DependentUpon>
->>>>>>> 3de65001a3a88a7b9ea8a6b81b26a8b20a4bc211
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -29,16 +29,7 @@ namespace ProgramPlanner.Models
         public virtual ICollection<DegreeCore> DegreeCores { get; set; }
         public virtual ICollection<TrimesterCourse> TrimesterCourses { get; set; }
         public virtual ICollection<SemesterCourse> SemesterCourses { get; set; }
-<<<<<<< HEAD
-
-
-        // public virtual Replacement Replacement { get; set; }
-
-        public virtual ICollection<Directed> Directeds { get; set; }
-
-=======
         public virtual ICollection<OptionalCoreCourse> OptionalCoreCourses { get; set; }
         public virtual ICollection<OptionalDirected> OptionalDirecteds { get; set; }
->>>>>>> 3de65001a3a88a7b9ea8a6b81b26a8b20a4bc211
     }
 }

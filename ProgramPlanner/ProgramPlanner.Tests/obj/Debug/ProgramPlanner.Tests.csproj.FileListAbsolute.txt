@@ -72,3 +72,5 @@ C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\o
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\obj\Debug\ProgramPlanner.Tests.csproj.CoreCompileInputs.cache
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\obj\Debug\ProgramPlanner.Tests.dll
 C:\Users\Folklaw\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\obj\Debug\ProgramPlanner.Tests.pdb
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\obj\Debug\ProgramPlanner.Tests.dll
+C:\Users\rcunn\Documents\GitHub\INFT3970\ProgramPlanner\ProgramPlanner.Tests\obj\Debug\ProgramPlanner.Tests.pdb
