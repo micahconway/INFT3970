@@ -9,15 +9,10 @@ namespace ProgramPlanner.Models
     public class Degree
     {
         public int DegreeID { get; set; }
-
         public string DegreeName { get; set; }
-
         public int Duration { get; set; }
-
         public virtual int UniversityID { get; set; }
-
         public virtual University University { get; set; }
-
         public virtual ICollection<YearDegree> YearDegrees { get; set; }
     }
 }

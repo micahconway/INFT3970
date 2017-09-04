@@ -1,7 +1,7 @@
 ﻿@model ProgramPlanner.Models.Replacement
 
 @{
-    ViewBag.Title = "Delete";
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -17,14 +17,6 @@
         <h4>Replacement</h4>
         <hr />
         <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.ReplacedCourse.CourseName)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.ReplacedCourse.CourseName)
-            </dd>
-    
             <dt>
                 @Html.DisplayNameFor(model => model.ReplacementCourse.CourseName)
             </dt>

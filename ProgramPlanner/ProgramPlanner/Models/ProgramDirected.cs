@@ -12,13 +12,9 @@ namespace ProgramPlanner.Models
     public class ProgramDirected
     {
         public int ProgramStructureID { get; set; }
-
         public virtual ProgramStructure ProgramStructure { get; set; }
-
-        public int DirectedID { get; set; }
-
-        public virtual Directed Directed { get; set; }
-
+        public int OptionalDirectedID { get; set; }
+        public virtual OptionalDirected OptionalDirected { get; set; }
         public int Completed { get; set; }
     }
 }

@@ -1,7 +1,7 @@
 ﻿@model ProgramPlanner.Models.Replacement
 
 @{
-    ViewBag.Title = "Edit";
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -20,11 +20,15 @@
             <h4>Replacement</h4>
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            @Html.HiddenFor(model => model.ReplacedCourseID)
+            @Html.HiddenFor(model => model.ReplacementID)
     
-            @Html.HiddenFor(model => model.ReplacementCourseID)
-    
-            @Html.HiddenFor(model => model.YearDegreeID)
+            <div class="form-group">
+                @Html.LabelFor(model => model.YearDegreeID, "YearDegreeID", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("YearDegreeID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.YearDegreeID, "", new { @class = "text-danger" })
+                </div>
+            </div>
     
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">

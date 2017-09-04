@@ -17,7 +17,8 @@ namespace ProgramPlanner.Controllers
         // GET: DegreeCores
         public ActionResult Index()
         {
-            var degreeCores = db.DegreeCores.Include(d => d.Course);
+            var degreeCores = db.DegreeCores.Include(d => d.Course).Include(d => d.YearDegree);
+            Setup.InitializeCourseCode(db);
             return View(degreeCores.ToList());
         }
 
@@ -39,8 +40,8 @@ namespace ProgramPlanner.Controllers
         // GET: DegreeCores/Create
         public ActionResult Create()
         {
-            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "YearDegreeID", "YearDegreeName");
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode");
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseName");
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "YearDegreeID", "YearDegreeID");
             return View();
         }
 
@@ -49,7 +50,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "DegreeCoreID,CourseID,YearDegreeID")] DegreeCore degreeCore)
+        public ActionResult Create([Bind(Include = "CourseID,YearDegreeID")] DegreeCore degreeCore)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +59,8 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", degreeCore.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseName", degreeCore.CourseID);
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "YearDegreeID", "YearDegreeID", degreeCore.YearDegreeID);
             return View(degreeCore);
         }
 
@@ -74,7 +76,8 @@ namespace ProgramPlanner.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", degreeCore.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseName", degreeCore.CourseID);
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "YearDegreeID", "YearDegreeID", degreeCore.YearDegreeID);
             return View(degreeCore);
         }
 
@@ -83,7 +86,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "DegreeCoreID,CourseID,YearDegreeID")] DegreeCore degreeCore)
+        public ActionResult Edit([Bind(Include = "CourseID,YearDegreeID")] DegreeCore degreeCore)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +94,8 @@ namespace ProgramPlanner.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", degreeCore.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseName", degreeCore.CourseID);
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "YearDegreeID", "YearDegreeID", degreeCore.YearDegreeID);
             return View(degreeCore);
         }
 

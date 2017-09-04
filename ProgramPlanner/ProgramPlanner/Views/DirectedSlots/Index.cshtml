@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ProgramPlanner.Models.DirectedSlot>
+
+@{
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Major.MajorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rule)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Major.MajorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rule)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.DirectedSlotID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.DirectedSlotID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.DirectedSlotID })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
