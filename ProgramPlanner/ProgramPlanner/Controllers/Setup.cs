@@ -23,7 +23,6 @@ namespace ProgramPlanner.Controllers
         public static List<Test> InitializeReplacements(ProgramPlannerContext db)
         {
             List<Test> temp = new List<Test>();
-
             var replacements = (
                from c in db.Courses
                join r in db.Replacements
@@ -31,7 +30,6 @@ namespace ProgramPlanner.Controllers
                join y in db.YearDegrees
                on r.YearDegreeID equals y.YearDegreeID
                select new { c, r, y });
-
             foreach (var t in replacements)
             {
                 temp.Add(new Test()
@@ -41,7 +39,6 @@ namespace ProgramPlanner.Controllers
                     YearDegree = t.y
                 });
             }
-
             return temp;
         }
     }

@@ -489,6 +489,10 @@
     <Compile Include="Migrations\201708270408406_Test31.Designer.cs">
       <DependentUpon>201708270408406_Test31.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708280351085_Test100.cs" />
+    <Compile Include="Migrations\201708280351085_Test100.Designer.cs">
+      <DependentUpon>201708280351085_Test100.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201708270417157_test45.cs" />
     <Compile Include="Migrations\201708270417157_test45.Designer.cs">
       <DependentUpon>201708270417157_test45.cs</DependentUpon>
@@ -1104,6 +1108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708270408406_Test31.resx">
       <DependentUpon>201708270408406_Test31.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708280351085_Test100.resx">
+      <DependentUpon>201708280351085_Test100.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708270417157_test45.resx">
       <DependentUpon>201708270417157_test45.cs</DependentUpon>
