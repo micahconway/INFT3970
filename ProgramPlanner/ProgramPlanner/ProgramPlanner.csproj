@@ -1,3 +1,1284 @@
+<<<<<<< Updated upstream
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{762BBC33-10A5-4AE5-9C6E-1E4AB4154B27}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProgramPlanner</RootNamespace>
+    <AssemblyName>ProgramPlanner</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AbbreviationsController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CoursesController.cs" />
+    <Compile Include="Controllers\DegreeCoresController.cs" />
+    <Compile Include="Controllers\DegreeCoreSlotsController.cs" />
+    <Compile Include="Controllers\DegreesController.cs" />
+    <Compile Include="Controllers\DirectedSlotsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MajorCoresController.cs" />
+    <Compile Include="Controllers\MajorsController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OptionalCoreCoursesController.cs" />
+    <Compile Include="Controllers\OptionalDirectedsController.cs" />
+    <Compile Include="Controllers\PlanController.cs" />
+    <Compile Include="Controllers\ProgramDirectedsController.cs" />
+    <Compile Include="Controllers\ProgramElectivesController.cs" />
+    <Compile Include="Controllers\ProgramMajorsController.cs" />
+    <Compile Include="Controllers\ProgramOptionalCoreCoursesController.cs" />
+    <Compile Include="Controllers\ProgramStructuresController.cs" />
+    <Compile Include="Controllers\ReplacementsController.cs" />
+    <Compile Include="Controllers\SemesterCoursesController.cs" />
+    <Compile Include="Controllers\SemestersController.cs" />
+    <Compile Include="Controllers\Setup.cs" />
+    <Compile Include="Controllers\StudyAreasController.cs" />
+    <Compile Include="Controllers\TrimesterCoursesController.cs" />
+    <Compile Include="Controllers\TrimestersController.cs" />
+    <Compile Include="Controllers\UniversitiesController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\YearDegreesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140612116_Test2.cs" />
+    <Compile Include="Migrations\201708140612116_Test2.Designer.cs">
+      <DependentUpon>201708140612116_Test2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140620446_Test3.cs" />
+    <Compile Include="Migrations\201708140620446_Test3.Designer.cs">
+      <DependentUpon>201708140620446_Test3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140623103_Test4.cs" />
+    <Compile Include="Migrations\201708140623103_Test4.Designer.cs">
+      <DependentUpon>201708140623103_Test4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140629238_Test5.cs" />
+    <Compile Include="Migrations\201708140629238_Test5.Designer.cs">
+      <DependentUpon>201708140629238_Test5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140641152_Test6.cs" />
+    <Compile Include="Migrations\201708140641152_Test6.Designer.cs">
+      <DependentUpon>201708140641152_Test6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140650145_test7.cs" />
+    <Compile Include="Migrations\201708140650145_test7.Designer.cs">
+      <DependentUpon>201708140650145_test7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140653296_test8.cs" />
+    <Compile Include="Migrations\201708140653296_test8.Designer.cs">
+      <DependentUpon>201708140653296_test8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140657216_test9.cs" />
+    <Compile Include="Migrations\201708140657216_test9.Designer.cs">
+      <DependentUpon>201708140657216_test9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140659120_test10.cs" />
+    <Compile Include="Migrations\201708140659120_test10.Designer.cs">
+      <DependentUpon>201708140659120_test10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140700174_Test11.cs" />
+    <Compile Include="Migrations\201708140700174_Test11.Designer.cs">
+      <DependentUpon>201708140700174_Test11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140705214_Test12.cs" />
+    <Compile Include="Migrations\201708140705214_Test12.Designer.cs">
+      <DependentUpon>201708140705214_Test12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140722520_Test13.cs" />
+    <Compile Include="Migrations\201708140722520_Test13.Designer.cs">
+      <DependentUpon>201708140722520_Test13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140726424_Test14.cs" />
+    <Compile Include="Migrations\201708140726424_Test14.Designer.cs">
+      <DependentUpon>201708140726424_Test14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140727181_Test15.cs" />
+    <Compile Include="Migrations\201708140727181_Test15.Designer.cs">
+      <DependentUpon>201708140727181_Test15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140736018_Test16.cs" />
+    <Compile Include="Migrations\201708140736018_Test16.Designer.cs">
+      <DependentUpon>201708140736018_Test16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140737345_test17.cs" />
+    <Compile Include="Migrations\201708140737345_test17.Designer.cs">
+      <DependentUpon>201708140737345_test17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140742112_Test18.cs" />
+    <Compile Include="Migrations\201708140742112_Test18.Designer.cs">
+      <DependentUpon>201708140742112_Test18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140748005_test19.cs" />
+    <Compile Include="Migrations\201708140748005_test19.Designer.cs">
+      <DependentUpon>201708140748005_test19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140754455_test20.cs" />
+    <Compile Include="Migrations\201708140754455_test20.Designer.cs">
+      <DependentUpon>201708140754455_test20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140757370_test21.cs" />
+    <Compile Include="Migrations\201708140757370_test21.Designer.cs">
+      <DependentUpon>201708140757370_test21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140758509_Test22.cs" />
+    <Compile Include="Migrations\201708140758509_Test22.Designer.cs">
+      <DependentUpon>201708140758509_Test22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140802110_test23.cs" />
+    <Compile Include="Migrations\201708140802110_test23.Designer.cs">
+      <DependentUpon>201708140802110_test23.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140806094_test24.cs" />
+    <Compile Include="Migrations\201708140806094_test24.Designer.cs">
+      <DependentUpon>201708140806094_test24.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140807563_test25.cs" />
+    <Compile Include="Migrations\201708140807563_test25.Designer.cs">
+      <DependentUpon>201708140807563_test25.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140809371_test26.cs" />
+    <Compile Include="Migrations\201708140809371_test26.Designer.cs">
+      <DependentUpon>201708140809371_test26.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140817066_Test27.cs" />
+    <Compile Include="Migrations\201708140817066_Test27.Designer.cs">
+      <DependentUpon>201708140817066_Test27.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708140820596_Test28.cs" />
+    <Compile Include="Migrations\201708140820596_Test28.Designer.cs">
+      <DependentUpon>201708140820596_Test28.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708141020266_Test33.cs" />
+    <Compile Include="Migrations\201708141020266_Test33.Designer.cs">
+      <DependentUpon>201708141020266_Test33.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708141022570_Test34.cs" />
+    <Compile Include="Migrations\201708141022570_Test34.Designer.cs">
+      <DependentUpon>201708141022570_Test34.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708141023502_Test35.cs" />
+    <Compile Include="Migrations\201708141023502_Test35.Designer.cs">
+      <DependentUpon>201708141023502_Test35.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708141209106_Test40.cs" />
+    <Compile Include="Migrations\201708141209106_Test40.Designer.cs">
+      <DependentUpon>201708141209106_Test40.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708141211283_Test41.cs" />
+    <Compile Include="Migrations\201708141211283_Test41.Designer.cs">
+      <DependentUpon>201708141211283_Test41.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708190327548_test46.cs" />
+    <Compile Include="Migrations\201708190327548_test46.Designer.cs">
+      <DependentUpon>201708190327548_test46.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708190328315_test47.cs" />
+    <Compile Include="Migrations\201708190328315_test47.Designer.cs">
+      <DependentUpon>201708190328315_test47.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708190335475_test48.cs" />
+    <Compile Include="Migrations\201708190335475_test48.Designer.cs">
+      <DependentUpon>201708190335475_test48.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708190357308_test49.cs" />
+    <Compile Include="Migrations\201708190357308_test49.Designer.cs">
+      <DependentUpon>201708190357308_test49.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708190359563_tes50.cs" />
+    <Compile Include="Migrations\201708190359563_tes50.Designer.cs">
+      <DependentUpon>201708190359563_tes50.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708200125397_Test51.cs" />
+    <Compile Include="Migrations\201708200125397_Test51.Designer.cs">
+      <DependentUpon>201708200125397_Test51.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708200145042_test52.cs" />
+    <Compile Include="Migrations\201708200145042_test52.Designer.cs">
+      <DependentUpon>201708200145042_test52.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708200216556_Test53.cs" />
+    <Compile Include="Migrations\201708200216556_Test53.Designer.cs">
+      <DependentUpon>201708200216556_Test53.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708200220254_Test54.cs" />
+    <Compile Include="Migrations\201708200220254_Test54.Designer.cs">
+      <DependentUpon>201708200220254_Test54.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708200223415_Test541.cs" />
+    <Compile Include="Migrations\201708200223415_Test541.Designer.cs">
+      <DependentUpon>201708200223415_Test541.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708250732045_Update.cs" />
+    <Compile Include="Migrations\201708250732045_Update.Designer.cs">
+      <DependentUpon>201708250732045_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708250756064_Update2.cs" />
+    <Compile Include="Migrations\201708250756064_Update2.Designer.cs">
+      <DependentUpon>201708250756064_Update2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708250759090_Update3.cs" />
+    <Compile Include="Migrations\201708250759090_Update3.Designer.cs">
+      <DependentUpon>201708250759090_Update3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708250809311_Update4.cs" />
+    <Compile Include="Migrations\201708250809311_Update4.Designer.cs">
+      <DependentUpon>201708250809311_Update4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708250812087_Update5.cs" />
+    <Compile Include="Migrations\201708250812087_Update5.Designer.cs">
+      <DependentUpon>201708250812087_Update5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708250821082_Update6.cs" />
+    <Compile Include="Migrations\201708250821082_Update6.Designer.cs">
+      <DependentUpon>201708250821082_Update6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260000494_Update7.cs" />
+    <Compile Include="Migrations\201708260000494_Update7.Designer.cs">
+      <DependentUpon>201708260000494_Update7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260008397_Update10.cs" />
+    <Compile Include="Migrations\201708260008397_Update10.Designer.cs">
+      <DependentUpon>201708260008397_Update10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260357294_Update11.cs" />
+    <Compile Include="Migrations\201708260357294_Update11.Designer.cs">
+      <DependentUpon>201708260357294_Update11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260434039_Update14.cs" />
+    <Compile Include="Migrations\201708260434039_Update14.Designer.cs">
+      <DependentUpon>201708260434039_Update14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260445441_Update15.cs" />
+    <Compile Include="Migrations\201708260445441_Update15.Designer.cs">
+      <DependentUpon>201708260445441_Update15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260447488_Update16.cs" />
+    <Compile Include="Migrations\201708260447488_Update16.Designer.cs">
+      <DependentUpon>201708260447488_Update16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260453271_Update161.cs" />
+    <Compile Include="Migrations\201708260453271_Update161.Designer.cs">
+      <DependentUpon>201708260453271_Update161.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260500252_Update17.cs" />
+    <Compile Include="Migrations\201708260500252_Update17.Designer.cs">
+      <DependentUpon>201708260500252_Update17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260511556_Update162.cs" />
+    <Compile Include="Migrations\201708260511556_Update162.Designer.cs">
+      <DependentUpon>201708260511556_Update162.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260524175_Update18.cs" />
+    <Compile Include="Migrations\201708260524175_Update18.Designer.cs">
+      <DependentUpon>201708260524175_Update18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260526329_Update19.cs" />
+    <Compile Include="Migrations\201708260526329_Update19.Designer.cs">
+      <DependentUpon>201708260526329_Update19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260552577_Update20.cs" />
+    <Compile Include="Migrations\201708260552577_Update20.Designer.cs">
+      <DependentUpon>201708260552577_Update20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260610108_Update21.cs" />
+    <Compile Include="Migrations\201708260610108_Update21.Designer.cs">
+      <DependentUpon>201708260610108_Update21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260615294_Update22.cs" />
+    <Compile Include="Migrations\201708260615294_Update22.Designer.cs">
+      <DependentUpon>201708260615294_Update22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260617282_Update23.cs" />
+    <Compile Include="Migrations\201708260617282_Update23.Designer.cs">
+      <DependentUpon>201708260617282_Update23.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260628287_Update26.cs" />
+    <Compile Include="Migrations\201708260628287_Update26.Designer.cs">
+      <DependentUpon>201708260628287_Update26.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260647313_Update29.cs" />
+    <Compile Include="Migrations\201708260647313_Update29.Designer.cs">
+      <DependentUpon>201708260647313_Update29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260655498_Update291.cs" />
+    <Compile Include="Migrations\201708260655498_Update291.Designer.cs">
+      <DependentUpon>201708260655498_Update291.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708270408406_Test31.cs" />
+    <Compile Include="Migrations\201708270408406_Test31.Designer.cs">
+      <DependentUpon>201708270408406_Test31.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708280351085_Test100.cs" />
+    <Compile Include="Migrations\201708280351085_Test100.Designer.cs">
+      <DependentUpon>201708280351085_Test100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708270417157_test45.cs" />
+    <Compile Include="Migrations\201708270417157_test45.Designer.cs">
+      <DependentUpon>201708270417157_test45.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708270536466_27-Aug-2016-1.cs" />
+    <Compile Include="Migrations\201708270536466_27-Aug-2016-1.Designer.cs">
+      <DependentUpon>201708270536466_27-Aug-2016-1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708270602287_27-Aug-17-2.cs" />
+    <Compile Include="Migrations\201708270602287_27-Aug-17-2.Designer.cs">
+      <DependentUpon>201708270602287_27-Aug-17-2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708270616143_27-Aug-2017-3.cs" />
+    <Compile Include="Migrations\201708270616143_27-Aug-2017-3.Designer.cs">
+      <DependentUpon>201708270616143_27-Aug-2017-3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708270618555_27-Aug-2017-4.cs" />
+    <Compile Include="Migrations\201708270618555_27-Aug-2017-4.Designer.cs">
+      <DependentUpon>201708270618555_27-Aug-2017-4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708270621197_27-Aug-2017-5.cs" />
+    <Compile Include="Migrations\201708270621197_27-Aug-2017-5.Designer.cs">
+      <DependentUpon>201708270621197_27-Aug-2017-5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708270426109_test43.cs" />
+    <Compile Include="Migrations\201708270426109_test43.Designer.cs">
+      <DependentUpon>201708270426109_test43.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708291149087_Update79.cs" />
+    <Compile Include="Migrations\201708291149087_Update79.Designer.cs">
+      <DependentUpon>201708291149087_Update79.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708291150124_update80.cs" />
+    <Compile Include="Migrations\201708291150124_update80.Designer.cs">
+      <DependentUpon>201708291150124_update80.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708291202425_Test82.cs" />
+    <Compile Include="Migrations\201708291202425_Test82.Designer.cs">
+      <DependentUpon>201708291202425_Test82.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708291223137_29-Aug-2017Test1.cs" />
+    <Compile Include="Migrations\201708291223137_29-Aug-2017Test1.Designer.cs">
+      <DependentUpon>201708291223137_29-Aug-2017Test1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300015180_30-Aug=2017Update1.cs" />
+    <Compile Include="Migrations\201708300015180_30-Aug=2017Update1.Designer.cs">
+      <DependentUpon>201708300015180_30-Aug=2017Update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300027135_30-Aug=2017Update2.cs" />
+    <Compile Include="Migrations\201708300027135_30-Aug=2017Update2.Designer.cs">
+      <DependentUpon>201708300027135_30-Aug=2017Update2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300034077_30-Aug=2017Update3.cs" />
+    <Compile Include="Migrations\201708300034077_30-Aug=2017Update3.Designer.cs">
+      <DependentUpon>201708300034077_30-Aug=2017Update3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300046309_30-Aug-2017Update5.cs" />
+    <Compile Include="Migrations\201708300046309_30-Aug-2017Update5.Designer.cs">
+      <DependentUpon>201708300046309_30-Aug-2017Update5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300048182_30-Aug-2017Update6.cs" />
+    <Compile Include="Migrations\201708300048182_30-Aug-2017Update6.Designer.cs">
+      <DependentUpon>201708300048182_30-Aug-2017Update6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300222047_30-Aug=2017Test6.cs" />
+    <Compile Include="Migrations\201708300222047_30-Aug=2017Test6.Designer.cs">
+      <DependentUpon>201708300222047_30-Aug=2017Test6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300245318_30-Aug-2017Test11.cs" />
+    <Compile Include="Migrations\201708300245318_30-Aug-2017Test11.Designer.cs">
+      <DependentUpon>201708300245318_30-Aug-2017Test11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300258268_30-Aug-2017Test12.cs" />
+    <Compile Include="Migrations\201708300258268_30-Aug-2017Test12.Designer.cs">
+      <DependentUpon>201708300258268_30-Aug-2017Test12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300308322_30-Aug-2017Test13.cs" />
+    <Compile Include="Migrations\201708300308322_30-Aug-2017Test13.Designer.cs">
+      <DependentUpon>201708300308322_30-Aug-2017Test13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300319265_30-Aug-2017Test14.cs" />
+    <Compile Include="Migrations\201708300319265_30-Aug-2017Test14.Designer.cs">
+      <DependentUpon>201708300319265_30-Aug-2017Test14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300323248_30-Aug-2017Test15.cs" />
+    <Compile Include="Migrations\201708300323248_30-Aug-2017Test15.Designer.cs">
+      <DependentUpon>201708300323248_30-Aug-2017Test15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300601294_30-Aug-2017Test22.cs" />
+    <Compile Include="Migrations\201708300601294_30-Aug-2017Test22.Designer.cs">
+      <DependentUpon>201708300601294_30-Aug-2017Test22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300602405_30-Aug-2017Test23.cs" />
+    <Compile Include="Migrations\201708300602405_30-Aug-2017Test23.Designer.cs">
+      <DependentUpon>201708300602405_30-Aug-2017Test23.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300610145_30-Aug-2017Test24.cs" />
+    <Compile Include="Migrations\201708300610145_30-Aug-2017Test24.Designer.cs">
+      <DependentUpon>201708300610145_30-Aug-2017Test24.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708300614085_30-Aug-2017Test25.cs" />
+    <Compile Include="Migrations\201708310236332_31-Aug-2017Update1.cs" />
+    <Compile Include="Migrations\201708310236332_31-Aug-2017Update1.Designer.cs">
+      <DependentUpon>201708310236332_31-Aug-2017Update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310249169_31-Aug-2017Update2.cs" />
+    <Compile Include="Migrations\201708310249169_31-Aug-2017Update2.Designer.cs">
+      <DependentUpon>201708310249169_31-Aug-2017Update2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310252213_31-Aug-2017Update3.cs" />
+    <Compile Include="Migrations\201708310252213_31-Aug-2017Update3.Designer.cs">
+      <DependentUpon>201708310252213_31-Aug-2017Update3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310255177_31-Aug-2017Update4.cs" />
+    <Compile Include="Migrations\201708310255177_31-Aug-2017Update4.Designer.cs">
+      <DependentUpon>201708310255177_31-Aug-2017Update4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310256188_31-Aug-2017Update5.cs" />
+    <Compile Include="Migrations\201708310256188_31-Aug-2017Update5.Designer.cs">
+      <DependentUpon>201708310256188_31-Aug-2017Update5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310259346_31-Aug-2017Update6.cs" />
+    <Compile Include="Migrations\201708310259346_31-Aug-2017Update6.Designer.cs">
+      <DependentUpon>201708310259346_31-Aug-2017Update6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310309575_31-Aug-2017Update7.cs" />
+    <Compile Include="Migrations\201708310309575_31-Aug-2017Update7.Designer.cs">
+      <DependentUpon>201708310309575_31-Aug-2017Update7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310334270_31-Aug-2017Update8.cs" />
+    <Compile Include="Migrations\201708310334270_31-Aug-2017Update8.Designer.cs">
+      <DependentUpon>201708310334270_31-Aug-2017Update8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310342187_31-Aug-2017Update9.cs" />
+    <Compile Include="Migrations\201708310342187_31-Aug-2017Update9.Designer.cs">
+      <DependentUpon>201708310342187_31-Aug-2017Update9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310346513_31-Aug-2017Update10.cs" />
+    <Compile Include="Migrations\201708310346513_31-Aug-2017Update10.Designer.cs">
+      <DependentUpon>201708310346513_31-Aug-2017Update10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310350434_31-Aug-2017Update11.cs" />
+    <Compile Include="Migrations\201708310350434_31-Aug-2017Update11.Designer.cs">
+      <DependentUpon>201708310350434_31-Aug-2017Update11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310358013_31-Aug-2017UpdateWhoKnows.cs" />
+    <Compile Include="Migrations\201708310358013_31-Aug-2017UpdateWhoKnows.Designer.cs">
+      <DependentUpon>201708310358013_31-Aug-2017UpdateWhoKnows.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310359337_31-Aug-2017UpdateWhoKnows1.cs" />
+    <Compile Include="Migrations\201708310359337_31-Aug-2017UpdateWhoKnows1.Designer.cs">
+      <DependentUpon>201708310359337_31-Aug-2017UpdateWhoKnows1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310517266_31-Aug-2017UpdateWhoKnows4.cs" />
+    <Compile Include="Migrations\201708310517266_31-Aug-2017UpdateWhoKnows4.Designer.cs">
+      <DependentUpon>201708310517266_31-Aug-2017UpdateWhoKnows4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310537124_31-Aug-2017UpdateWhoKnows5.cs" />
+    <Compile Include="Migrations\201708310537124_31-Aug-2017UpdateWhoKnows5.Designer.cs">
+      <DependentUpon>201708310537124_31-Aug-2017UpdateWhoKnows5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708310539566_31-Aug-2017UpdateWhoKnows6.cs" />
+    <Compile Include="Migrations\201708310539566_31-Aug-2017UpdateWhoKnows6.Designer.cs">
+      <DependentUpon>201708310539566_31-Aug-2017UpdateWhoKnows6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Abbreviation.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Degree.cs" />
+    <Compile Include="Models\DegreeCore.cs" />
+    <Compile Include="Models\DegreeCoreSlot.cs" />
+    <Compile Include="Models\OptionalDirected.cs" />
+    <Compile Include="Models\DirectedSlot.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Major.cs" />
+    <Compile Include="Models\MajorCore.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\OptionalCoreCourse.cs" />
+    <Compile Include="Models\Plan.cs" />
+    <Compile Include="Models\ProgramDirected.cs" />
+    <Compile Include="Models\ProgramElective.cs" />
+    <Compile Include="Models\ProgramMajor.cs" />
+    <Compile Include="Models\ProgramOptionalCoreCourse.cs" />
+    <Compile Include="Models\ProgramPlannerContext.cs" />
+    <Compile Include="Models\ProgramStructure.cs" />
+    <Compile Include="Models\Replacement.cs" />
+    <Compile Include="Models\Semester.cs" />
+    <Compile Include="Models\SemesterCourse.cs" />
+    <Compile Include="Models\StudyArea.cs" />
+    <Compile Include="Models\Test.cs" />
+    <Compile Include="Models\Trimester.cs" />
+    <Compile Include="Models\TrimesterCourse.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\YearDegree.cs" />
+    <Compile Include="Models\University.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\aspnet-ProgramPlanner-20170724023334.mdf" />
+    <Content Include="App_Data\aspnet-ProgramPlanner-20170724023334_log.ldf">
+      <DependentUpon>aspnet-ProgramPlanner-20170724023334.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\ProgramPlannerContext-20170729114207.mdf" />
+    <Content Include="App_Data\ProgramPlannerContext-20170729114207_log.ldf">
+      <DependentUpon>ProgramPlannerContext-20170729114207.mdf</DependentUpon>
+    </Content>
+    <Content Include="bin\ProgramPlanner.dll" />
+    <Content Include="bin\ProgramPlanner.pdb" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Plan.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Majors\Create.cshtml" />
+    <Content Include="Views\Majors\Delete.cshtml" />
+    <Content Include="Views\Majors\Details.cshtml" />
+    <Content Include="Views\Majors\Edit.cshtml" />
+    <Content Include="Views\Majors\Index.cshtml" />
+    <Content Include="Views\OptionalCoreCourses\Create.cshtml" />
+    <Content Include="Views\OptionalCoreCourses\Delete.cshtml" />
+    <Content Include="Views\OptionalCoreCourses\Details.cshtml" />
+    <Content Include="Views\OptionalCoreCourses\Edit.cshtml" />
+    <Content Include="Views\OptionalCoreCourses\Index.cshtml" />
+    <Content Include="Views\TrimesterCourses\Create.cshtml" />
+    <Content Include="Views\TrimesterCourses\Delete.cshtml" />
+    <Content Include="Views\TrimesterCourses\Details.cshtml" />
+    <Content Include="Views\TrimesterCourses\Edit.cshtml" />
+    <Content Include="Views\TrimesterCourses\Index.cshtml" />
+    <Content Include="Views\Trimesters\Create.cshtml" />
+    <Content Include="Views\Trimesters\Delete.cshtml" />
+    <Content Include="Views\Trimesters\Details.cshtml" />
+    <Content Include="Views\Trimesters\Edit.cshtml" />
+    <Content Include="Views\Trimesters\Index.cshtml" />
+    <Content Include="Views\Plan\Index.cshtml" />
+    <Content Include="Views\Plan\Submit.cshtml" />
+    <Content Include="Views\StudyAreas\Create.cshtml" />
+    <Content Include="Views\StudyAreas\Delete.cshtml" />
+    <Content Include="Views\StudyAreas\Details.cshtml" />
+    <Content Include="Views\StudyAreas\Edit.cshtml" />
+    <Content Include="Views\StudyAreas\Index.cshtml" />
+    <Content Include="Views\Degrees\Create.cshtml" />
+    <Content Include="Views\Degrees\Delete.cshtml" />
+    <Content Include="Views\Degrees\Details.cshtml" />
+    <Content Include="Views\Degrees\Edit.cshtml" />
+    <Content Include="Views\Degrees\Index.cshtml" />
+    <Content Include="Views\Courses\Create.cshtml" />
+    <Content Include="Views\Courses\Delete.cshtml" />
+    <Content Include="Views\Courses\Details.cshtml" />
+    <Content Include="Views\Courses\Edit.cshtml" />
+    <Content Include="Views\Courses\Index.cshtml" />
+    <Content Include="Views\Abbreviations\Create.cshtml" />
+    <Content Include="Views\Abbreviations\Delete.cshtml" />
+    <Content Include="Views\Abbreviations\Details.cshtml" />
+    <Content Include="Views\Abbreviations\Edit.cshtml" />
+    <Content Include="Views\Abbreviations\Index.cshtml" />
+    <Content Include="Views\Semesters\Create.cshtml" />
+    <Content Include="Views\Semesters\Delete.cshtml" />
+    <Content Include="Views\Semesters\Details.cshtml" />
+    <Content Include="Views\Semesters\Edit.cshtml" />
+    <Content Include="Views\Semesters\Index.cshtml" />
+    <Content Include="Views\SemesterCourses\Create.cshtml" />
+    <Content Include="Views\SemesterCourses\Delete.cshtml" />
+    <Content Include="Views\SemesterCourses\Details.cshtml" />
+    <Content Include="Views\SemesterCourses\Edit.cshtml" />
+    <Content Include="Views\SemesterCourses\Index.cshtml" />
+    <Content Include="Views\YearDegrees\Create.cshtml" />
+    <Content Include="Views\YearDegrees\Delete.cshtml" />
+    <Content Include="Views\YearDegrees\Details.cshtml" />
+    <Content Include="Views\YearDegrees\Edit.cshtml" />
+    <Content Include="Views\YearDegrees\Index.cshtml" />
+    <Content Include="Views\Universities\Create.cshtml" />
+    <Content Include="Views\Universities\Delete.cshtml" />
+    <Content Include="Views\Universities\Details.cshtml" />
+    <Content Include="Views\Universities\Edit.cshtml" />
+    <Content Include="Views\Universities\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\ProgramStructures\Create.cshtml" />
+    <Content Include="Views\ProgramStructures\Delete.cshtml" />
+    <Content Include="Views\ProgramStructures\Details.cshtml" />
+    <Content Include="Views\ProgramStructures\Edit.cshtml" />
+    <Content Include="Views\ProgramStructures\Index.cshtml" />
+    <Content Include="Views\ProgramElectives\Create.cshtml" />
+    <Content Include="Views\ProgramElectives\Delete.cshtml" />
+    <Content Include="Views\ProgramElectives\Details.cshtml" />
+    <Content Include="Views\ProgramElectives\Edit.cshtml" />
+    <Content Include="Views\ProgramElectives\Index.cshtml" />
+    <Content Include="Views\ProgramMajors\Create.cshtml" />
+    <Content Include="Views\ProgramMajors\Delete.cshtml" />
+    <Content Include="Views\ProgramMajors\Details.cshtml" />
+    <Content Include="Views\ProgramMajors\Edit.cshtml" />
+    <Content Include="Views\ProgramMajors\Index.cshtml" />
+    <Content Include="Views\ProgramOptionalCoreCourses\Create.cshtml" />
+    <Content Include="Views\ProgramOptionalCoreCourses\Delete.cshtml" />
+    <Content Include="Views\ProgramOptionalCoreCourses\Details.cshtml" />
+    <Content Include="Views\ProgramOptionalCoreCourses\Edit.cshtml" />
+    <Content Include="Views\ProgramOptionalCoreCourses\Index.cshtml" />
+    <Content Include="Views\Replacements\Create.cshtml" />
+    <Content Include="Views\Replacements\Delete.cshtml" />
+    <Content Include="Views\Replacements\Details.cshtml" />
+    <Content Include="Views\Replacements\Edit.cshtml" />
+    <Content Include="Views\Replacements\Index.cshtml" />
+    <Content Include="Views\PM_Home\Index.cshtml" />
+    <Content Include="Views\MajorCores\Create.cshtml" />
+    <Content Include="Views\MajorCores\Delete.cshtml" />
+    <Content Include="Views\MajorCores\Details.cshtml" />
+    <Content Include="Views\MajorCores\Edit.cshtml" />
+    <Content Include="Views\MajorCores\Index.cshtml" />
+    <Content Include="Views\DegreeCores\Create.cshtml" />
+    <Content Include="Views\DegreeCores\Delete.cshtml" />
+    <Content Include="Views\DegreeCores\Details.cshtml" />
+    <Content Include="Views\DegreeCores\Edit.cshtml" />
+    <Content Include="Views\DegreeCores\Index.cshtml" />
+    <Content Include="Views\DegreeCoreSlots\Create.cshtml" />
+    <Content Include="Views\DegreeCoreSlots\Delete.cshtml" />
+    <Content Include="Views\DegreeCoreSlots\Details.cshtml" />
+    <Content Include="Views\DegreeCoreSlots\Edit.cshtml" />
+    <Content Include="Views\DegreeCoreSlots\Index.cshtml" />
+    <Content Include="Views\DirectedSlots\Create.cshtml" />
+    <Content Include="Views\DirectedSlots\Delete.cshtml" />
+    <Content Include="Views\DirectedSlots\Details.cshtml" />
+    <Content Include="Views\DirectedSlots\Edit.cshtml" />
+    <Content Include="Views\DirectedSlots\Index.cshtml" />
+    <Content Include="Views\ProgramDirecteds\Create.cshtml" />
+    <Content Include="Views\ProgramDirecteds\Delete.cshtml" />
+    <Content Include="Views\ProgramDirecteds\Details.cshtml" />
+    <Content Include="Views\ProgramDirecteds\Edit.cshtml" />
+    <Content Include="Views\ProgramDirecteds\Index.cshtml" />
+    <Content Include="Views\OptionalDirecteds\Create.cshtml" />
+    <Content Include="Views\OptionalDirecteds\Delete.cshtml" />
+    <Content Include="Views\OptionalDirecteds\Details.cshtml" />
+    <Content Include="Views\OptionalDirecteds\Edit.cshtml" />
+    <Content Include="Views\OptionalDirecteds\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BusinessLogic\" />
+    <Folder Include="obj\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201708140612116_Test2.resx">
+      <DependentUpon>201708140612116_Test2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140620446_Test3.resx">
+      <DependentUpon>201708140620446_Test3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140623103_Test4.resx">
+      <DependentUpon>201708140623103_Test4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140629238_Test5.resx">
+      <DependentUpon>201708140629238_Test5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140641152_Test6.resx">
+      <DependentUpon>201708140641152_Test6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140650145_test7.resx">
+      <DependentUpon>201708140650145_test7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140653296_test8.resx">
+      <DependentUpon>201708140653296_test8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140657216_test9.resx">
+      <DependentUpon>201708140657216_test9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140659120_test10.resx">
+      <DependentUpon>201708140659120_test10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140700174_Test11.resx">
+      <DependentUpon>201708140700174_Test11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140705214_Test12.resx">
+      <DependentUpon>201708140705214_Test12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140722520_Test13.resx">
+      <DependentUpon>201708140722520_Test13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140726424_Test14.resx">
+      <DependentUpon>201708140726424_Test14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140727181_Test15.resx">
+      <DependentUpon>201708140727181_Test15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140736018_Test16.resx">
+      <DependentUpon>201708140736018_Test16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140737345_test17.resx">
+      <DependentUpon>201708140737345_test17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140742112_Test18.resx">
+      <DependentUpon>201708140742112_Test18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140748005_test19.resx">
+      <DependentUpon>201708140748005_test19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140754455_test20.resx">
+      <DependentUpon>201708140754455_test20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140757370_test21.resx">
+      <DependentUpon>201708140757370_test21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140758509_Test22.resx">
+      <DependentUpon>201708140758509_Test22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140802110_test23.resx">
+      <DependentUpon>201708140802110_test23.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140806094_test24.resx">
+      <DependentUpon>201708140806094_test24.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140807563_test25.resx">
+      <DependentUpon>201708140807563_test25.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140809371_test26.resx">
+      <DependentUpon>201708140809371_test26.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140817066_Test27.resx">
+      <DependentUpon>201708140817066_Test27.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708140820596_Test28.resx">
+      <DependentUpon>201708140820596_Test28.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708141020266_Test33.resx">
+      <DependentUpon>201708141020266_Test33.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708141022570_Test34.resx">
+      <DependentUpon>201708141022570_Test34.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708141023502_Test35.resx">
+      <DependentUpon>201708141023502_Test35.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708141209106_Test40.resx">
+      <DependentUpon>201708141209106_Test40.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708141211283_Test41.resx">
+      <DependentUpon>201708141211283_Test41.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708190327548_test46.resx">
+      <DependentUpon>201708190327548_test46.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708190328315_test47.resx">
+      <DependentUpon>201708190328315_test47.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708190335475_test48.resx">
+      <DependentUpon>201708190335475_test48.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708190357308_test49.resx">
+      <DependentUpon>201708190357308_test49.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708190359563_tes50.resx">
+      <DependentUpon>201708190359563_tes50.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708200125397_Test51.resx">
+      <DependentUpon>201708200125397_Test51.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708200145042_test52.resx">
+      <DependentUpon>201708200145042_test52.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708200216556_Test53.resx">
+      <DependentUpon>201708200216556_Test53.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708200220254_Test54.resx">
+      <DependentUpon>201708200220254_Test54.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708200223415_Test541.resx">
+      <DependentUpon>201708200223415_Test541.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708250732045_Update.resx">
+      <DependentUpon>201708250732045_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708250756064_Update2.resx">
+      <DependentUpon>201708250756064_Update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708250759090_Update3.resx">
+      <DependentUpon>201708250759090_Update3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708250809311_Update4.resx">
+      <DependentUpon>201708250809311_Update4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708250812087_Update5.resx">
+      <DependentUpon>201708250812087_Update5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708250821082_Update6.resx">
+      <DependentUpon>201708250821082_Update6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260000494_Update7.resx">
+      <DependentUpon>201708260000494_Update7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260008397_Update10.resx">
+      <DependentUpon>201708260008397_Update10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260357294_Update11.resx">
+      <DependentUpon>201708260357294_Update11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260434039_Update14.resx">
+      <DependentUpon>201708260434039_Update14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260445441_Update15.resx">
+      <DependentUpon>201708260445441_Update15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260447488_Update16.resx">
+      <DependentUpon>201708260447488_Update16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260453271_Update161.resx">
+      <DependentUpon>201708260453271_Update161.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260500252_Update17.resx">
+      <DependentUpon>201708260500252_Update17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260511556_Update162.resx">
+      <DependentUpon>201708260511556_Update162.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260524175_Update18.resx">
+      <DependentUpon>201708260524175_Update18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260526329_Update19.resx">
+      <DependentUpon>201708260526329_Update19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260552577_Update20.resx">
+      <DependentUpon>201708260552577_Update20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260610108_Update21.resx">
+      <DependentUpon>201708260610108_Update21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260615294_Update22.resx">
+      <DependentUpon>201708260615294_Update22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260617282_Update23.resx">
+      <DependentUpon>201708260617282_Update23.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260628287_Update26.resx">
+      <DependentUpon>201708260628287_Update26.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260647313_Update29.resx">
+      <DependentUpon>201708260647313_Update29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260655498_Update291.resx">
+      <DependentUpon>201708260655498_Update291.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708270408406_Test31.resx">
+      <DependentUpon>201708270408406_Test31.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708280351085_Test100.resx">
+      <DependentUpon>201708280351085_Test100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708270417157_test45.resx">
+      <DependentUpon>201708270417157_test45.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708270536466_27-Aug-2016-1.resx">
+      <DependentUpon>201708270536466_27-Aug-2016-1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708270602287_27-Aug-17-2.resx">
+      <DependentUpon>201708270602287_27-Aug-17-2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708270616143_27-Aug-2017-3.resx">
+      <DependentUpon>201708270616143_27-Aug-2017-3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708270618555_27-Aug-2017-4.resx">
+      <DependentUpon>201708270618555_27-Aug-2017-4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708270621197_27-Aug-2017-5.resx">
+      <DependentUpon>201708270621197_27-Aug-2017-5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708270426109_test43.resx">
+      <DependentUpon>201708270426109_test43.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708291149087_Update79.resx">
+      <DependentUpon>201708291149087_Update79.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708291150124_update80.resx">
+      <DependentUpon>201708291150124_update80.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708291202425_Test82.resx">
+      <DependentUpon>201708291202425_Test82.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708291223137_29-Aug-2017Test1.resx">
+      <DependentUpon>201708291223137_29-Aug-2017Test1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300015180_30-Aug=2017Update1.resx">
+      <DependentUpon>201708300015180_30-Aug=2017Update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300027135_30-Aug=2017Update2.resx">
+      <DependentUpon>201708300027135_30-Aug=2017Update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300034077_30-Aug=2017Update3.resx">
+      <DependentUpon>201708300034077_30-Aug=2017Update3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300046309_30-Aug-2017Update5.resx">
+      <DependentUpon>201708300046309_30-Aug-2017Update5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300048182_30-Aug-2017Update6.resx">
+      <DependentUpon>201708300048182_30-Aug-2017Update6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300222047_30-Aug=2017Test6.resx">
+      <DependentUpon>201708300222047_30-Aug=2017Test6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300245318_30-Aug-2017Test11.resx">
+      <DependentUpon>201708300245318_30-Aug-2017Test11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300258268_30-Aug-2017Test12.resx">
+      <DependentUpon>201708300258268_30-Aug-2017Test12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300308322_30-Aug-2017Test13.resx">
+      <DependentUpon>201708300308322_30-Aug-2017Test13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300319265_30-Aug-2017Test14.resx">
+      <DependentUpon>201708300319265_30-Aug-2017Test14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300323248_30-Aug-2017Test15.resx">
+      <DependentUpon>201708300323248_30-Aug-2017Test15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300601294_30-Aug-2017Test22.resx">
+      <DependentUpon>201708300601294_30-Aug-2017Test22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300602405_30-Aug-2017Test23.resx">
+      <DependentUpon>201708300602405_30-Aug-2017Test23.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708300610145_30-Aug-2017Test24.resx">
+      <DependentUpon>201708300610145_30-Aug-2017Test24.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310236332_31-Aug-2017Update1.resx">
+      <DependentUpon>201708310236332_31-Aug-2017Update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310249169_31-Aug-2017Update2.resx">
+      <DependentUpon>201708310249169_31-Aug-2017Update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310252213_31-Aug-2017Update3.resx">
+      <DependentUpon>201708310252213_31-Aug-2017Update3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310255177_31-Aug-2017Update4.resx">
+      <DependentUpon>201708310255177_31-Aug-2017Update4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310256188_31-Aug-2017Update5.resx">
+      <DependentUpon>201708310256188_31-Aug-2017Update5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310259346_31-Aug-2017Update6.resx">
+      <DependentUpon>201708310259346_31-Aug-2017Update6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310309575_31-Aug-2017Update7.resx">
+      <DependentUpon>201708310309575_31-Aug-2017Update7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310334270_31-Aug-2017Update8.resx">
+      <DependentUpon>201708310334270_31-Aug-2017Update8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310342187_31-Aug-2017Update9.resx">
+      <DependentUpon>201708310342187_31-Aug-2017Update9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310346513_31-Aug-2017Update10.resx">
+      <DependentUpon>201708310346513_31-Aug-2017Update10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310350434_31-Aug-2017Update11.resx">
+      <DependentUpon>201708310350434_31-Aug-2017Update11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310358013_31-Aug-2017UpdateWhoKnows.resx">
+      <DependentUpon>201708310358013_31-Aug-2017UpdateWhoKnows.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310359337_31-Aug-2017UpdateWhoKnows1.resx">
+      <DependentUpon>201708310359337_31-Aug-2017UpdateWhoKnows1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310517266_31-Aug-2017UpdateWhoKnows4.resx">
+      <DependentUpon>201708310517266_31-Aug-2017UpdateWhoKnows4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310537124_31-Aug-2017UpdateWhoKnows5.resx">
+      <DependentUpon>201708310537124_31-Aug-2017UpdateWhoKnows5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708310539566_31-Aug-2017UpdateWhoKnows6.resx">
+      <DependentUpon>201708310539566_31-Aug-2017UpdateWhoKnows6.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54437</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54437/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+=======
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
@@ -1101,4 +2382,5 @@
   </Target>
   <Target Name="AfterBuild">
   </Target> -->
+>>>>>>> Stashed changes
 </Project>

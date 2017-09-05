@@ -1,0 +1,99 @@
+<<<<<<< Updated upstream:ProgramPlanner/ProgramPlanner/Views/DirectedSlots/Delete.cshtml
+﻿@model ProgramPlanner.Models.DirectedSlot
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>DirectedSlot</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Major.MajorName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Major.MajorName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.rule)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.rule)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>
+=======
+﻿@model ProgramPlanner.Models.Directed
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Directed</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Course.CourseName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Course.CourseName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Major.MajorName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Major.MajorName)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>
+>>>>>>> Stashed changes:ProgramPlanner/ProgramPlanner/Views/Directeds/Delete.cshtml

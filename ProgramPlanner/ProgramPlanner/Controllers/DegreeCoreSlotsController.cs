@@ -17,7 +17,8 @@ namespace ProgramPlanner.Controllers
         // GET: DegreeCoreSlots
         public ActionResult Index()
         {
-            return View(db.DegreeCoreSlots.ToList());
+            var degreeCoreSlots = db.DegreeCoreSlots.Include(d => d.YearDegree);
+            return View(degreeCoreSlots.ToList());
         }
 
         // GET: DegreeCoreSlots/Details/5
@@ -38,6 +39,7 @@ namespace ProgramPlanner.Controllers
         // GET: DegreeCoreSlots/Create
         public ActionResult Create()
         {
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "YearDegreeID", "YearDegreeID");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "DegreeCoreSlotID,numOfOptions")] DegreeCoreSlot degreeCoreSlot)
+        public ActionResult Create([Bind(Include = "DegreeCoreSlotID,numOfOptions,YearDegreeID")] DegreeCoreSlot degreeCoreSlot)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace ProgramPlanner.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "YearDegreeID", "YearDegreeID", degreeCoreSlot.YearDegreeID);
             return View(degreeCoreSlot);
         }
 
@@ -70,6 +73,7 @@ namespace ProgramPlanner.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "YearDegreeID", "YearDegreeID", degreeCoreSlot.YearDegreeID);
             return View(degreeCoreSlot);
         }
 
@@ -78,7 +82,7 @@ namespace ProgramPlanner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "DegreeCoreSlotID,numOfOptions")] DegreeCoreSlot degreeCoreSlot)
+        public ActionResult Edit([Bind(Include = "DegreeCoreSlotID,numOfOptions,YearDegreeID")] DegreeCoreSlot degreeCoreSlot)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace ProgramPlanner.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.YearDegreeID = new SelectList(db.YearDegrees, "YearDegreeID", "YearDegreeID", degreeCoreSlot.YearDegreeID);
             return View(degreeCoreSlot);
         }
 

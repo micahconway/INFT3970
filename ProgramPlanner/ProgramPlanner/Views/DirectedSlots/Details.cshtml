@@ -1,0 +1,87 @@
+<<<<<<< Updated upstream:ProgramPlanner/ProgramPlanner/Views/DirectedSlots/Details.cshtml
+﻿@model ProgramPlanner.Models.DirectedSlot
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>DirectedSlot</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Major.MajorName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Major.MajorName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.rule)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.rule)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.DirectedSlotID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
+=======
+﻿@model ProgramPlanner.Models.Directed
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Directed</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Course.CourseName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Course.CourseName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Major.MajorName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Major.MajorName)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.DirectedID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
+>>>>>>> Stashed changes:ProgramPlanner/ProgramPlanner/Views/Directeds/Details.cshtml
