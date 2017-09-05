@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ﻿@model IEnumerable<ProgramPlanner.Models.Test>
 
 @{
@@ -51,3 +52,58 @@
     </table>
 </body>
 </html>
+=======
+﻿@model IEnumerable<ProgramPlanner.Models.Replacement>
+
+@{
+   
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                Replaced
+            </th>
+            <th>
+                Replacement
+            </th>
+            <th>
+                Year Degree
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ReplacementCourse.CourseName)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReplacementCourse.CourseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YearDegree.YearDegreeID)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ReplacementID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ReplacementID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ReplacementID })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
+>>>>>>> Stashed changes
